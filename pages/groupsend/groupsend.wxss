@@ -1,0 +1,113 @@
+/* pages/makeUpClass/studentManage.wxss */
+
+page {
+    background-color: #fff;
+}
+
+.searchMain {
+    overflow: hidden;
+    border-bottom: 1rpx solid #eee;
+}
+
+.search {
+    width: 70%;
+    height: 60rpx;
+    background-size: 28rpx;
+    border-radius: 15rpx;
+    margin: 20rpx auto 40rpx auto;
+    border: 1rpx solid #bcbcbc;
+    margin-left: 8%;
+}
+
+.search input {
+    width: 90%;
+    height: 100%;
+    float: right;
+    font-size: 27rpx;
+}
+
+.rightAdd {
+    border-radius: 10rpx;
+    height: 58rpx;
+    width: 75rpx;
+    margin-top: 20rpx;
+    margin-left: 3%;
+    font-size: 30rpx;
+    line-height: 58rpx;
+}
+
+.rightAdd image {
+    width: 45rpx;
+    height: 45rpx;
+    background-size: 100% 100%;
+    margin-top: 7rpx;
+    margin-left: 16rpx;
+}
+
+.rightBtn {
+    width: 45%;
+    height: 70rpx;
+    background-size: 100%;
+    margin-top: 30rpx;
+    border: 4rpx solid #469bba;
+    border-radius: 20rpx;
+    position: relative;
+    margin: 60rpx auto 0 auto;
+    background-color: #469bba;
+}
+
+.rightBtn .rightTxt {
+    color: #fff !important;
+    text-align: center;
+    line-height: 70rpx;
+    display: block;
+    font-size: 30rpx;
+}
+
+.rightBtn text {
+    color: #469bba;
+    text-align: center;
+    line-height: 70rpx;
+    display: block;
+    font-size: 30rpx;
+}
+
+.checkBox  checkbox {
+    display: inline-block;
+    vertical-align: middle;
+    width: 30rpx;
+    margin-left: 5%;
+    border-radius: 50% 50%;
+}
+
+.stuInfo {
+    display: inline-block;
+    vertical-align: middle;
+    width: 80%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-left: 6%;
+    line-height: 80rpx;
+    font-size: 26rpx;
+    color: #333;
+}
+
+.item {
+    border-bottom: 1rpx solid #eee;
+}
+
+checkbox {
+    transform: scale(0.8);
+}
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+    border: 1rpx solid #469bb8;
+    background: #469bb8;
+    border-radius: 50% 50%;
+}
+
+
+checkbox .wx-checkbox-input{
+  border-radius: 50%;
+}

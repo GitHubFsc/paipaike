@@ -1,0 +1,85 @@
+<view class="container-cn">
+    <view class="searchMain">
+        <view class="search left">
+            <input placeholder="搜索..."></input>
+        </view>
+        <view class="rightAdd left" bindtap="selectStu">
+            全选
+        </view>
+    </view>
+</view>
+
+<view class="container">
+    <view class="item">
+        <label class="checkBox" catchtap='checkedTap'>
+            <checkbox checked="{{checked}}" color='#fff' />
+        </label>
+        <view class="stuInfo">江晓鹏0：18510235964</view>
+    </view>
+
+    <view class="item">
+        <label class="checkBox" catchtap='checkedTap'>
+            <checkbox checked="{{checked}}" color='#fff' />
+        </label>
+        <view class="stuInfo">江晓鹏1：18510235964</view>
+    </view>
+
+    <view class="item">
+        <label class="checkBox" catchtap='checkedTap'>
+            <checkbox checked="{{checked}}" color='#fff' />
+        </label>
+        <view class="stuInfo">江晓鹏2：18510235964-父亲:15516536356-母亲:14343554545</view>
+    </view>
+
+    <view class="item">
+        <label class="checkBox" catchtap='checkedTap'>
+            <checkbox checked="{{checked}}" color='#fff' />
+        </label>
+        <view class="stuInfo">江晓鹏3：18510235964</view>
+    </view>
+
+
+    <view class="item">
+        <label class="checkBox" catchtap='checkedTap'>
+            <checkbox checked="{{checked}}" color='#fff' />
+        </label>
+        <view class="stuInfo">江晓鹏2：18510235964-父亲:15516536356-母亲:14343554545</view>
+    </view>
+
+
+
+    <view class="item">
+        <label class="checkBox" catchtap='checkedTap'>
+            <checkbox checked="{{checked}}" color='#fff' />
+        </label>
+        <view class="stuInfo">江晓鹏2：18510235964-父亲:15516536356-母亲:14343554545</view>
+    </view>
+
+
+    <view class="item">
+        <label class="checkBox" catchtap='checkedTap'>
+            <checkbox checked="{{checked}}" color='#fff' />
+        </label>
+        <view class="stuInfo">江晓鹏2：18510235964-父亲:15516536356-母亲:14343554545</view>
+    </view>
+
+    <view class="item">
+        <label class="checkBox" catchtap='checkedTap'>
+            <checkbox checked="{{checked}}" color='#fff' />
+        </label>
+        <view class="stuInfo">江晓鹏2：18510235964-父亲:15516536356-母亲:14343554545</view>
+    </view>
+
+    <view class="item">
+        <label class="checkBox" catchtap='checkedTap'>
+            <checkbox checked="{{checked}}" color='#fff' />
+        </label>
+        <view class="stuInfo">江晓鹏2：18510235964-父亲:15516536356-母亲:14343554545</view>
+    </view>
+
+
+</view>
+
+<view class="rightBtn" bindtap="sendMessage">
+    <text class="rightTxt">下一步</text>
+</view>

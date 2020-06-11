@@ -1,0 +1,95 @@
+<view class="itemMain container-cn">
+    <!-- <view class="topOneTitle">调课时间:</view>
+    <view class="item">
+        <view class='select_box select_box_time contentBorder'>
+                 <picker mode="date" value="{{date}}"  start="2019-01-01" end="2030-01-01" bindchange="bindDateChange">
+                <view class="picker"> {{date}} </view>
+            </picker>
+        </view>
+
+        <view class='select_box select_box_time contentBorder'>
+                 <picker mode="time" value="{{startDate}}"  start="0:00" end="24:00" bindchange="bindDateChange">
+                <view class="picker"> {{startDate}} </view>
+            </picker>
+        </view>
+
+        <view class='select_box select_box_time contentBorder'>
+                 <picker mode="time" value="{{endDate}}"  start="2019-01-01" end="2030-01-01" bindchange="bindDateChange">
+                <view class="picker"> {{endDate}} </view>
+            </picker>
+        </view>
+
+        <view class='select_box select_box_time'>
+            <view class='select'>
+                <text class='select_text'>结束时间</text>
+                <image class='select_img' src='http://520fax.com/ximg/iconr.png'></image>
+            </view>
+        </view>
+    </view> -->
+
+     <view class="item">
+        <view class="itemTitle">调课日期:</view>
+        <view class="itemContent contentBorder">
+            <picker mode="date" value="{{date}}"  start="1990-01-01" end="2030-01-01" bindchange="bindDateChange">
+                <view class="picker"> {{date}} </view>
+            </picker>
+        </view>
+    </view>
+
+    <view class="item">
+        <view class="itemTitle">调课时间:</view>
+        <view class="itemContent">
+            <view class='select_box select_box_time contentBorder'>
+                <picker mode="time" value="{{startDate}}" start="0:00" end="24:00" bindchange="bindStartDateChange">
+                <view class="picker"> {{startDate}} </view>
+            </picker>
+            </view>
+            <text class="tipsTxt">至</text>
+            <view class='select_box select_box_time contentBorder'>
+
+                <picker  mode="time" value="{{startDate}}" start="0:00" end="24:00"   bindchange="bindEndDateChange">
+                <view class="picker"> {{endDate}} </view>
+            </picker>
+            </view>
+        </view>
+        <view class="clear"></view>
+    </view>
+
+    <view class="item">
+        <view class="itemTitle">申请教师:</view>
+         <view class="itemContent contentBorder">
+              <picker bindchange="bindTeaPickerChange" value="{{index}}" range="{{teacherArray}}">
+                <view class="picker">
+                    {{teacherArray[index]}}
+                </view>
+            </picker>
+        </view>
+    </view>
+
+    <view class="item">
+        <view class="itemTitle">上课教室:</view>
+         <view class="itemContent contentBorder">
+              <picker bindchange="bindJSPickerChange" value="{{jsIndex}}" range="{{classRoomArray}}">
+                <view class="picker">
+                    {{classRoomArray[jsIndex]}}
+                </view>
+            </picker>
+        </view>
+    </view>
+
+    <view class="item">
+        <view class="lastItem">发送调课通知:</view>
+        <view class="lastRight">
+            <label class="leftLabel fr font checked-lable" catchtap='checkedTap'>
+                <radio checked="{{checked}}" color='#469bba' />发送
+            </label>
+
+            <label class="fr font checked-lable" catchtap='checkedTap'>
+                <radio checked="{{checked}}" color='#469bba' />不发送
+            </label>
+        </view>
+    </view>
+    <view class="button" bindtap="">
+        <text>提交</text>
+    </view>
+</view>

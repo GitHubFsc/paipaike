@@ -1,0 +1,229 @@
+/* pages/pinTuanTemp/pinTuanTemp.wxss */
+
+page {
+    color: #333;
+    background-color: #fff;
+}
+
+.ptMain {
+    padding-bottom: 100rpx;
+}
+
+.bannerMain {
+    position: relative;
+    margin-bottom: 60rpx;
+}
+
+.bannerMain .bannerImage {
+    width: 100%;
+    display: block;
+}
+
+.bannerMain .addBannerImg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+}
+
+.addBannerImg image {
+    width: 140rpx;
+    height: 140rpx;
+    background-size: 100% 100%;
+    top: 50%;
+    margin-top: -70rpx;
+    position: absolute;
+    left: 50%;
+    margin-left: -70rpx;
+}
+
+.pTItle {
+    width: 80%;
+    margin: 20rpx auto 40rpx auto;
+    text-align: left;
+    border: 1rpx solid #ccc;
+    border-radius: 8rpx;
+    padding: 20rpx 20rpx;
+}
+
+.textAreaMain {
+    border: 1rpx solid #ccc;
+    border-radius: 8rpx;
+    padding: 20rpx 20rpx;
+}
+
+textarea {
+    font-size: 30rpx;
+    width: 100%;
+    height: 100rpx;
+}
+
+input {
+    border: 1rpx solid #ccc;
+    text-indent: 20rpx;
+    border-radius: 8rpx;
+    height: 70rpx;
+    padding-left: 20rpx;
+}
+
+.pTActivity {
+    text-align: center;
+    width: 90%;
+    margin: 0 atuo;
+}
+
+.activityTitle {
+    font-size: 44rpx;
+}
+
+.pTActivity .line {
+    width: 100rpx;
+    height: 6rpx;
+    background-color: #333;
+    display: block;
+    margin: 0 auto 60rpx auto;
+}
+
+.activityTitle text {
+    color: #205c9a;
+}
+
+.pTTime {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin: 0 auto 80rpx auto;
+    display: flex;
+    justify-content: center;
+}
+
+.pTTime .innerTxt {
+    width: 50rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+   /* margin: -10rpx 10rpx 0rpx; */
+}
+
+.pTTime .timeStart, .pTTime .timeEnd {
+    width: 200rpx;
+    height: 80rpx;
+    border: 2rpx solid #e3e3e8;
+    border-radius: 10rpx;
+}
+
+.pTTime view {
+    display: inline-block;
+}
+.picker{
+    width: 100%;
+    height: 100%;
+    line-height: 78rpx;
+    text-align: center;
+}
+.ptselectMain {
+    font-size: 30rpx;
+    color: #5b5b5c;
+    width: 85%;
+    margin: 40rpx auto 40rpx auto;
+    border-bottom: 1rpx solid #f5f5f5;
+}
+
+.ptselectMain .leftRadio {
+    margin-right: 60rpx;
+}
+
+.ptselectMain .checkedRadio {
+    margin: 20rpx;
+}
+
+.ptGoodMain {
+    width: 94%;
+    margin: 0 auto 60rpx auto;
+    box-shadow: 0 0 15rpx rgba(153, 153, 153, 0.5);
+}
+
+.ptGoodMain .goodTitle {
+    width: 100%;
+    height: 70rpx;
+    font-size: 30rpx;
+    line-height: 70rpx;
+    background-color: #469bba;
+    color: #fff;
+}
+
+.ptGoodMain .goodTitle text {
+    padding-left: 40rpx;
+}
+
+.ptGoodMain .goodImg image {
+    width: 160rpx;
+    height: 160rpx;
+    background-size: 100%;
+}
+
+.goodItem {
+    padding: 20rpx 30rpx;
+}
+
+.goodItem .leftTxt {
+    display: inline-block;
+    width: 30%;
+    vertical-align: middle;
+    margin-bottom: 30rpx;
+    font-size: 28rpx;
+}
+
+.goodItem .rightCaozuo {
+    width: 65%;
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 30rpx;
+    font-size: 28rpx;
+}
+
+.ptGuize {
+    margin: 0rpx 20rpx;
+    padding: 20rpx 0;
+    font-size: 28rpx;
+    border-bottom: 1rpx solid #f5f5f5;
+}
+
+.ptGuize text {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.ptGuize input {
+    width: 170rpx;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10rpx;
+    text-indent: 20rpx;
+    padding-left: 20rpx;
+}
+
+.activityMiddleImg .imgItem{
+    width: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.activityMiddleImg .imgItem image{
+    width: 95%;
+    background-size: 100% 100%;
+}
+
+.actvSm{
+    margin-top: 60rpx;
+    text-align: center;
+}
+.smInput{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 20rpx;
+}

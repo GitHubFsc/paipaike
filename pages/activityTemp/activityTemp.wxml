@@ -1,0 +1,56 @@
+<view class="container studentDetail">
+
+    <view class="container-cn stu-cn">
+        <view class="yn-cntop">
+            模版:
+            <text class="stuName">拼团模版</text>
+            <view class="checkedRadio">
+                <label class="leftLabel fr font checked-lable">
+                    <radio checked="{{checked}}" color='#469bba' />
+                </label>
+            </view>
+
+        </view>
+        <view class="stu-link">
+            <view class="stu-link-item">
+                模版说明:
+                <text class="mr30">拼团模版</text>
+            </view>
+            <view class="stu-link-item">
+                模版描述:
+                <text class="mr30">拼团选择</text>
+            </view>
+
+            <view class="stu-link-item">
+                <image src="../../images/background-3.jpg"></image>
+            </view>
+
+        </view>
+    </view>
+    <view class="container-cn stu-cn">
+        <view class="yn-cntop">
+            模版:
+            <text class="stuName">报名模版</text>
+            <view class="checkedRadio">
+                <label class="leftLabel fr font checked-lable">
+                    <radio checked="{{checked}}" color='#469bba' />
+                </label>
+            </view>
+        </view>
+        <view class="stu-link">
+            <view class="stu-link-item">
+                报名说明:
+                <text class="mr30">报名模版</text>
+            </view>
+            <view class="stu-link-item">
+                模版描述:
+                <text class="mr30">报名选择</text>
+            </view>
+
+            <view class="stu-link-item">
+                <image src="../../images/background-2.jpg"></image>
+            </view>
+
+        </view>
+    </view>
+</view>

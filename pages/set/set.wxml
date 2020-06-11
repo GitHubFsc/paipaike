@@ -1,0 +1,15 @@
+<view class="container mainBg">
+
+   <view class="item" bindtap="aboutUs">
+        <text>关于我们</text>
+   </view> 
+   <view class="item" bindtap="changePassWord">
+        <text>修改密码</text>
+   </view> 
+   <view class="item" bindtap="changePhone">
+        <text>修改手机号</text>
+   </view> 
+    <view class="item" bindtap="outLogin">
+        <text>退出登录</text>
+   </view> 
+</view>

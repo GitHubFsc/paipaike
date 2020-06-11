@@ -1,0 +1,110 @@
+<view class="container middleMain">
+    <scroll-view scroll-x="true" class="nav" scroll-left="{{navScrollLeft}}" scroll-with-animation="{{true}}">
+        <block wx:for="{{navData}}" wx:for-index="idx" wx:for-item="navItem" wx:key="idx">
+            <view class="nav-item {{currentTab == idx ?'active':''}}" data-current="{{idx}}" bindtap="switchNav">
+                {{navItem.text}}
+                <block wx:if="{{currentTab == idx}}">
+                    <view class="line"></view>
+                </block>
+            </view>
+        </block>
+        <view>
+        </view>
+    </scroll-view>
+
+    <swiper style="height:{{heiNum}}; width:100%" class="container-cn tab-box" current="{{currentTab}}" duration="300" bindchange="switchTab">
+        <swiper-item class="swiperItems student-table">
+            <view class="table">
+                <view class="thead">
+                    <view class="td">姓名</view>
+                    <view class="td">课程名称</view>
+                    <view class="td">课时</view>
+                    <view class="td">已耗课时</view>
+                    <view class="td">剩余课时</view>
+                    <view class="td">奖励课时</view>
+                </view>
+                <view wx:for="{{studentArray}}" wx:key="index" class="tr {{index%2==0?'odd':'even'}}">
+                    <view class="td">{{item.name}}</view>
+                    <view class="td" hover-start-time="{{item.courseName}}">{{item.courseName}}</view>
+                    <view class="td">{{item.totalHour}}小时</view>
+                    <view class="td">{{item.usedHour}}小时</view>
+                    <view class="td">{{item.nouseHour}}小时</view>
+                    <view class="td">{{item.giveHour}}小时</view>
+                </view>
+   
+            </view>
+              
+        </swiper-item>
+
+        <swiper-item class="swiperItems">
+       		<block wx:for="{{teacherArray}}" wx:key="index">
+				<view class="table-title">{{item.yearMonth}}</view>
+				<view class="table">
+					<view class="thead">
+						<view class="td">老师姓名</view>
+						<view class="td">入职时间</view>
+						<view class="td">上课课时</view>
+					</view>
+					<view wx:for="{{item.TeacherInfos}}" wx:for-item="cell" wx:key="index" class="tr {{index%2==0?'odd':'even'}}">
+						<view class="td">{{cell.name}}</view>
+						<view class="td">{{cell.entryDate}}</view>
+						<view class="td">{{cell.ClassHour}}课时</view>
+					</view>
+				</view>
+			</block>
+        </swiper-item>
+
+
+        <swiper-item class="swiperItems school-table">
+            <view class="table">
+                <view class="thead">
+                    <view class="td">时间</view>
+                    <view class="td">在读人数</view>
+                    <view class="td">总课时</view>
+                    <view class="td">已消课时</view>
+                    <view class="td">未消课时</view>
+                </view>
+                <view  wx:for="{{organArray}}" wx:key="index" class="tr {{index%2==0?'odd':'even'}}">
+                    <view class="td">{{item.yearMonth}}</view>
+                    <view class="td">{{item.num}}人</view>
+                    <view class="td">{{item.totalHour}}课时</view>
+                    <view class="td">{{item.useHour}}课时</view>
+                    <view class="td">{{item.nouseHour}}课时</view>
+                </view>
+            </view>
+        </swiper-item>
+    </swiper>
+</view>
+
+
+<!-- <view class='userlist container'>
+    <view class='userlist-item' bindtap="studentList">
+        <view class='userlist-icon'>
+            <image src='../../images/BTN.png'></image>
+        </view>
+        <view class='userlist-text'>学员</view>
+        <view class='userlist-rt'>
+            <image src='http://520fax.com/ximg/iconr.png'></image>
+        </view>
+    </view>
+
+    <view class='userlist-item' bindtap="teacherList">
+        <view class='userlist-icon'>
+            <image src='../../images/BTN.png'></image>
+        </view>
+        <view class='userlist-text'>老师</view>
+        <view class='userlist-rt'>
+            <image src='../../images/BTN.png'></image>
+        </view>
+    </view>
+
+    <view class='userlist-item' bindtap="schoolChart">
+        <view class='userlist-icon'>
+             <image src='../../images/BTN.png'></image>
+        </view>
+        <view class='userlist-text'>学校</view>
+        <view class='userlist-rt'>
+            <image src='http://520fax.com/ximg/iconr.png'></image>
+        </view>
+    </view>
+</view> -->

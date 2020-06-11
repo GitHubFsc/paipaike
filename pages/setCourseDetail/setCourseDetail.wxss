@@ -1,0 +1,223 @@
+page {
+    background-color: #fff;
+}
+
+.itemMain {
+    padding-bottom: 100rpx;
+}
+
+.mainTitle {
+    height: 80rpx;
+    font-size: 34rpx;
+    text-indent: 40rpx;
+    box-shadow: 0 0 10rpx rgba(153, 153, 153, 0.2);
+    border-bottom: 4rpx solid #469db9;
+    line-height: 80rpx;
+    margin-bottom: 50rpx;
+    color: #469db9;
+}
+
+.item {
+    line-height: 100rpx;
+    /* border-bottom: 1rpx solid #f4f2f2; */
+    height: 100rpx;
+}
+
+.item .itemTitle {
+    width: 23%;
+    float: left;
+    font-size: 30rpx;
+    text-align: center;
+}
+
+.item .itemContent {
+    width: 75%;
+    float: right;
+}
+
+.banjiset {
+    width: 65%;
+    float: left;
+    margin-left: 15rpx;
+}
+
+.item input {
+    height: 70rpx;
+    margin-top: 15rpx;
+    font-size: 28rpx;
+    border: 1px solid #efefef;
+    border-radius: 8rpx;
+    color: #999;
+    padding: 0 20rpx;
+}
+
+.select_box {
+    background: #fff;
+    width: 100%;
+    margin: 15rpx auto;
+    position: relative;
+}
+
+.select {
+    box-sizing: border-box;
+    width: 100%;
+    height: 70rpx;
+    border: 1px solid #efefef;
+    border-radius: 8rpx;
+    display: flex;
+    align-items: center;
+    padding: 0 20rpx;
+}
+
+.select_text {
+    font-size: 26rpx;
+    flex: 1;
+    color: #999;
+}
+
+.select_img {
+    width: 30rpx;
+    height: 30rpx;
+    display: block;
+    transition: transform 0.3s;
+    background-size: 100% 100%;
+}
+
+.select_img_rotate {
+    transform: rotate(90deg);
+}
+
+.option_box {
+    position: absolute;
+    top: 70rpx;
+    width: 100%;
+    border: 1px solid #efefef;
+    box-sizing: border-box;
+    overflow-y: auto;
+    border-top: 0;
+    background: #fff;
+    transition: height 0.3s;
+    z-index: 2;
+    height: 350rpx;
+    color: #999;
+}
+
+.option {
+    display: block;
+    line-height: 40rpx;
+    font-size: 26rpx;
+    border-bottom: 1px solid #efefef;
+    padding: 10rpx;
+}
+
+.lastItem, .lastRight {
+    width: 50%;
+    display: inline-block;
+    font-size: 30rpx;
+}
+
+.lastRight {
+    color: #999;
+}
+
+.checked-lable radio {
+    transform: scale(0.8);
+}
+
+.leftLabel {
+    margin-right: 40rpx;
+}
+
+.bgBlue {
+    background-color: #479aba;
+}
+
+.bgBlue text {
+    color: #fff;
+}
+
+.contentBorder {
+    border: 1px solid #efefef;
+    border-radius: 8rpx;
+    color: #999;
+    font-size: 28rpx;
+    line-height: 70rpx;
+    margin-top: 15rpx;
+}
+
+.picker {
+    position: relative;
+    padding-left: 20rpx;
+}
+
+.uploadImg {
+    width: 100%;
+    height: 150rpx;
+    background-color: #e8e8e8;
+    position: relative;
+    margin-top: 10rpx;
+}
+
+.uploadImg image {
+    position: absolute;
+    width: 80rpx;
+    height: 80rpx;
+    background-size: 100% 100%;
+    top: 50%;
+    margin-top: -38rpx;
+    left: 50%;
+    margin-left: -30rpx;
+}
+
+.uploadedImg {
+    margin-top: 20rpx;
+    overflow: hidden;
+}
+
+.imgItem {
+    width: 25%;
+    height: 140rpx;
+    background-size: 100% 100%;
+    border-radius: 10rpx 10rpx;
+    display: inline-block;
+    position: relative;
+}
+
+.imgItem image {
+    width: 90%;
+    height: 90%;
+    background-size: 100% 100%;
+    margin-left: 5%;
+    margin-top: 5%;
+    border-radius: 8rpx;
+}
+
+.iconClass {
+    position: absolute;
+    width: 15rpx;
+    height: 15rpx;
+    z-index: 99;
+    top: 3%;
+    right: 13%;
+}
+
+.addClassIcon {
+    width: 40rpx;
+    height: 40rpx;
+    background-size: 100% 100%;
+    margin-left: 20rpx;
+    margin-top: 30rpx;
+}
+
+.selector {
+    width: 100%;
+    height:70rpx;
+    color: #999;
+    font-size: 26rpx;
+    line-height: 70rpx;
+}
+
+
+checkbox {
+    transform: scale(0.6);
+}

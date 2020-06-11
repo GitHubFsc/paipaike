@@ -1,0 +1,24 @@
+<view class="container-cn">
+    <view class="searchMain">
+        <view class="search left">
+            <input placeholder="搜索..."></input>
+        </view>
+        <view class="rightAdd left" bindtap="selectStu">
+            <image src=" ../../images/searchAddIcon.png"></image>
+        </view>
+    </view>
+    <view class="studentItem" bindtap="studentDetail">
+        <view class="studentInfo">
+            <view class="ite">
+                <text class="classTitle">江小鹏(EnglishName)</text>
+            </view>
+            <view class='select-icon'>
+                <image src='http://520fax.com/ximg/iconr.png'></image>
+            </view>
+        </view>
+    </view>
+    <view class="rightBtn" bindtap="addStudent">
+        <image src="../../images/btnAddIcon.png"></image>
+        <text class="rightTxt">新增学员</text>
+    </view>
+</view>

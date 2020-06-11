@@ -1,0 +1,137 @@
+<view class="container studentDetail">
+
+	<view class="itemMain container-cn">
+		<view class="item">
+			<view class="itemTitle">姓名(中文):</view>
+			<view class="itemContent">
+				<input placeholder="必填" value="{{cn_name}}" maxlength="12" bindinput="cnNameInput"></input>
+			</view>
+		</view>
+
+		<view class="item">
+			<view class="itemTitle">姓名(英文):</view>
+			<view class="itemContent">
+				<input placeholder="选填" maxlength="25" value="{{en_name}}" bindinput="enNameInput"></input>
+			</view>
+		</view>
+
+		<view class="item">
+			<view class="itemTitle">学员性别:</view>
+			<view class="itemContent">
+				<radio-group bindchange="sexChange">
+					<radio checked="{{male}}" color='#469bba' value="0" />男
+					<radio checked="{{female}}" color='#469bba' value="1" />女
+				</radio-group>
+
+			</view>
+		</view>
+
+		<view class="item">
+			<view class="itemTitle">出生日期:</view>
+			<!-- <view class="itemContent">
+				<input placeholder="YYYY-MM-DD" maxlength="25" value="{{date}}" bindinput="bindDateChange"></input>
+			</view> -->
+			<view class="itemContent contentBorder">
+				<picker mode="date" value="{{date}}" start="1990-01-01" end="{{end}}" bindchange="bindDateChange">
+					<view class="picker"> {{date}} </view>
+				</picker>
+			</view>
+		</view>
+
+		<view class="item">
+			<view class="itemTitle">班级:</view>
+			<view class="itemContent contentBorder">
+				<picker bindchange="bindClassChange" value="{{csIndex}}" range="{{classData}}" range-key="{{'name'}}">
+					<view class="picker">
+						{{classData[csIndex].name}}
+					</view>
+				</picker>
+			</view>
+		</view>
+
+		<view class="item">
+			<view class="itemTitle">年级:</view>
+			<view class="itemContent contentBorder">
+				<picker bindchange="bindGradeChange" value="{{grade}}" range="{{gradeList}}">
+					<view class="picker"> {{grade}} </view>
+				</picker>
+			</view>
+		</view>
+
+		<view class="item">
+			<view class="itemTitle">所在学校:</view>
+			<view class="itemContent">
+				<input placeholder="必填" value="{{school}}" bindinput="schoolInput" maxlength="20"></input>
+			</view>
+		</view>
+
+		<view class="item">
+			<!-- <view class="itemTitle">与学员关系:</view> -->
+			<view class="itemTitle">主要联系人:</view>
+			<!-- <view class="itemContent contentBorder">
+                <picker bindchange="bindClassChange" value="{{index}}" range="{{classData}}">
+                    <view class="picker">
+                        {{classData[index]}}
+                    </view>
+                </picker>
+            </view> -->
+			<view class="itemContent">
+				<input placeholder="必填" value="{{parental_identity}}" maxlength="6" bindinput="parentalIdentityInput"></input>
+			</view>
+		</view>
+
+		<view class="item">
+			<!-- <view class="itemTitle">家长手机号:</view> -->
+			<view class="itemTitle">联系手机:</view>
+			<view class="itemContent">
+				<input type="number" placeholder="必填" value="{{phone}}" bindblur="phoneInput" maxlength="11"></input>
+			</view>
+		</view>
+
+		<!-- <view class="item">
+			<view class="itemTitle">{{flag==2?'意向课程':'报名课程'}}:</view>
+			<view class="itemContent contentBorder">
+				<picker bindchange="bindCourseChange" value="{{ceIndex}}" range="{{courseData}}" range-key="{{'name'}}">
+					<view class="picker">
+						{{courseData[ceIndex].name}}
+					</view>
+				</picker>
+			</view>
+		</view> -->
+		<view class="item">
+			<view class="itemTitle">{{flag==2?'意向课程':'报名课程'}}:</view>
+			<view class="itemContent contentBorder">
+				<multi-selector class='selector' value='{{value}}' bindchange='bindSelectorChange' bindmodalopen='onModalOpen' placeholder='请选择教授科目' items='{{courseData}}' bindmodalclose='onModalClose' show-value='{{false}}'>
+				</multi-selector>
+			</view>
+		</view>
+		<!-- <view class="selectItemMain" >
+			<view class="itemTitle">已选学员:</view>
+			<view class="itemContent">
+				<view class="selectItem" wx:key="select" wx:for="{{selectValue}}">{{item.value}}</view>
+			</view>
+		</view> -->
+		<block wx:for="{{selectValue}}" wx:key="index">
+			<view class="class">
+				<view class="classTitle">{{item.value}}课时:</view>
+				<view class="classTxt">节</view>
+				<view class="classInput">
+					<input type="number" placeholder="报名课时" value="{{}}" data-id="{{item.id}}" bindblur="classHourInput" maxlength="3"></input>
+				</view>
+				
+			</view>
+		</block>
+		
+
+		<view class="item" wx:if="{{flag == 2}}">
+			<view class="itemTitle">备注:</view>
+			<view class="itemContent">
+				<textarea placeholder="备注" value="{{remark}}" auto-height="true" bindinput="remarkInput" maxlength="150"></textarea>
+			</view>
+		</view>
+
+		<view class="button bgBlue" bindtap="confirmAdd">
+			<text>确认新增</text>
+		</view>
+	</view>
+</view>

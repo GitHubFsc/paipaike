@@ -1,0 +1,149 @@
+<view class="container courseDetail">
+    <view class="itemMain container-cn">
+        <view class="item">
+            <view class="itemTitle">试听课程:</view>
+            <view class="itemContent contentBorder">
+                <picker bindchange="bindKCPickerChange" value="{{kcIndex}}" range="{{courseArray}}" range-key="{{'name'}}">
+                    <view class="picker">
+                        {{courseArray[kcIndex].name}}
+                    </view>
+                </picker>
+            </view>
+        </view>
+
+        <view class="item">
+            <view class="itemTitle">试听班级:</view>
+            <view class="banjiset contentBorder ">
+                <picker bindchange="bindPickerChange" value="{{bjIndex}}" range="{{classArray}}" range-key="{{'name'}}">
+                    <view class="picker">
+                        {{classArray[bjIndex].name}}
+                    </view>
+                </picker>
+            </view>
+            <image bindtap="showModal" class="addClassIcon" src="../../images/searchAddIcon.png"></image>
+        </view>
+
+        <view class="item">
+            <view class="itemTitle">试听教室:</view>
+            <view class="contentBorder banjiset">
+                <picker bindchange="bindJSPickerChange" value="{{jsIndex}}" range="{{classRoomArray}}" range-key="{{'name'}}">
+                    <view class="picker">
+                        {{classRoomArray[jsIndex].name}}
+                    </view>
+                </picker>
+            </view>
+            <image bindtap="showJiaoshi" class="addClassIcon" src="../../images/searchAddIcon.png"></image>
+        </view>
+
+
+
+        <view class="item">
+            <view class="itemTitle">试听日期:</view>
+            <view class="itemContent contentBorder">
+                <picker mode="date" value="{{date}}" start="2019-01-01" end="2030-01-01" bindchange="bindDateChange">
+                    <view class="picker"> {{date}} </view>
+                </picker>
+            </view>
+        </view>
+
+
+        <view class="item">
+            <view class="itemTitle">试听时间:</view>
+
+            <view class="itemContent">
+                <view class='select_box select_box_time contentBorder'>
+                    <picker mode="time" value="{{startDate}}" start="0:00" end="24:00" bindchange="bindStartDateChange">
+                        <view class="picker"> {{startDate}} </view>
+                    </picker>
+                </view>
+                <text class="tipsTxt">至</text>
+                <view class='select_box select_box_time contentBorder'>
+
+                    <picker mode="time" value="{{startDate}}" start="0:00" end="24:00" bindchange="bindEndDateChange">
+                        <view class="picker"> {{endDate}} </view>
+                    </picker>
+                </view>
+            </view>
+        </view>
+
+        <view class="item">
+            <view class="itemTitle">上课教师:</view>
+            <view class="banjiset contentBorder">
+                <picker bindchange="bindTeacherPickerChange" value="{{teacherIndex}}" range="{{teacherArray}}" range-key="{{'cn_name'}}">
+                    <view class="picker">
+                        {{teacherArray[teacherIndex].cn_name}}
+                    </view>
+                </picker>
+            </view>
+             <!-- <image bindtap="addTeacher" class="addClassIcon" src="../../images/searchAddIcon.png"></image> -->
+        </view>
+
+        <view class="item">
+            <view class="itemTitle">班级容量:</view>
+            <view class="itemContent">
+                <input placeholder="班级容量" type="number" bindinput="capacityInput" value="{{capacity}}" maxlength="2"></input>
+            </view>
+        </view>
+
+        <!-- <view class="item">
+            <view class="itemTitle">课程图片:</view>
+        </view>
+
+        <view class="uploadImg" bindtap="chooseImageTap">
+            <image src="../../images/addImgIcon.png"></image>
+        </view>
+
+        <view class="container-cn uploadedImg" >
+            <view class="imgItem" wx:if="{{imgShow}}">
+                <icon class="iconClass" type="cancel" size="15" bindtap="removeImageFn"/>
+                <image src="{{imagePath}}"></image>
+            </view>
+        </view> -->
+
+
+            <view class="button" bindtap="submitFn">
+                <text>提交</text>
+                <view class="icon"></view>
+            </view>
+
+
+
+    </view>
+
+    <view class="commodity_screen" bindtap="hideModalJs" wx:if="{{showModalStatusJs}}"></view>
+    <view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatusJs}}">
+        <view class="title">
+            <text>录入教室</text>
+        </view>
+        <view class="linkItem">
+            <view class="leftImg">
+                <image src="../../images/classRoomBar.png" mode="widthFix"></image>
+            </view>
+            <view class="txt">
+                <input type="text" placeholder="请录入教室" bindinput="classRoomNameInput"></input>
+            </view>
+        </view>
+        <view class="rightBtn" bindtap="addClassRoomFn" wx:if="{{showModalStatusJs}}">
+            <text class="rightTxt">确定</text>
+        </view>
+    </view>
+
+    <view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+    <view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+        <view class="title">
+            <text>录入班级</text>
+        </view>
+        <view class="linkItem">
+            <view class="leftImg">
+                <image src="../../images/classBar.png" mode="widthFix"></image>
+            </view>
+            <view class="txt">
+                <input type="text" placeholder="请录入班级" bindinput="classNameInput"></input>
+            </view>
+        </view>
+        <view class="rightBtn" bindtap="addClassFn" wx:if="{{showModalStatus}}">
+            <text class="rightTxt">确定</text>
+        </view>
+    </view>
+
+</view>

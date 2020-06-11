@@ -1,0 +1,103 @@
+
+.studentDetail {
+    margin-top: 50rpx;
+    margin-bottom: 20rpx;
+}
+
+.stuName {
+    color: #469db9 !important;
+    display: inline !important;
+    font-size: 32rpx !important;
+}
+
+.stu-cn {
+    background: #fff;
+    border-radius: 10rpx;
+    padding: 24rpx 0;
+    margin-top: 42rpx;
+    overflow: hidden;
+    box-shadow: 0 0 10rpx rgba(153, 153, 153, 0.2);
+}
+
+.yn-cntop {
+    border-bottom: 1rpx solid #e5e5e5;
+    line-height: 80rpx;
+    padding-left: 40rpx;
+    position: relative;
+}
+
+.yn-cntop text:first-child {
+    color: #333;
+    font-size: 28rpx;
+}
+
+.yn-cntop text:last-child {
+    color: #666;
+    font-size: 28rpx;
+    margin-top: 37rpx;
+    margin-bottom: 25rpx;
+}
+
+.stu-link {
+    width: 95%;
+    background: #f6f6f6;
+    margin: 0 auto;
+    margin-top: 25rpx;
+    border-radius: 15rpx;
+}
+
+.stu-link-item {
+    width: 95%;
+    /* height: 84rpx; */
+    margin: 0 auto;
+    border-bottom: 1rpx solid #e5e5e5;
+    font-size: 27rpx;
+    line-height: 84rpx;
+}
+
+.stu-link-item image{
+    width: 100%;
+    height: 160rpx;
+    margin-right: 30rpx;
+}
+
+.orderNum {
+    width: 70%;
+    height: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.stu-link-item text {
+    float: right;
+}
+
+.stu-link-item {
+    margin-left: 30rpx;
+}
+
+.mr30 {
+    margin-right: 30rpx;
+}
+
+.stu-link .stu-link-item:last-child {
+    border: none;
+}
+
+.jiaoyi {
+    float: left !important;
+    background: #469db9;
+    height: 38rpx;
+    line-height: 38rpx;
+    color: #fff;
+    padding: 0 10rpx;
+    margin-top: 23rpx;
+    border-radius: 5rpx;
+}
+
+.checkedRadio{
+    position: absolute;
+    top: -10rpx;
+    right: 10rpx;
+}

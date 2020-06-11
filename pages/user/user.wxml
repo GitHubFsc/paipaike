@@ -1,0 +1,66 @@
+<view class='userhead container'>
+    <view class="us-info-head">
+        <image src="{{image}}"></image>
+         <view class="us-info-name">{{name}}</view>
+    </view>
+</view>
+
+<view class='userlist container'>
+    <view class='userlist-item'>
+        <view class='userlist-icon'>
+            <image src='../../images/SchoolDistrictB.png'></image>
+        </view>
+        <view class='userlist-text'>所属校区</view>
+        <view class="schoolName">{{schoolName}} </view>
+    </view>
+
+    <!-- <view class='userlist-item' bindtap="selectWork">
+        <view class='userlist-icon'>
+            <image src='http://yan.zhangqianit.com/PAIKEIMG/userIcon-2.png'></image>
+        </view>
+        <view class='userlist-text'>查看出勤</view>
+        <view class='userlist-rt'>
+            <image src='http://520fax.com/ximg/iconr.png'></image>
+        </view>
+    </view> -->
+
+    <!-- <view class='userlist-item' bindtap="bukeInfo">
+        <view class='userlist-icon'>
+            <image src='http://yan.zhangqianit.com/PAIKEIMG/userIcon-2.png'></image>
+        </view>
+        <view class='userlist-text'>补课信息</view>
+        <view class='userlist-rt'>
+            <image src='http://520fax.com/ximg/iconr.png'></image>
+        </view>
+    </view> -->
+
+    <!-- <view class='userlist-item' bindtap="accountAssignment">
+        <view class='userlist-icon'>
+            <image src='http://yan.zhangqianit.com/PAIKEIMG/userIcon-3.png'></image>
+        </view>
+        <view class='userlist-text'>账号分配</view>
+        <view class='userlist-rt'>
+            <image src='http://520fax.com/ximg/iconr.png'></image>
+        </view>
+    </view> -->
+
+    <view class='userlist-item' bindtap="jgPage">
+        <view class='userlist-icon'>
+            <image src='../../images/jgjsB.png'></image>
+        </view>
+        <view class='userlist-text'>机构介绍</view>
+        <view class='userlist-rt'>
+            <image src='../../images/iconr.png'></image>
+        </view>
+    </view>
+
+    <view class='userlist-item' bindtap="setting">
+        <view class='userlist-icon'>
+            <image src='../../images/setupB.png'></image>
+        </view>
+        <view class='userlist-text'>设置</view>
+        <view class='userlist-rt'>
+            <image src='../../images/iconr.png'></image>
+        </view>
+    </view>
+</view>

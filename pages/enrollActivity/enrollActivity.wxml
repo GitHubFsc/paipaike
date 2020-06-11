@@ -1,0 +1,32 @@
+<view class="notice-title">
+    <view>公告标题</view>
+    <input class="" value="{{title}}" bindinput="titleInput" type="text"  placeholder="请输入公告标题" placeholder-style="" placeholder-class="input-placeholder"
+         maxlength="25" >
+    </input>
+</view>
+  
+
+<view class="container mainBg">
+    <view class="txtDom">
+        <textarea maxlength="300" bindinput="contentInput" placeholder="请输入您的通知公告" value="{{content}}"></textarea>
+    </view>
+</view>
+
+<view class="uploadImg" bindtap="chooseMultImageTap">
+    <image src="../../images/addImgIcon.png"></image>
+</view>
+
+<view class="container-cn uploadedImg">
+    <view class="imgItem" wx:for="{{imagePath}}" wx:key="{{index}}">
+        <icon class="iconClass" type="cancel" size="15" bindtap="deleteMultImageFn" data-index="{{index}}" />
+        <image src="{{item}}"></image>
+    </view>
+</view>
+
+
+
+<view class="container-cn">
+    <view class="button" bindtap="submitFn">
+        <text>提交</text>
+    </view>
+</view>

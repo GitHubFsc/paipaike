@@ -1,0 +1,208 @@
+.userhead {
+    background-color: #469bba;
+}
+
+.us-info-head {
+    margin: 0 auto;
+    padding-top: 50rpx;
+    padding: 50epx;
+}
+
+.us-info-head  image {
+    height: 150rpx;
+    width: 150rpx;
+    border-radius: 50% 50%;
+    background-size: 100% 100%;
+    margin: 0 auto;
+    display: block;
+}
+
+.us-info-name {
+    font-size: 36rpx;
+    color: #fff;
+    line-height: 120rpx;
+    text-align: center;
+}
+
+.user-mess {
+    padding-top: 50rpx;
+    text-align: right;
+}
+
+.user-mess image {
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.user-mess text {
+    color: #fff;
+    font-size: 22rpx;
+}
+
+.user-mess-text {
+    margin-top: -15rpx;
+}
+
+.user-infolist {
+    display: flex;
+}
+
+.user-tx {
+    width: 140rpx;
+    height: 166rpx;
+    background: url(http://520fax.com/ximg/txbg.png) no-repeat;
+    background-size: 100%;
+    position: relative;
+}
+
+.user-tx-img {
+    position: absolute;
+    top: 30rpx;
+    left: 5rpx;
+    width: 133rpx;
+    height: 133rpx;
+}
+
+.user-tx-img image {
+    width: 100%;
+    height: 100%;
+}
+
+.user-info {
+    flex: 1;
+    margin-left: 29rpx;
+    color: #fff;
+}
+
+.user-info-one {
+    font-size: 30rpx;
+    margin-top: 48rpx;
+}
+
+.user-info-one image {
+    width: 26rpx;
+    height: 26rpx;
+    margin-left: 14rpx;
+}
+
+.user-info-two {
+    font-size: 26rpx;
+    margin-top: 14rpx;
+}
+
+.user-info-two image {
+    width: 26rpx;
+    height: 26rpx;
+    margin-right: 14rpx;
+}
+
+.user-info-three {
+    margin-top: 18rpx;
+    width: 300rpx;
+    height: 52rpx;
+    text-align: center;
+    border: 1rpx solid #666;
+    box-sizing: border-box;
+    border-radius: 50rpx;
+    line-break: 52rpx;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.user-rt {
+    width: 61rpx;
+    margin-top: 52rpx;
+}
+
+.user-rt image {
+    width: 61rpx;
+    height: 61rpx;
+}
+
+.user-rt text {
+    font-size: 20rpx;
+    color: #fff;
+}
+
+.user-sy {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 138rpx;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.user-sy-item {
+    width: 33.3333%;
+    height: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: rgb(235, 235, 235);
+}
+
+.user-sy-item text {
+    width: 100%;
+    text-indent: 30rpx;
+}
+
+.user-sy-color {
+    color: #fff;
+}
+
+.userorder {
+    background: #fff;
+}
+
+.userlist {
+    background: #fff;
+    margin-top: 21rpx;
+}
+
+.userlist-item {
+    width: 100%;
+    height: 100rpx;
+    border-bottom: 1px solid #f5f6f7;
+    display: flex;
+    align-items: center;
+}
+
+.userlist-icon {
+    width: 50rpx;
+    height: 50rpx;
+    margin-left: 30rpx;
+}
+
+.schoolName {
+    font-size: 26rpx;
+    padding-right: 40rpx;
+}
+
+.userlist-icon image {
+    width: 100%;
+    height: 100%;
+}
+
+.userlist-text {
+    flex: 1;
+    margin-left: 30rpx;
+    font-size: 26rpx;
+    margin-right: 20rpx;
+}
+
+.userlist-text text {
+    float: right;
+    color: #5cc99c;
+}
+
+.userlist-rt {
+    width: 26rpx;
+    height: 26rpx;
+    margin-right: 38rpx;
+}
+
+.userlist-rt image {
+    width: 100%;
+    height: 100%;
+}

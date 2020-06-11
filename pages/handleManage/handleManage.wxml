@@ -1,0 +1,128 @@
+<view class="container middleMain">
+	<scroll-view scroll-x="true" class="nav" scroll-left="{{navScrollLeft}}" scroll-with-animation="{{true}}">
+		<block wx:for="{{navData}}" wx:for-index="idx" wx:for-item="navItem" wx:key="idx">
+			<view class="nav-item {{currentTab == idx ?'active':''}}" data-current="{{idx}}" bindtap="switchNav">
+				{{navItem.text}}
+				<block wx:if="{{currentTab == idx}}">
+					<view class="line"></view>
+				</block>
+			</view>
+		</block>
+		<view>
+		</view>
+	</scroll-view>
+
+	<swiper style="height: {{heiNum}}" class="container-cn tab-box" current="{{currentTab}}" duration="300" bindchange="switchTab">
+		<swiper-item class="swiperItems">
+			<view class="searchMain">
+				<view class="search">
+					<image src="../../images/search.png"></image>
+					<input placeholder="搜索..." confirm-type='search' bindconfirm="searchFn"></input>
+				</view>
+			</view>
+			<view class="studentItem" wx:for="{{zaiduList}}" wx:key="list" bindtap="studentDetailFn1" data-id="{{item.id}}">
+				<view class="studentInfo">
+					<view class="ite">
+						<text class="classTitle">{{item.cn_name}}, {{item.en_name}},{{item.class_name}},{{item.school}}</text>
+					</view>
+					<view class='select-icon'>
+						<image src='../../images/iconr.png'></image>
+					</view>
+				</view>
+			</view>
+			<view class="rightBtn" bindtap="addStudentFn">
+				<view>
+					<image src="../../images/StudentW.png"></image>
+					<text class="rightTxt">新增学员</text>
+				</view>
+			</view>
+		</swiper-item>
+		<swiper-item class="swiperItems">
+			<view class="searchMain">
+				<view class="search">
+					<image src="../../images/search.png"></image>
+					<input placeholder="搜索..." confirm-type='search' bindconfirm="searchFn"></input>
+				</view>
+			</view>
+			<view class="studentItem" wx:for="{{zaiduList}}" wx:key="list" bindtap="studentDetailFn2" data-id="{{item.id}}">
+				<view class="studentInfo">
+					<view class="ite">
+						<text class="classTitle">{{item.cn_name}}, {{item.en_name}},{{item.class_name}},{{item.school}}</text>
+					</view>
+					<view class='select-icon'>
+						<image src='../../images/iconr.png'></image>
+					</view>
+				</view>
+			</view>
+			<view class="rightBtn" bindtap="addStudentFn">
+				<view>
+					<image src="../../images/StudentW.png"></image>
+					<text class="rightTxt">新增学员</text>
+				</view>
+			</view>
+		</swiper-item>
+		<swiper-item class="swiperItems">
+			<view class="searchMain">
+				<view class="search">
+					<image src="../../images/search.png"></image>
+					<input placeholder="搜索..." confirm-type='search' bindconfirm="searchFn"></input>
+				</view>
+			</view>
+			<view class="studentItem" wx:for="{{zaiduList}}" wx:key="list" bindtap="studentDetailFn3" data-id="{{item.id}}">
+				<view class="studentInfo">
+					<view class="ite">
+						<text class="classTitle">{{item.cn_name}}, {{item.en_name}},{{item.class_name}},{{item.school}}</text>
+					</view>
+					<view class='select-icon'>
+						<image src='../../images/iconr.png'></image>
+					</view>
+				</view>
+			</view>
+			<view class="rightBtn" bindtap="addStudentFn">
+				<view>
+					<image src="../../images/StudentW.png"></image>
+					<text class="rightTxt">新增学员</text>
+				</view>
+			</view>
+		</swiper-item>
+	</swiper>
+	<!-- <view class="rightBtn" bindtap="addStudentFn">
+		<view>
+			<image src="../../images/StudentW.png"></image>
+			<text class="rightTxt">新增学员</text>
+		</view>
+	</view> -->
+</view>
+
+<!-- <view class='userlist container'>
+
+    <view class='userlist-item' bindtap="zaiduFn">
+        <view class='userlist-icon'>
+            <image src='../../images/zaiduIcon.png'></image>
+        </view>
+        <view class='userlist-text'>在读</view>
+        <view class='userlist-rt'>
+            <image src='../../images/iconr.png'></image>
+        </view>
+    </view>
+
+    <view class='userlist-item' bindtap="cengduduFn">
+        <view class='userlist-icon'>
+            <image src='../../images/cengduIcon.png'></image>
+        </view>
+        <view class='userlist-text'>曾读</view>
+        <view class='userlist-rt'>
+            <image src='../../images/iconr.png'></image>
+        </view>
+    </view>
+
+    <view class='userlist-item' bindtap="yixiangFn">
+        <view class='userlist-icon'>
+            <image src='../../images/yixiangIcon.png'></image>
+        </view>
+        <view class='userlist-text'>意向</view>
+        <view class='userlist-rt'>
+            <image src='../../images/iconr.png'></image>
+        </view>
+    </view>
+</view> -->

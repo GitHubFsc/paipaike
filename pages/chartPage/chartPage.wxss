@@ -1,0 +1,747 @@
+page{
+    width: 100%;
+    height: 100%;
+}
+.container {
+    width: 100%;
+    height: 100%;
+}
+.userhead {
+    background-color: #469bba;
+}
+
+.us-info-head {
+    margin: 0 auto;
+    padding-top: 50rpx;
+    padding: 50epx;
+}
+
+.us-info-head  image {
+    height: 150rpx;
+    width: 150rpx;
+    border-radius: 50% 50%;
+    background-size: 100% 100%;
+    margin: 0 auto;
+    display: block;
+}
+
+.us-info-name {
+    font-size: 36rpx;
+    color: #fff;
+    line-height: 120rpx;
+    text-align: center;
+}
+
+.user-mess {
+    padding-top: 50rpx;
+    text-align: right;
+}
+
+.user-mess image {
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.user-mess text {
+    color: #fff;
+    font-size: 22rpx;
+}
+
+.user-mess-text {
+    margin-top: -15rpx;
+}
+
+.user-infolist {
+    display: flex;
+}
+
+.user-tx {
+    width: 140rpx;
+    height: 166rpx;
+    background: url(http://520fax.com/ximg/txbg.png) no-repeat;
+    background-size: 100%;
+    position: relative;
+}
+
+.user-tx-img {
+    position: absolute;
+    top: 30rpx;
+    left: 5rpx;
+    width: 133rpx;
+    height: 133rpx;
+}
+
+.user-tx-img image {
+    width: 100%;
+    height: 100%;
+}
+
+.user-info {
+    flex: 1;
+    margin-left: 29rpx;
+    color: #fff;
+}
+
+.user-info-one {
+    font-size: 30rpx;
+    margin-top: 48rpx;
+}
+
+.user-info-one image {
+    width: 26rpx;
+    height: 26rpx;
+    margin-left: 14rpx;
+}
+
+.user-info-two {
+    font-size: 26rpx;
+    margin-top: 14rpx;
+}
+
+.user-info-two image {
+    width: 26rpx;
+    height: 26rpx;
+    margin-right: 14rpx;
+}
+
+.user-info-three {
+    margin-top: 18rpx;
+    width: 300rpx;
+    height: 52rpx;
+    text-align: center;
+    border: 1rpx solid #666;
+    box-sizing: border-box;
+    border-radius: 50rpx;
+    line-break: 52rpx;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.user-rt {
+    width: 61rpx;
+    margin-top: 52rpx;
+}
+
+.user-rt image {
+    width: 61rpx;
+    height: 61rpx;
+}
+
+.user-rt text {
+    font-size: 20rpx;
+    color: #fff;
+}
+
+.user-sy {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 138rpx;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.user-sy-item {
+    width: 33.3333%;
+    height: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: rgb(235, 235, 235);
+}
+
+.user-sy-item text {
+    width: 100%;
+    text-indent: 30rpx;
+}
+
+.user-sy-color {
+    color: #fff;
+}
+
+.userorder {
+    background: #fff;
+}
+
+.userlist {
+    background: #fff;
+    margin-top: 21rpx;
+}
+
+.userlist-item {
+    width: 100%;
+    height: 100rpx;
+    border-bottom: 1px solid #f5f6f7;
+    display: flex;
+    align-items: center;
+}
+
+.userlist-icon {
+    width: 50rpx;
+    height: 50rpx;
+    margin-left: 30rpx;
+}
+
+.schoolName {
+    font-size: 26rpx;
+    padding-right: 40rpx;
+}
+
+.userlist-icon image {
+    width: 100%;
+    height: 100%;
+}
+
+.userlist-text {
+    flex: 1;
+    margin-left: 30rpx;
+    font-size: 26rpx;
+    margin-right: 20rpx;
+}
+
+.userlist-text text {
+    float: right;
+    color: #5cc99c;
+}
+
+.userlist-rt {
+    width: 26rpx;
+    height: 26rpx;
+    margin-right: 38rpx;
+}
+
+.userlist-rt image {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* ====================== */
+page {
+    background-color: #fff;
+}
+
+.userhead {
+    background-color: #469bba;
+}
+
+.us-info-head {
+    margin: 0 auto;
+    padding-top: 50rpx;
+    padding: 50epx;
+}
+
+.us-info-head  image {
+    height: 150rpx;
+    width: 150rpx;
+    border-radius: 50% 50%;
+    background-size: 100% 100%;
+    margin: 0 auto;
+    display: block;
+}
+
+.us-info-name {
+    font-size: 36rpx;
+    color: #fff;
+    line-height: 120rpx;
+    text-align: center;
+}
+
+.user-mess {
+    padding-top: 50rpx;
+    text-align: right;
+}
+
+.user-mess image {
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.user-mess text {
+    color: #fff;
+    font-size: 22rpx;
+}
+
+.user-mess-text {
+    margin-top: -15rpx;
+}
+
+.user-infolist {
+    display: flex;
+}
+
+.user-tx {
+    width: 140rpx;
+    height: 166rpx;
+    background: url(http://520fax.com/ximg/txbg.png) no-repeat;
+    background-size: 100%;
+    position: relative;
+}
+
+.user-tx-img {
+    position: absolute;
+    top: 30rpx;
+    left: 5rpx;
+    width: 133rpx;
+    height: 133rpx;
+}
+
+.user-tx-img image {
+    width: 100%;
+    height: 100%;
+}
+
+.user-info {
+    flex: 1;
+    margin-left: 29rpx;
+    color: #fff;
+}
+
+.user-info-one {
+    font-size: 30rpx;
+    margin-top: 48rpx;
+}
+
+.user-info-one image {
+    width: 26rpx;
+    height: 26rpx;
+    margin-left: 14rpx;
+}
+
+.user-info-two {
+    font-size: 26rpx;
+    margin-top: 14rpx;
+}
+
+.user-info-two image {
+    width: 26rpx;
+    height: 26rpx;
+    margin-right: 14rpx;
+}
+
+.user-info-three {
+    margin-top: 18rpx;
+    width: 300rpx;
+    height: 52rpx;
+    text-align: center;
+    border: 1rpx solid #666;
+    box-sizing: border-box;
+    border-radius: 50rpx;
+    line-break: 52rpx;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.user-rt {
+    width: 61rpx;
+    margin-top: 52rpx;
+}
+
+.user-rt image {
+    width: 61rpx;
+    height: 61rpx;
+}
+
+.user-rt text {
+    font-size: 20rpx;
+    color: #fff;
+}
+
+.user-sy {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 138rpx;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.user-sy-item {
+    width: 33.3333%;
+    height: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: rgb(235, 235, 235);
+}
+
+.user-sy-item text {
+    width: 100%;
+    text-indent: 30rpx;
+}
+
+.user-sy-color {
+    color: #fff;
+}
+
+.userorder {
+    background: #fff;
+}
+
+.userlist {
+    background: #fff;
+    margin-top: 21rpx;
+}
+
+.userlist-item {
+    width: 100%;
+    height: 100rpx;
+    border-bottom: 1px solid #f5f6f7;
+    display: flex;
+    align-items: center;
+}
+
+.userlist-icon {
+    width: 50rpx;
+    height: 50rpx;
+    margin-left: 30rpx;
+}
+
+.schoolName {
+    font-size: 26rpx;
+    padding-right: 40rpx;
+}
+
+.userlist-icon image {
+    width: 100%;
+    height: 100%;
+}
+
+.userlist-text {
+    flex: 1;
+    margin-left: 30rpx;
+    font-size: 26rpx;
+    margin-right: 20rpx;
+}
+
+.userlist-text text {
+    float: right;
+    color: #5cc99c;
+}
+
+.userlist-rt {
+    width: 26rpx;
+    height: 26rpx;
+    margin-right: 38rpx;
+}
+
+.userlist-rt image {
+    width: 100%;
+    height: 100%;
+}
+
+.middleMain {
+    /* margin-top: 20rpx; */
+    margin-bottom: 30rpx;
+}
+
+.nav {
+    width: 100%;
+    box-sizing: border-box;
+    background: #469bba;
+    height: 78rpx;
+}
+
+.nav-item {
+    display: inline-block;
+    text-align: center;
+    font-size: 30rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+    width: 33.3%;
+    color: #fff;
+}
+
+.line {
+    width: 60rpx;
+    height: 4rpx;
+    background-color: #fff;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.nav-item.active {
+    color: #fff;
+}
+
+.tab-box {
+    width: 100%;
+    height: 100% !important;
+    padding-bottom: 20rpx;
+    margin-top: 0rpx;
+    /* border: 1rpx solid #c9c9c9; */
+    border-top: none;
+    /* background-color: #fff; */
+    border-radius: 0rpx 0rpx 13rpx 13rpx;
+}
+
+.tab-content {
+    overflow-y: scroll;
+}
+.swiperItems{
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+}
+.swiperItems image {
+    width: 100%;
+}
+
+/* ========================================= */
+
+.search {
+    width: 70%;
+    height: 60rpx;
+    background-size: 28rpx;
+    border-radius: 15rpx;
+    margin: 20rpx auto 40rpx auto;
+    border: 1rpx solid #bcbcbc;
+    margin-left: 15%;
+}
+
+.search input {
+    width: 90%;
+    height: 100%;
+    float: right;
+    font-size: 27rpx;
+}
+
+.rightAdd {
+    border: 1rpx solid #479aba;
+    border-radius: 10rpx;
+    height: 58rpx;
+    width: 75rpx;
+    margin-top: 20rpx;
+    margin-left: 3%;
+}
+
+.rightAdd image {
+    width: 45rpx;
+    height: 45rpx;
+    background-size: 100% 100%;
+    margin-top: 7rpx;
+    margin-left: 16rpx;
+}
+
+.studentItem {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 6rpx;
+    height: 80rpx;
+    margin-bottom: 10rpx;
+    line-height: 80rpx;
+    position: relative;
+    background-color: #fff;
+    box-shadow: 0 0 10rpx rgba(153, 153, 153, 0.2);
+}
+
+.studentItem .studentInfo {
+    width: 100%;
+    font-size: 28rpx;
+}
+
+.studentInfo .ite {
+    padding-left: 5%;
+    padding-right: 5%;
+    line-height: 80rpx;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 82%;
+    display: inline-block;
+    height: 80rpx;
+    vertical-align: middle;
+}
+
+.select-icon {
+    width: 8%;
+    display: inline-block;
+    height: 80rpx;
+    vertical-align: middle;
+}
+
+.select-icon image {
+    position: absolute;
+    width: 35rpx;
+    height: 35rpx;
+    background-size: 100% 100%;
+    margin-top: 23rpx;
+}
+
+.studentInfo .classTitle {
+    color: #1a1a1a;
+    margin-right: 25rpx;
+}
+
+.rightBtn {
+    width: 45%;
+    height: 70rpx;
+    background-size: 100%;
+    margin-top: 30rpx;
+    border: 4rpx solid #469bba;
+    border-radius: 20rpx;
+    position: relative;
+    margin: 60rpx auto 0 auto;
+    background-color: #469bba;
+}
+
+.rightBtn image {
+    position: absolute;
+    width: 30rpx;
+    height: 30rpx;
+    background-size: 100% 100%;
+    top: 20rpx;
+    left: 60rpx;
+}
+
+.rightBtn .rightTxt {
+    color: #fff !important;
+    text-align: center;
+    line-height: 70rpx;
+    display: block;
+    font-size: 30rpx;
+}
+
+.rightBtn text {
+    color: #469bba;
+    text-align: center;
+    line-height: 70rpx;
+    display: block;
+    font-size: 30rpx;
+}
+
+/* ================================ */
+
+page {
+    background-color: #fff;
+    margin: 0 0;
+    padding: 0 0;
+}
+
+.wcks ,.sdrs ,.syks ,.jlks ,.wxks{
+    color: #101010;
+    font-size: 26rpx;
+    padding-left: 20rpx;
+    margin-bottom: 15rpx;
+}
+
+.wxks text{
+    color: #055e7f;
+}
+
+.wcks text{
+    color: #afdcb1;
+}
+
+.sdrs text{
+    color: #92a4e4;
+}
+
+.syks text{
+      color: #469bba;
+}
+
+.jlks text{
+      color: #da5d3d;
+}
+
+.canvas {
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 150rpx;
+    margin-top: 30rpx;
+}
+
+.columnCanvas {
+    box-shadow: 0 0 10rpx rgba(153, 153, 153, 0.2);
+}
+
+.xiaoke {
+    color: #afdcb1;
+    font-weight: bold;
+    font-size: 30rpx;
+    width: 100%;
+    box-shadow: 0 0 10rpx rgba(153, 153, 153, 0.2);
+    margin-top: 80rpx;
+}
+
+.xiaoke .title {
+    margin-left: 5%;
+    padding: 20rpx 0rpx;
+    color: #101010;
+    font-weight: lighter;
+}
+
+.progress {
+    width: 90%;
+    margin-top: 0px;
+    padding-bottom: 20px;
+    margin: 0rpx auto;
+}
+
+.zb {
+    color: #95a7e9;
+}
+
+/* 
+.studentInfo{
+    width: 100%;
+    height: 70rpx;
+    background-color: #fff;
+    margin-bottom: 50rpx;
+     box-shadow: 0 0 10rpx rgba(153, 153, 153, 0.2);
+     text-align: center;
+     margin-top: 5rpx;
+}
+.studentInfo text{
+    font-size: 32rpx;
+    font-weight: bold;
+    line-height: 70rpx;
+} */
+
+ .table .thead {
+    height: 101rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20rpx;
+    background-color: #479AB9;
+    color: #fff;
+    font-size: 26rpx;
+}
+ .table .thead .td {
+    height: 100%;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    border-right: 1rpx solid #D8D8D8;
+}
+ .table .tr {
+    height: 100rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #333;
+    font-size: 28rpx;
+    border-bottom: 1rpx solid #D8D8D8;
+}
+ .table .tr .td {
+    height: 100%;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    border-right: 1rpx solid #D8D8D8;
+}
+ .table .odd {
+    background-color: #fff;
+}
+ .even {
+    background-color: #F6F7FA;
+}
+.table-title {
+    margin: 57rpx 0 31rpx 27rpx;
+    color: #147092;
+    font-size: 32rpx;
+}

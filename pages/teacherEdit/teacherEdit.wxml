@@ -1,0 +1,102 @@
+<view class="itemMain container-cn">
+    <view class="item">
+        <view class="itemTitle">姓名(中文):</view>
+        <view class="itemContent">
+            <input placeholder="姓名" value="王某某"></input>
+        </view>
+    </view>
+
+    <view class="item">
+        <view class="itemTitle">姓名(英文):</view>
+        <view class="itemContent">
+            <input placeholder="姓名" value="Amy"></input>
+        </view>
+    </view>
+
+    <view class="item">
+        <view class="itemTitle">履历介绍:</view>
+        <view class="itemContent">
+            <input placeholder="履历介绍" value="老师介绍"></input>
+        </view>
+    </view>
+
+    <view class="item">
+        <view class="itemTitle">绑定手机:</view>
+        <view class="itemContent">
+            <input placeholder="绑定手机" value="15515517726"></input>
+        </view>
+    </view>
+
+    <view class="item">
+        <view class="itemTitle">入职时间:</view>
+        <view class="itemContent contentBorder">
+            <picker mode="date" value="{{date}}" start="1990-01-01" end="2030-01-01" bindchange="bindDateChange">
+                <view class="picker"> {{date}} </view>
+            </picker>
+        </view>
+    </view>
+
+    <view class="item">
+        <view class="itemTitle">教授科目:</view>
+        <view class="itemContent contentBorder">
+            <picker bindchange="bindKCPickerChange" value="{{kcIndex}}" range="{{scourseData}}">
+                <view class="picker">
+                    {{scourseData[kcIndex]}}
+                </view>
+            </picker>
+        </view>
+    </view>
+
+    <view class="item">
+        <view class="itemTitle">教师照片:</view>
+    </view>
+    <view class="uploadImg">
+        <image src="../../images/addImgIcon.png"></image>
+    </view>
+    <view class="container-cn uploadedImg">
+        <view class="imgItem">
+            <icon class="iconClass" type="cancel" size="15" />
+            <image src="../../images/background-3.jpg"></image>
+        </view>
+    </view>
+
+    <view class="item">
+        <view class="itemTitle">资质图片:</view>
+    </view>
+
+    <view class="uploadImg">
+        <image src="../../images/addImgIcon.png"></image>
+    </view>
+
+    <view class="container-cn uploadedImg">
+        <view class="imgItem">
+            <icon class="iconClass" type="cancel" size="15" />
+            <image src="../../images/background-3.jpg"></image>
+        </view>
+        <view class="imgItem">
+            <icon class="iconClass" type="cancel" size="15" />
+            <image src="../../images/background-2.jpg"></image>
+        </view>
+        <view class="imgItem">
+            <icon class="iconClass" type="cancel" size="15" />
+            <image src="../../images/background-1.jpg"></image>
+        </view>
+        <view class="imgItem">
+            <icon class="iconClass" type="cancel" size="15" />
+            <image src="../../images/background-3.jpg"></image>
+        </view>
+        <view class="imgItem">
+            <icon class="iconClass" type="cancel" size="15" />
+            <image src="../../images/background-2.jpg"></image>
+        </view>
+        <view class="imgItem">
+            <icon class="iconClass" type="cancel" size="15" />
+            <image src="../../images/background-1.jpg"></image>
+        </view>
+    </view>
+
+    <view class="button bgBlue" bindtap="submitAllocation">
+        <text>保存</text>
+    </view>
+
+</view>

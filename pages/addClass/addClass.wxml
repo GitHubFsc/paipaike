@@ -1,0 +1,76 @@
+<view class="container">
+    <view class="topBar">
+        <image bindtap="showModal" class="leftAdd" src="../../images/BTN.png"></image>
+        <text>班级</text>
+        <image bindtap="deleteKeCheng" class="rightDel" src="../../images/BTN.png"></image>
+    </view>
+</view>
+
+<view class="container-cn">
+    <view class="item">
+        <view class="stuInfo">班级1</view>
+        <label class="checkBox" catchtap='checkedTap'>
+            <checkbox checked="{{checked}}" color='#fff' />
+        </label>
+    </view>
+
+    <view class="item">
+        <view class="stuInfo">班级2</view>
+        <label class="checkBox" catchtap='checkedTap'>
+            <checkbox checked="{{checked}}" color='#fff' />
+        </label>
+    </view>
+
+    <view class="item">
+        <view class="stuInfo">班级3</view>
+        <label class="checkBox" catchtap='checkedTap'>
+            <checkbox checked="{{checked}}" color='#fff' />
+        </label>
+    </view>
+
+    <view class="item">
+        <view class="stuInfo">班级4</view>
+        <label class="checkBox" catchtap='checkedTap'>
+            <checkbox checked="{{checked}}" color='#fff' />
+        </label>
+    </view>
+
+    <view class="item">
+        <view class="stuInfo">班级5</view>
+        <label class="checkBox" catchtap='checkedTap'>
+            <checkbox checked="{{checked}}" color='#fff' />
+        </label>
+    </view>
+
+    <view class="item">
+        <view class="stuInfo">班级6</view>
+        <label class="checkBox" catchtap='checkedTap'>
+            <checkbox checked="{{checked}}" color='#fff' />
+        </label>
+    </view>
+
+    <view class="item">
+        <view class="stuInfo">班级7</view>
+        <label class="checkBox" catchtap='checkedTap'>
+            <checkbox checked="{{checked}}" color='#fff' />
+        </label>
+    </view>
+</view>
+
+<view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+<view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+    <view class="title">
+        <text>录入班级</text>
+    </view>
+    <view class="linkItem">
+        <view class="leftImg">
+            <image src="../../images/classBar.png" mode="widthFix"></image>
+        </view>
+        <view class="txt">
+            <input type="text" placeholder="请录入班级"></input>
+        </view>
+    </view>
+    <view class="rightBtn" bindtap="hideModal" wx:if="{{showModalStatus}}">
+        <text class="rightTxt">确定</text>
+    </view>
+</view>

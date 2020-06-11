@@ -1,0 +1,165 @@
+<view class="container courseDetail">
+	<view class="qrCode">
+		<canvas canvas-id="myQrcode"></canvas>
+		<!-- <image src="../../images/erweima.jpg"></image> -->
+	</view>
+
+	<view class="itemMain container-cn">
+		<view class="item">
+			<view class="itemTitle">课程名称:</view>
+			<view class="itemContent">
+				<input placeholder="课程名称" value="{{courseName}}" disabled></input>
+			</view>
+		</view>
+
+		<view class="item">
+			<view class="itemTitle">班　　级:</view>
+			<view class="itemContent">
+				<input placeholder="班级容量" value="{{className}}" disabled></input>
+			</view>
+		</view>
+
+		<view class="item">
+			<view class="itemTitle">上课日期:</view>
+			<view class="itemContent">
+				<input value="{{date}}" disabled></input>
+			</view>
+			<!-- <view class="datePinlv">
+                <input value="单次" disabled></input>
+            </view> -->
+		</view>
+
+		<view class="item">
+			<view class="itemTitle">上课时间:</view>
+			<view class="itemContent">
+				<view class='select_box select_box_time'>
+					<input value="{{start}}" disabled></input>
+				</view>
+				<text class="tipsTxt">至</text>
+				<view class='select_box select_box_time'>
+					<input value="{{end}}" disabled></input>
+				</view>
+			</view>
+		</view>
+		<view class="item">
+			<view class="itemTitle">教　　室:</view>
+			<view class="itemContent">
+				<input placeholder="教室" value="{{classRoomName}}" disabled></input>
+			</view>
+		</view>
+
+
+
+		<view class="item">
+			<view class="itemTitle">上课教师:</view>
+			<view class="itemContent">
+				<input value="{{teacherName}}" disabled></input>
+			</view>
+		</view>
+
+		<view class="selectItemMain item" wx:if="{{selectStatus}}">
+			<view class="itemTitle">学 员:</view>
+			<view class="itemContent">
+				<view class="selectItem" wx:key="select" wx:for="{{studentArray}}">{{item.cn_name}}</view>
+			</view>
+		</view>
+
+		<!-- <view class="item">
+			<view class="itemTitle">联系电话:</view>
+			<view class="itemContent">{{phone}}</view>
+		</view> -->
+
+		<view class="item">
+			<view class="itemTitle">备　　注:</view>
+			<view class="itemContent">{{remark}}</view>
+		</view>
+
+		<!-- <view class="item">
+            <view class="itemTitle">班级容量:</view>
+            <view class="itemContent">
+                <input value="99" disabled></input>
+            </view>
+        </view> -->
+
+		<!-- <view class="selectItemMain" wx:if="{{pxStatus}}">
+            <view class="itemTitle">平行班级:</view>
+            <view class="itemContent">
+                <view class="selectItem" wx:key="select" 
+                wx:for="{{pxSelectValueNew}}">{{item.value}}</view>
+            </view>
+        </view> -->
+
+		<view class="detail-foot">
+			<view class="button" bindtap="deleteRoomFn">
+				<text>删除</text>
+				<!-- <view class="icon"></view> -->
+			</view>
+			<view class="button" bindtap="editCourseList">
+				<text>修改</text>
+				<!-- <view class="icon"></view> -->
+			</view>
+		</view>
+	</view>
+
+	<!-- 我的教室列表 -->
+	<view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+	<view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+		<view class="title">
+			<text>我的教室</text>
+		</view>
+		<view class="roomList">
+			<view class="linkItem roomItem">
+				<input type="text" value="教室一"></input>
+				<view class="edit" bindtap="showEditModal">修改</view>
+				<view class="delete" bindtap="deleteRoomFn">删除</view>
+			</view>
+			<view class="linkItem roomItem">
+				<input type="text" value="教室一"></input>
+				<view class="edit" bindtap="showEditModal">修改</view>
+				<view class="delete" bindtap="deleteRoomFn">删除</view>
+			</view>
+		</view>
+		<view class="rightBtn" bindtap="showAddModal" wx:if="{{showModalStatus}}">
+			<text class="rightTxt">新增</text>
+		</view>
+	</view>
+
+	<!-- 新增教室 -->
+	<view class="commodity_screen" bindtap="hideModal" wx:if="{{showAddModalStatus}}"></view>
+	<view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showAddModalStatus}}">
+		<view class="title">
+			<text>新增教室</text>
+		</view>
+		<view class="linkItem">
+			<view class="leftImg">
+				<image src="../../images/classRoomBar.png" mode="widthFix"></image>
+			</view>
+			<view class="txt">
+				<input type="text" placeholder="请录入课程"></input>
+			</view>
+		</view>
+		<view class="rightBtn" bindtap="hideModal" wx:if="{{showAddModalStatus}}">
+			<text class="rightTxt">确定</text>
+		</view>
+	</view>
+
+	<!-- 修改教室 -->
+	<view class="commodity_screen" bindtap="hideModal" wx:if="{{showEditModalStatus}}"></view>
+	<view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showEditModalStatus}}">
+		<view class="title">
+			<text>编辑教室</text>
+		</view>
+		<view class="linkItem">
+			<view class="leftImg">
+				<image src="../../images/classRoomBar.png" mode="widthFix"></image>
+			</view>
+			<view class="txt">
+				<input type="text" placeholder="请录入课程" value="教室一"></input>
+			</view>
+		</view>
+		<view class="rightBtn" bindtap="hideModal" wx:if="{{showEditModalStatus}}">
+			<text class="rightTxt">保存</text>
+		</view>
+	</view>
+
+</view>

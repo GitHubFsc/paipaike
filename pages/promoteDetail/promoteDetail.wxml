@@ -1,0 +1,63 @@
+<!-- 头部 -->
+<view class="promote-header">
+  <view class="header-lt">
+    <image class="" mode="aspectFit"  src="{{banner}}"   />
+  </view>
+  <view class="header-rt">
+    <view class="header-title">{{title}}</view>
+    <view class="people-count">{{enrollNum}}人团购</view>
+  </view>
+</view>
+
+<!-- 拼团信息 -->
+<view class="promote-main">
+  <view class="main-title">报名情况({{view_num}}人参观)</view>
+  <scroll-view class="" scroll-x="true" scroll-y="false" upper-threshold="50" lower-threshold="50" 
+    scroll-top="0" scroll-left="0" scroll-into-view="" scroll-with-animation="true" enable-back-to-top="false" 
+    bindscrolltoupper="" bindscrolltolower="" bindscroll="">
+    
+    <view class="main-table">
+      <view class="thead">
+        <view class="td">姓名</view>
+        <view class="td">电话</view>
+        <!-- <view class="td">课程</view> -->
+        <!-- <view class="td">支付费用</view> -->
+        <view class="td">是否成团</view>
+        <view class="td">购买时间</view>
+      </view>
+      <view class="tr" wx:for="{{enrollList}}" wx:key="id">
+        <view class="td">{{item.name}}</view>
+        <view class="td">{{item.phone}}</view>
+        <!-- <view class="td">{{item.course}}</view> -->
+        <!-- <view class="td">{{item.payment}}元</view> -->
+        <view class="td">{{item.is_master?"是":"否"}}</view>
+        <view class="td">{{item.add_time}}</view>
+      </view>
+      <!-- <view class="tr">
+        <view class="td">张三</view>
+        <view class="td">188888888</view>
+        <view class="td">英语课</view>
+        <view class="td">300元</view>
+        <view class="td">是</view>
+        <view class="td">2019/12/20</view>
+      </view>
+      <view class="tr">
+        <view class="td">张三</view>
+        <view class="td">188888888</view>
+        <view class="td">英语课</view>
+        <view class="td">300元</view>
+        <view class="td">是</view>
+        <view class="td">2019/12/20</view>
+      </view>
+      <view class="tr">
+        <view class="td">张三</view>
+        <view class="td">188888888</view>
+        <view class="td">英语课</view>
+        <view class="td">300元</view>
+        <view class="td">是</view>
+        <view class="td">2019/12/20</view>
+      </view> -->
+    </view>
+  </scroll-view>
+    
+</view>

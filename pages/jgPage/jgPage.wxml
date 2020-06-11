@@ -1,0 +1,43 @@
+<view class="itemMain container-cn">
+	<view class="item">
+		<view class="itemTitle">机构名称:</view>
+		<view class="itemContent">
+			<input placeholder="机构名称" bindinput="nameInput" value="{{name}}"></input>
+		</view>
+	</view>
+	<view class="item">
+		<view class="itemTitle">电话:</view>
+		<view class="itemContent">
+			<input placeholder="电话" value="{{phone}}" bindblur="phoneInput"></input>
+		</view>
+	</view>
+	<view class="item">
+		<view class="itemTitle">地址:</view>
+		<view class="itemContent">
+			<input placeholder="地址" value="{{address}}" bindinput="addressInput"></input>
+		</view>
+	</view>
+	<view class="item">
+		<view class="itemTitle">文字介绍:</view>
+		<view class="itemContent">
+			<input placeholder="文字介绍" value="{{info}}" bindinput="infoInput"></input>
+		</view>
+	</view>
+
+	<view class="item">
+		<view class="itemTitle">学校商标:</view>
+	</view>
+	<view class="uploadImg" bindtap="chooseImageTap">
+		<image src="../../images/addImgIcon.png"></image>
+	</view>
+	<view class="container-cn uploadedImg" wx:if="{{imgShow}}">
+		<view class="imgItem">
+			<icon class="iconClass" type="cancel" size="15" bindtap="deleteImageFn" />
+			<image src="{{imagePath}}"></image>
+		</view>
+	</view>
+
+	<view class="button bgBlue" bindtap="submitEdit">
+		<text>保存</text>
+	</view>
+</view>

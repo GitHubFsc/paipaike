@@ -1,0 +1,595 @@
+<view class="container">
+	<!-- <image class="shitingBanner" src="../../images/background-2.jpg">
+    </image> -->
+	<view class="calenderMain">
+		<picker mode='date' bindchange='change' value='={{month}}'>
+			<view class="dateTime">{{month}}</view>
+		</picker>
+		<calendar class="calender" value='{{month}}' bindchange='change' />
+		<view class="table" wx:for="{{cartData}}" wx:key="id">
+			<view class="thead {{item.mark}}">
+				<view class="td">{{item.start}}-{{item.end}}</view>
+				<view class="td" bindtap="courseDetail" data-id="{{item.id}}">详情</view>
+			</view>
+			<view class="tbody">
+				<view class="tr">课程名称:　　{{item.courseName}}</view>
+				<view class="tr">班　　级:　　{{item.className}}</view>
+				<view class="tr">上课教室:　　{{item.classRoomName}}</view>
+				<view class="tr">授课老师:　　{{item.teacherName}}</view>
+				<view class="tr">试听人数:　　{{item.capacity}}人</view>
+			</view>
+		</view>
+		<view class="curButton" bindtap="addShiTing">
+			<text>新增试听</text>
+		</view>
+	</view>
+
+
+	<!-- <view class="table">
+        <view class="thead">
+            <view class="td">8:00-9:00</view>
+            <view class="td" bindtap="courseDetail">详情</view>
+        </view>
+        <view class="tbody">
+            <view class="tr">课程名称:　　英语</view>
+            <view class="tr">班　　级:　　奥数班</view>
+            <view class="tr">上课教室:　　1号教室</view>
+            <view class="tr">授课老师:　　王老师</view>
+            <view class="tr">试听人数:　　50人</view>
+        </view>
+    </view>
+    <view class="table last">
+        <view class="thead">
+            <view class="td">8:00-9:00</view>
+            <view class="td" bindtap="courseDetail">详情</view>
+        </view>
+        <view class="tbody">
+            <view class="tr">课程名称:　　英语</view>
+            <view class="tr">班　　级:　　奥数班</view>
+            <view class="tr">上课教室:　　1号教室</view>
+            <view class="tr">授课老师:　　王老师</view>
+            <view class="tr">试听人数:　　50人</view>
+        </view>
+    </view> -->
+
+
+	<!-- <view class="container dateInfo">
+        <view class="container-cn courseMain">
+            <view class="hoursTime">
+                <view class="timeItem">8:00</view>
+                <view class="timeItem">10:00</view>
+                <view class="timeItem">12:00</view>
+                <view class="timeItem">14:00</view>
+                <view class="timeItem">16:00</view>
+                <view class="timeItem">18:00</view>
+                <view class="timeItem">20:00</view>
+                <view class="timeItem">22:00</view>
+            </view>
+
+            <view class="rightMain">
+                6个颜色区分不同的课程
+                greenItem, orangeItem, redItem, blueItem ,violetItem, grassGreenItem
+                <view class="courseItem">
+                    <view class="citems violetItem" bindtap="courseDetail">
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">课程名称:</text>
+                            <text class="itemTxt">舞蹈课舞蹈课舞蹈课舞蹈课舞蹈课</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">班级:</text>
+                            <text class="itemTxt">精英班</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">上课时间:</text>
+                            <text class="itemTxt">2020/1/7</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">教室:</text>
+                            <text class="itemTxt">F4教室</text>
+                        </view>
+                        <view class="itemTxtMain red-mark">
+                            <text class="itemTitle">试听人数:</text>
+                            <text class="itemTxt">50人</text>
+                        </view>
+                    </view>
+
+                    <view class="citems blueItem" bindtap="courseDetail">
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">课程名称:</text>
+                            <text class="itemTxt">舞蹈课舞蹈课舞蹈课舞蹈课舞蹈课</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">班级:</text>
+                            <text class="itemTxt">精英班</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">上课时间:</text>
+                            <text class="itemTxt">2020/1/7</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">教室:</text>
+                            <text class="itemTxt">F4教室</text>
+                        </view>
+                        <view class="itemTxtMain red-mark">
+                            <text class="itemTitle">试听人数:</text>
+                            <text class="itemTxt">50人</text>
+                        </view>
+                    </view>
+
+                    <view class="citems blueItem" bindtap="courseDetail">
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">课程名称:</text>
+                            <text class="itemTxt">舞蹈课舞蹈课舞蹈课舞蹈课舞蹈课</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">班级:</text>
+                            <text class="itemTxt">精英班</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">上课时间:</text>
+                            <text class="itemTxt">2020/1/7</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">教室:</text>
+                            <text class="itemTxt">F4教室</text>
+                        </view>
+                        <view class="itemTxtMain red-mark">
+                            <text class="itemTitle">试听人数:</text>
+                            <text class="itemTxt">50人</text>
+                        </view>
+                    </view>
+                    <view class="citems blueItem" bindtap="courseDetail">
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">课程名称:</text>
+                            <text class="itemTxt">舞蹈课舞蹈课舞蹈课舞蹈课舞蹈课</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">班级:</text>
+                            <text class="itemTxt">精英班</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">上课时间:</text>
+                            <text class="itemTxt">2020/1/7</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">教室:</text>
+                            <text class="itemTxt">F4教室</text>
+                        </view>
+                        <view class="itemTxtMain red-mark">
+                            <text class="itemTitle">试听人数:</text>
+                            <text class="itemTxt">50人</text>
+                        </view>
+                    </view>
+                </view>
+                <view class="courseItem">
+                    <view class="citems blueItem" bindtap="courseDetail">
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">课程名称:</text>
+                            <text class="itemTxt">舞蹈课舞蹈课舞蹈课舞蹈课舞蹈课</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">班级:</text>
+                            <text class="itemTxt">精英班</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">上课时间:</text>
+                            <text class="itemTxt">2020/1/7</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">教室:</text>
+                            <text class="itemTxt">F4教室</text>
+                        </view>
+                        <view class="itemTxtMain red-mark">
+                            <text class="itemTitle">试听人数:</text>
+                            <text class="itemTxt">50人</text>
+                        </view>
+                    </view>
+                    <view class="citems blueItem" bindtap="courseDetail">
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">课程名称:</text>
+                            <text class="itemTxt">舞蹈课舞蹈课舞蹈课舞蹈课舞蹈课</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">班级:</text>
+                            <text class="itemTxt">精英班</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">上课时间:</text>
+                            <text class="itemTxt">2020/1/7</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">教室:</text>
+                            <text class="itemTxt">F4教室</text>
+                        </view>
+                        <view class="itemTxtMain red-mark">
+                            <text class="itemTitle">试听人数:</text>
+                            <text class="itemTxt">50人</text>
+                        </view>
+                    </view>
+                    <view class="citems blueItem" bindtap="courseDetail">
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">课程名称:</text>
+                            <text class="itemTxt">舞蹈课舞蹈课舞蹈课舞蹈课舞蹈课</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">班级:</text>
+                            <text class="itemTxt">精英班</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">上课时间:</text>
+                            <text class="itemTxt">2020/1/7</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">教室:</text>
+                            <text class="itemTxt">F4教室</text>
+                        </view>
+                        <view class="itemTxtMain red-mark">
+                            <text class="itemTitle">试听人数:</text>
+                            <text class="itemTxt">50人</text>
+                        </view>
+                    </view>
+                </view>
+                <view class="courseItem">
+                    <view class="citems blueItem" bindtap="courseDetail">
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">课程名称:</text>
+                            <text class="itemTxt">舞蹈课舞蹈课舞蹈课舞蹈课舞蹈课</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">班级:</text>
+                            <text class="itemTxt">精英班</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">上课时间:</text>
+                            <text class="itemTxt">2020/1/7</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">教室:</text>
+                            <text class="itemTxt">F4教室</text>
+                        </view>
+                        <view class="itemTxtMain red-mark">
+                            <text class="itemTitle">试听人数:</text>
+                            <text class="itemTxt">50人</text>
+                        </view>
+                    </view>
+                </view>
+                <view class="courseItem">
+                    <view class="citems violetItem" bindtap="courseDetail">
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">课程名称:</text>
+                            <text class="itemTxt">舞蹈课舞蹈课舞蹈课舞蹈课舞蹈课</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">班级:</text>
+                            <text class="itemTxt">精英班</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">上课时间:</text>
+                            <text class="itemTxt">2020/1/7</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">教室:</text>
+                            <text class="itemTxt">F4教室</text>
+                        </view>
+                        <view class="itemTxtMain red-mark">
+                            <text class="itemTitle">试听人数:</text>
+                            <text class="itemTxt">50人</text>
+                        </view>
+                    </view>
+                    <view class="citems violetItem" bindtap="courseDetail">
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">课程名称:</text>
+                            <text class="itemTxt">舞蹈课舞蹈课舞蹈课舞蹈课舞蹈课</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">班级:</text>
+                            <text class="itemTxt">精英班</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">上课时间:</text>
+                            <text class="itemTxt">2020/1/7</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">教室:</text>
+                            <text class="itemTxt">F4教室</text>
+                        </view>
+                        <view class="itemTxtMain red-mark">
+                            <text class="itemTitle">试听人数:</text>
+                            <text class="itemTxt">50人</text>
+                        </view>
+                    </view>
+                    <view class="citems blueItem" bindtap="courseDetail">
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">课程名称:</text>
+                            <text class="itemTxt">舞蹈课舞蹈课舞蹈课舞蹈课舞蹈课</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">班级:</text>
+                            <text class="itemTxt">精英班</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">上课时间:</text>
+                            <text class="itemTxt">2020/1/7</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">教室:</text>
+                            <text class="itemTxt">F4教室</text>
+                        </view>
+                        <view class="itemTxtMain red-mark">
+                            <text class="itemTitle">试听人数:</text>
+                            <text class="itemTxt">50人</text>
+                        </view>
+                    </view>
+                    <view class="citems blueItem" bindtap="courseDetail">
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">课程名称:</text>
+                            <text class="itemTxt">舞蹈课舞蹈课舞蹈课舞蹈课舞蹈课</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">班级:</text>
+                            <text class="itemTxt">精英班</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">上课时间:</text>
+                            <text class="itemTxt">2020/1/7</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">教室:</text>
+                            <text class="itemTxt">F4教室</text>
+                        </view>
+                        <view class="itemTxtMain red-mark">
+                            <text class="itemTitle">试听人数:</text>
+                            <text class="itemTxt">50人</text>
+                        </view>
+                    </view>
+                </view>
+                <view class="courseItem">
+                    <view class="citems violetItem" bindtap="courseDetail">
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">课程名称:</text>
+                            <text class="itemTxt">舞蹈课舞蹈课舞蹈课舞蹈课舞蹈课</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">班级:</text>
+                            <text class="itemTxt">精英班</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">上课时间:</text>
+                            <text class="itemTxt">2020/1/7</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">教室:</text>
+                            <text class="itemTxt">F4教室</text>
+                        </view>
+                        <view class="itemTxtMain red-mark">
+                            <text class="itemTitle">试听人数:</text>
+                            <text class="itemTxt">50人</text>
+                        </view>
+                    </view>
+                    <view class="citems blueItem" bindtap="courseDetail">
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">课程名称:</text>
+                            <text class="itemTxt">舞蹈课舞蹈课舞蹈课舞蹈课舞蹈课</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">班级:</text>
+                            <text class="itemTxt">精英班</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">上课时间:</text>
+                            <text class="itemTxt">2020/1/7</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">教室:</text>
+                            <text class="itemTxt">F4教室</text>
+                        </view>
+                        <view class="itemTxtMain red-mark">
+                            <text class="itemTitle">试听人数:</text>
+                            <text class="itemTxt">50人</text>
+                        </view>
+                    </view>
+                    <view class="citems blueItem" bindtap="courseDetail">
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">课程名称:</text>
+                            <text class="itemTxt">舞蹈课舞蹈课舞蹈课舞蹈课舞蹈课</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">班级:</text>
+                            <text class="itemTxt">精英班</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">上课时间:</text>
+                            <text class="itemTxt">2020/1/7</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">教室:</text>
+                            <text class="itemTxt">F4教室</text>
+                        </view>
+                        <view class="itemTxtMain red-mark">
+                            <text class="itemTitle">试听人数:</text>
+                            <text class="itemTxt">50人</text>
+                        </view>
+                    </view>
+                </view>
+
+                <view class="courseItem">
+                    <view class="citems blueItem" bindtap="courseDetail">
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">课程名称:</text>
+                            <text class="itemTxt">舞蹈课舞蹈课舞蹈课舞蹈课舞蹈课</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">班级:</text>
+                            <text class="itemTxt">精英班</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">上课时间:</text>
+                            <text class="itemTxt">2020/1/7</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">教室:</text>
+                            <text class="itemTxt">F4教室</text>
+                        </view>
+                        <view class="itemTxtMain red-mark">
+                            <text class="itemTitle">试听人数:</text>
+                            <text class="itemTxt">50人</text>
+                        </view>
+                    </view>
+
+                    <view class="citems blueItem" bindtap="courseDetail">
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">课程名称:</text>
+                            <text class="itemTxt">舞蹈课舞蹈课舞蹈课舞蹈课舞蹈课</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">班级:</text>
+                            <text class="itemTxt">精英班</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">上课时间:</text>
+                            <text class="itemTxt">2020/1/7</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">教室:</text>
+                            <text class="itemTxt">F4教室</text>
+                        </view>
+                        <view class="itemTxtMain red-mark">
+                            <text class="itemTitle">试听人数:</text>
+                            <text class="itemTxt">50人</text>
+                        </view>
+                    </view>
+                </view>
+
+                <view class="courseItem">
+                    <view class="citems blueItem" bindtap="courseDetail">
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">课程名称:</text>
+                            <text class="itemTxt">舞蹈课舞蹈课舞蹈课舞蹈课舞蹈课</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">班级:</text>
+                            <text class="itemTxt">精英班</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">上课时间:</text>
+                            <text class="itemTxt">2020/1/7</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">教室:</text>
+                            <text class="itemTxt">F4教室</text>
+                        </view>
+                        <view class="itemTxtMain red-mark">
+                            <text class="itemTitle">试听人数:</text>
+                            <text class="itemTxt">50人</text>
+                        </view>
+                    </view>
+                    <view class="citems violetItem" bindtap="courseDetail">
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">课程名称:</text>
+                            <text class="itemTxt">舞蹈课舞蹈课舞蹈课舞蹈课舞蹈课</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">班级:</text>
+                            <text class="itemTxt">精英班</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">上课时间:</text>
+                            <text class="itemTxt">2020/1/7</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">教室:</text>
+                            <text class="itemTxt">F4教室</text>
+                        </view>
+                        <view class="itemTxtMain red-mark">
+                            <text class="itemTitle">试听人数:</text>
+                            <text class="itemTxt">50人</text>
+                        </view>
+                    </view>
+                    <view class="citems blueItem" bindtap="courseDetail">
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">课程名称:</text>
+                            <text class="itemTxt">舞蹈课舞蹈课舞蹈课舞蹈课舞蹈课</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">班级:</text>
+                            <text class="itemTxt">精英班</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">上课时间:</text>
+                            <text class="itemTxt">2020/1/7</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">教室:</text>
+                            <text class="itemTxt">F4教室</text>
+                        </view>
+                        <view class="itemTxtMain red-mark">
+                            <text class="itemTitle">试听人数:</text>
+                            <text class="itemTxt">50人</text>
+                        </view>
+                    </view>
+                </view>
+
+                <view class="courseItem">
+                    <view class="citems violetItem" bindtap="courseDetail">
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">课程名称:</text>
+                            <text class="itemTxt">舞蹈课舞蹈课舞蹈课舞蹈课舞蹈课</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">班级:</text>
+                            <text class="itemTxt">精英班</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">上课时间:</text>
+                            <text class="itemTxt">2020/1/7</text>
+                        </view>
+                        <view class="itemTxtMain">
+                            <text class="itemTitle">教室:</text>
+                            <text class="itemTxt">F4教室</text>
+                        </view>
+                        <view class="itemTxtMain red-mark">
+                            <text class="itemTitle">试听人数:</text>
+                            <text class="itemTxt">50人</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+
+        </view>
+
+        <view class="curButton" bindtap="addCourse">
+            <image src="http://yan.zhangqianit.com/PAIKEIMG/btnIconBook.png"></image>
+            <text>新增试听课程</text>
+        </view>
+
+    </view> -->
+
+	<!-- <view class="container cartlist" wx:for="{{cartData}}" wx:key="data">
+
+        <view class="container-cn cartlist-item">
+            <navigator url="/pages/shiTingDetail/shiTingDetail">
+                <view class="item-img">
+                    <image src="{{item.image}}"></image>
+                </view>
+            </navigator>
+
+            <view class="item-info">
+                <navigator url="/pages/shiTingDetail/shiTingDetail">
+                    <view class="itemName">{{item.name}}</view>
+                    <view class="itemDesc">{{item.desc}}</view>
+                </navigator>
+            </view>
+
+            <view class="caozuo-item">
+                <image bindtap="copyCourse" data-text="{{item.id}}" class="copyImg" src="http://yan.zhangqianit.com/PAIKEIMG/copyIcon.png"></image>
+
+                <image bindtap="editCourse" class="editImg" src="http://yan.zhangqianit.com/PAIKEIMG/editIcon-set.png"></image>
+
+                <image bindtap="deleteKeCheng" class="deleteImg" src="http://yan.zhangqianit.com/PAIKEIMG/deleteIcon.png"></image>
+
+            </view>
+        </view>
+    </view>-->
+
+
+</view>

@@ -1,0 +1,151 @@
+<view class="container studentDetail">
+
+	<!-- <view class="container-cn stu-cn"> -->
+	<!-- <view class="yn-cntop">
+            <view class="xueyuanName">学员姓名:</view>
+            <input type="text" value="江晓鹏(EnglishName)" class="stuName"></input>
+            <text class="stuName">江晓鹏</text>
+        </view>
+        <view class="stu-link">
+            <view class="stu-link-item">
+                <text class="jiaoyi">联系电话</text>
+            </view>
+            <view class="stu-link-item">
+                父亲
+                <text class="mr30">1515517717</text>
+            </view>
+            <view class="stu-link-item">
+                母亲
+                <text class="mr30">18567676767</text>
+            </view>
+            <view class="stu-link-item">
+                姐姐
+                <text class="mr30">151277686887</text>
+            </view>
+        </view> -->
+	<!-- </view> -->
+
+	<view class="itemMain container-cn">
+		<view class="item">
+			<view class="itemTitle">姓名(中文):</view>
+			<view class="itemContent">
+				<input placeholder="必填" maxlength="12" value="{{cn_name}}" bindinput="cnNameInput"></input>
+			</view>
+		</view>
+
+		<view class="item">
+			<view class="itemTitle">姓名(英文):</view>
+			<view class="itemContent">
+				<input placeholder="必填" maxlength="25" value="{{en_name}}" bindinput="enNameInput"></input>
+			</view>
+		</view>
+
+		<view class="item">
+			<view class="itemTitle">性别:</view>
+			<view class="itemContent">
+				<radio-group bindchange="sexChange">
+					<radio checked="{{male}}" color='#469bba' value="0" />男
+					<radio checked="{{female}}" color='#469bba' value="1" />女
+				</radio-group>
+			</view>
+		</view>
+
+		<view class="item">
+			<view class="itemTitle">出生日期:</view>
+			<view class="itemContent contentBorder">
+				<picker mode="date" value="{{date}}" start="1990-01-01" end="2030-01-01" bindchange="bindDateChange">
+					<view class="picker"> {{date}} </view>
+				</picker>
+			</view>
+		</view>
+
+		<view class="item">
+			<view class="itemTitle">班级:</view>
+
+			<view class="itemContent contentBorder">
+				<picker bindchange="bindClassChange" value="{{csIndex}}" range="{{classData}}" range-key="{{'name'}}">
+					<view class="picker">
+						{{classData[csIndex].name}}
+					</view>
+				</picker>
+			</view>
+		</view>
+		<view class="item">
+			<view class="itemTitle">年级:</view>
+			<view class="itemContent contentBorder">
+				<picker bindchange="bindGradeChange" value="{{grade}}" range="{{gradeList}}">
+					<view class="picker"> {{grade}} </view>
+				</picker>
+			</view>
+		</view>
+		<view class="item">
+			<view class="itemTitle">所在学校:</view>
+			<view class="itemContent">
+				<input placeholder="必填" maxlength="30" value="{{school}}" bindinput="schoolInput"></input>
+			</view>
+		</view>
+
+		<view class="item" wx:if="{{flag==3}}">
+			<view class="itemTitle">备注:</view>
+			<view class="itemContent">
+				<input placeholder="备注" value="{{remark}}" bindinput="remarkInput"></input>
+			</view>
+		</view>
+
+		<view class="container-cn stu-cn">
+			<view class="stu-link">
+				<view class="stu-link-item">
+					<text class="jiaoyi">身份-有效电话号码/手机号码</text>
+				</view>
+				<!-- <view class="stu-link-item" wx:for="{{parentData}}" wx:key="id">
+					{{item.identityName}}: {{item.phone}}
+					<text class="mr30 red" bindtap="deleteParentFn" data-id="{{item.id}}">删除</text>
+					<text  class="mr30 green" bindtap="editParentFn" data-id="{{item.id}}">编辑</text>
+				</view> -->
+				<view class="stu-link-item">
+					{{parentalIdentity}}: {{phone}}
+					<text class="mr30 red" bindtap="deleteParentFn" data-id="{{item.id}}">删除</text>
+					<text  class="mr30 green" bindtap="editParentFn" data-id="{{item.id}}">编辑</text>
+				</view>
+			</view>
+			<view class="goBind" bindtap="bindPhoneNumber">
+				<image src="../../images/btnAddIconW.png"></image>
+				<text> 绑定新电话</text>
+			</view>
+		</view>
+
+		<!--在读 -->
+		<view class="btnMain" wx:if="{{flag==0}}">
+			<view class="buttonPage editBtn" bindtap="saveStudent">
+				<text>保存修改</text>
+			</view>
+			<view class="buttonPage deleteBtn" bindtap="deleteStudent">
+				<text>删除该学员</text>
+			</view>
+		</view>
+
+		<!--曾读 -->
+		<view class="btnMain" wx:if="{{flag==1}}">
+
+			<!-- 删除后归入曾读页 -->
+			<view class="buttonPage editBtn" bindtap="agentInto">
+				<text>再次就读</text>
+			</view>
+			<view class="buttonPage deleteBtn" bindtap="deleteStudent">
+				<text>删除该学员</text>
+			</view>
+
+		</view>
+
+		<!--意向 -->
+		<view class="btnMain" wx:if="{{flag==2}}">
+			<view class="buttonPage editBtn" bindtap="intoStudent">
+				<text>入学</text>
+			</view>
+			<!-- 删除后归入曾读页 -->
+			<view class="buttonPage deleteBtn" bindtap="deleteStudent">
+				<text>删除该学员</text>
+			</view>
+		</view>
+	</view>
+</view>

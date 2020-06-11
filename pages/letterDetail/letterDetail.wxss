@@ -1,0 +1,49 @@
+.letterDetail {
+    margin-top: 0rpx;
+    margin-bottom: 20rpx;
+}
+
+.letterFormName {
+    color: #469db9 !important;
+    display: inline;
+    font-size: 32rpx !important;
+}
+
+.letter-from-cn {
+    background: #fff;
+    border-radius: 0rpx 0rpx 10rpx 10rpx;
+    padding: 24rpx 0;
+    margin-top: 0rpx;
+    overflow: hidden;
+    box-shadow: 0 0 10rpx rgba(153, 153, 153, 0.2);
+}
+
+.letter-cont {
+    border-bottom: 1rpx solid #e5e5e5;
+    line-height: 80rpx;
+    padding-left: 40rpx;
+}
+
+.letter-cont text:first-child {
+    color: #333;
+    font-size: 28rpx;
+}
+
+.letter-cont text:last-child {
+    color: #666;
+    font-size: 28rpx;
+    margin-top: 37rpx;
+    margin-bottom: 25rpx;
+}
+
+.detilaTxt {
+    width: 90%;
+    background: #fff;
+    margin: 0 auto;
+    padding: 30rpx 0rpx;
+    font-size: 28rpx;
+    color: #999;
+    text-indent: 56rpx;
+    text-align: justify;
+    line-height: 50rpx;
+}

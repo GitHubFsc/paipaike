@@ -1,0 +1,38 @@
+<view class="container-cn">
+
+	<view class="search">
+		<image src="../../images/search.png"></image>
+		<input placeholder="请输入搜索内容..." confirm-type='search' bindconfirm="searchFn"></input>
+	</view>
+
+
+	<view class="teacherItem" wx:for="{{items}}" wx:key="id">
+		<view class="teacherInfo">
+			<view class="ite">
+				<text class="classTitle">教师姓名:</text>
+				<text>{{item.cn_name}} ({{item.en_name}})</text>
+			</view>
+			<view class="ite">
+				<text class="classTitle">手机号:</text>
+				<text>{{item.phone}}</text>
+			</view>
+
+			<view class="editImg" bindtap="editTeacher" data-id="{{item.id}}">
+				<image src="../../images/edit.png"></image>
+			</view>
+
+			<view class="deleteImg" bindtap="deleteTeacher" data-id="{{item.id}}">
+				<image src="../../images/delete.png"></image>
+			</view>
+		</view>
+	</view>
+
+
+
+	<view class="rightBtn" bindtap="addTeacher">
+		<view>
+			<image src="../../images/AddTeacherW.png"></image>
+			<text class="rightTxt">新增教师</text>
+		</view>
+	</view>
+</view>

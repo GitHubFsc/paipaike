@@ -1,0 +1,149 @@
+/* pages/makeUpClass/teacherManage.wxss */
+
+page {
+    background-color: #fff;
+}
+
+.search {
+    width: 70%;
+    height: 54rpx;
+    background-size: 28rpx;
+    border-radius: 15rpx;
+    margin: 20rpx auto 40rpx auto;
+    border: 1rpx solid #bcbcbc;
+}
+.search image {
+   width: 36rpx;
+   height: 36rpx;
+   vertical-align: middle;
+   padding: 7rpx;
+}
+.search input {
+    width: 90%;
+    height: 100%;
+    float: right;
+    font-size: 27rpx;
+}
+
+
+.teacherItem {
+    width: 100%;
+    /* border: 1rpx solid #bcbcbc; */
+    overflow: hidden;
+    border-radius: 10rpx;
+    height: 140rpx;
+    margin-bottom: 15rpx;
+    box-shadow: 0 0 10rpx rgba(153, 153, 153, 0.4);
+    position: relative;
+}
+
+.teacherItem .teacherInfo {
+    width: 80%;
+    font-size: 28rpx;
+    /* background-color: red; */
+}
+
+.teacherInfo .ite {
+    padding-left: 20rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+}
+
+.teacherInfo .ite text:nth-child(2) {
+    font-size: 26rpx;
+    color: #5a5a5a;
+}
+
+.teacherInfo .ite:first-child {
+    padding-top: 25rpx;
+    margin-bottom: 15rpx;
+}
+
+.teacherInfo .ite:last-child {
+    padding-bottom: 25rpx;
+    margin-top: 15rpx;
+}
+
+.teacherInfo .classTitle {
+    color: #1a1a1a;
+    margin-right: 25rpx;
+}
+
+.rightBtn {
+    width: 45%;
+    height: auto;
+    margin: 0 auto;
+    padding: 30rpx 0 100rpx 0;
+   
+}
+.rightBtn view{
+    width: 100%;
+    height: 70rpx;
+    background-size: 100%;
+    margin-top: 30rpx;
+    border: 4rpx solid #469bba;
+    border-radius: 20rpx;
+    position: relative;
+    margin: 60rpx auto ;
+    background-color: #469bba;
+    text-align: center;
+}
+.rightBtn image {
+    width: 30rpx;
+    height: 30rpx;
+    background-size: 100% 100%;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20rpx;
+}
+
+.rightBtn .rightTxt {
+    color: #fff !important;
+    line-height: 70rpx;
+    display: inline-block;
+    font-size: 30rpx;
+    vertical-align: middle;
+}
+
+.rightBtn text {
+    color: #469bba;
+    line-height: 70rpx;
+    display: block;
+    font-size: 30rpx;
+}
+
+.editImg ,.deleteImg{
+    display: inline-block;
+}
+
+.deleteImg image{
+    width: 40rpx;
+    height: 40rpx;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 50rpx;
+    right: 20rpx;
+    margin-right: 30rpx;
+}
+
+.editImg image{
+    width: 35rpx;
+    height: 35rpx;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 50rpx;
+    right: 20rpx;
+    margin-right: 100rpx;
+}
+
+.copyImg image{
+    width: 40rpx;
+    height: 40rpx;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 50rpx;
+    right: 20rpx;
+    margin-right: 170rpx;
+}

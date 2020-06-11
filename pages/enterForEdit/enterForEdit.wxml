@@ -1,0 +1,163 @@
+<view class="enter-for-header">
+	<view class="music">音乐</view>
+	<view class="img-wrap">
+		<image class="" src="{{banner_path}}" mode="widthFix" lazy-load="false" binderror="" bindload="" />
+	</view>
+	<view class="change-btn" bindtap="chooseImageTap" data-path="banner_path" data-model="banner_image">
+		<view class="btn-top"></view>
+		<view class="btn-bottom">更换封面</view>
+	</view>
+</view>
+
+<view class="change-title">
+	<view class="sjx"></view>
+	<view class="first-title">
+		<view class="title">更换标题</view>
+		<view class="text-wrap">
+			<textarea bindinput="lengthChange" value="{{title}}" placeholder="新春价到！898元课程90元抢购，还有超值团购价格" maxlength="35" cols="32"></textarea>
+			<view>{{ipt_length}}/35</view>
+		</view>
+		<text class="">标题不填写或为空，则活动中不显示</text>
+	</view>
+	<view class="second-title">
+		<view class="title">活动时间</view>
+		<view class="choose-time">
+			<picker class="" mode="date" value="{{start_date}}" bindchange="startDateChange" bindcancel="" start="2020-02-17" end="2030-12-31">
+				<view>{{start_date}}</view>
+			</picker>
+			<text class="" >到</text>
+			<picker class="" mode="date" value="{{end_date}}" bindchange="endDateChange" bindcancel="" start="2020-02-17" end="2030-12-31">
+				<view>{{end_date}}</view>
+			</picker>
+		</view>
+	</view>
+</view>
+
+<view class="change-class">
+	<view class="sjx"></view>
+	<view class="class-title">课程</view>
+	<view class="class-item">
+		<view class="item-title">图片</view>
+		<view class="item-content1" bindtap="chooseImageTap" data-model="group_course_image" data-path="group_course_path">
+			<image src="{{group_course_path}}"></image>
+		</view>
+	</view>
+	<view class="class-item">
+		<view class="item-title">名称</view>
+		<view class="item-content2">
+			{{group_course_name}}
+			<!-- <textarea maxlength="20" bindinput="courseNameChange" value="{{group_course_name}}" placeholder="精品口才课4节课"></textarea> -->
+			<!-- <view class="class-name-num">{{name_length}}/20</view> -->
+		</view>
+	</view>
+	<view class="class-item">
+		<view class="item-title">内容</view>
+		<view class="item-content2">
+			<textarea maxlength="300" bindinput="courseContentChange" value="{{group_course_content}}" placeholder="精品口才课4节课"></textarea>
+			<view class="class-name-num">{{content_length}}/300</view>
+		</view>
+	</view>
+	<view class="class-item">
+		<view class="item-title">库存</view>
+		<view class="item-content">
+			<input type='number' value="{{group_course_capacity}}" bindinput="capacityInput"></input>
+		</view>
+		<text>件</text>
+	</view>
+	<!-- <view class="tip">若有用户报名，库存只减不增</view>   -->
+	<view class="class-item">
+		<view class="item-title">价格</view>
+		<view class="item-content">
+			<input type='number' value="{{group_course_price}}" bindinput="priceInput"></input>
+		</view>
+		<text>元</text>
+	</view>
+	<!-- <view class="tip">若有用户报名，价格无法修改</view>   -->
+</view>
+
+<view class="enter-detail">
+	<view class="enter-detail-title">{{mini_title_1}}</view>
+	<view class="enter-detail-main">
+		<view class="enter-detail-contet">
+			<textarea name="" id="" bindinput="mc1Change" value="{{mini_content_1}}" maxlength="300"></textarea>
+			<!-- <view class="cancle-btn"></view> -->
+			<text class="">{{mc1_length}}/300</text>
+		</view>
+		<view class="enter-detail-img">
+			<image class="" src="{{mini_path_1}}" mode="widthFix" />
+			<!-- <view class="cancle-btn" bindtap="cancelImageTap" data-model="mini_image_1" data-path="mini_path_1"></view> -->
+			<view class="change-img" bindtap="chooseImageTap" data-model="mini_image_1" data-path="mini_path_1">换图</view>
+		</view>
+
+	</view>
+</view>
+<view class="enter-detail">
+	<view class="enter-detail-title">{{mini_title_2}}</view>
+	<view class="enter-detail-main">
+		<view class="enter-detail-contet">
+			<textarea name="" id="" bindinput="mc2Change" value="{{mini_content_2}}"></textarea>
+			<!-- <view class="cancle-btn"></view> -->
+			<text class="">{{mc2_length}}/300</text>
+		</view>
+		<view class="enter-detail-img">
+			<image class="" src="{{mini_path_2}}" mode="aspectFit" />
+			<!-- <view class="cancle-btn" bindtap="cancelImageTap" data-model="mini_image_2" data-path="mini_path_2"></view> -->
+			<view class="change-img" bindtap="chooseImageTap" data-model="mini_image_2" data-path="mini_path_2">换图</view>
+		</view>
+	</view>
+</view>
+<view class="enter-detail">
+	<view class="enter-detail-title">{{mini_title_3}}</view>
+	<view class="enter-detail-main">
+		<view class="enter-detail-contet">
+			<textarea name="" id="" bindinput="mc3Change" value="{{mini_content_3}}" maxlength="300"></textarea>
+			<!-- <view class="cancle-btn"></view> -->
+			<text class="">{{mc3_length}}/300</text>
+		</view>
+		<view class="enter-detail-img">
+			<image class="" src="{{mini_path_3}}" mode="aspectFit" />
+			<!-- <view class="cancle-btn" bindtap="cancelImageTap" data-model="mini_image_3" data-path="mini_path_3"></view> -->
+			<view class="change-img" bindtap="chooseImageTap" data-model="mini_image_3" data-path="mini_path_3">换图</view>
+		</view>
+	</view>
+</view>
+<view class="enter-detail">
+	<view class="enter-detail-title">特别奖励</view>
+	<view class="enter-detail-main">
+		<view class="enter-detail-contet">
+			<textarea name="" id="" bindinput="scChange" value="{{spec_content}}" maxlength="300"></textarea>
+			<!-- <view class="cancle-btn"></view> -->
+			<text class="">{{sc_length}}/300</text>
+		</view>
+		<view class="enter-detail-img">
+			<image class="" src="{{spec_path}}" mode="aspectFit" />
+			<!-- <view class="cancle-btn" bindtap="cancelImageTap" data-model="spec_image" data-path="spec_path"></view> -->
+			<view class="change-img" bindtap="chooseImageTap" data-model="spec_image" data-path="spec_path">换图</view>
+		</view>
+
+	</view>
+</view>
+<!-- <view class="enter-detail">
+  <view class="enter-detail-title">机构介绍</view>
+  <view class="enter-detail-main">
+    <view class="enter-detail-contet">
+      <textarea name="" id="" value="机构介绍，机构介绍机构介绍，机构介绍机构介绍，机构介绍机构介绍，机构介绍机构介绍，机构介绍机构介绍，机构介绍机构介绍，机构介绍机构介绍，机构介绍机构介绍，机构介绍机构介绍，机构介绍机构介绍，机构介绍机构介绍，机构介绍" ></textarea>
+      <view class="cancle-btn"></view>
+      <text class="">120/300</text>
+    </view>
+    <view class="enter-detail-img">
+      <image class="" src="" mode="widthFix"  />
+      <view class="cancle-btn"></view>
+      <view class="change-img">换图</view>
+    </view>
+    <view class="enter-detail-img">
+      <image class="" src="" mode="widthFix"  />
+      <view class="cancle-btn"></view>
+      <view class="change-img">换图</view>
+    </view>
+  </view>
+</view> -->
+
+<view class="save-active" bindtap="submitFn">
+	<view>保存活动</view>
+</view>

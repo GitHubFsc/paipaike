@@ -1,0 +1,6 @@
+<view>
+    <picker mode='date' bindchange='change' value='={{month}}'>
+        <view>{{month}}</view>
+    </picker>
+    <calendar value='{{month}}' bindchange='change' />
+</view>

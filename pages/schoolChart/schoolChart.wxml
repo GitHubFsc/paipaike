@@ -1,0 +1,18 @@
+<view class="container columnCanvas">
+    <view class="wcks">总在读人数 <text>58.0</text></view>
+    <view class="sdrs">总课时 <text>20</text></view>
+    <view class="syks">已消课时 <text>10</text></view>
+    <view class="wxks">未消课时 <text>10</text></view>
+    <view class="jlks">总奖励课时 <text>10</text></view>
+    <canvas canvas-id="columnCanvas" disable-scroll="true" class="canvas"></canvas>
+</view>
+
+<!-- <view class="xiaoke">
+    <view class="title">消课率</view>
+    <progress border-radius="20" class="progress" percent="38" backgroundColor="#dcdcdc" activeColor="#afdcb1" stroke-width="16rpx" color="#afdcb1" show-info active/>
+
+    <view class="zb">
+        <view class="title">消课人数占比</view>
+        <progress border-radius="20" class="progress" percent="45" backgroundColor="#dcdcdc" activeColor="#95a7e9" stroke-width="16rpx" show-info active/>
+    </view>
+</view> -->

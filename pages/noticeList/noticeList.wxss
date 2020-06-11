@@ -1,0 +1,116 @@
+.shitingBanner {
+    width: 100%;
+    height: 200rpx;
+    background-size: 100% 100%;
+}
+
+
+.cartlist {
+    background: #fff;
+    margin-bottom: 20rpx;
+}
+
+.containerMain .cartlist:last-child {
+    margin-bottom: 120rpx;
+}
+
+.cartlist-item {
+    height: 180rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* 水平居中 */
+}
+
+.item-img {
+    width: 140rpx;
+    height: 140rpx;
+}
+
+.item-img image {
+    width: 100%;
+    height: 100%;
+    border-radius: 8rpx;
+}
+
+.item-info {
+    flex: 1;
+    margin-left: 20rpx;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    margin-right: 50rpx;
+}
+
+.item-pr {
+    color: #ec702d;
+}
+
+.item-scpr {
+    color: #999;
+    text-decoration: line-through;
+}
+
+.cartfoot {
+    position: fixed;
+    height: 100rpx;
+    bottom: 0;
+    background: #fff;
+    display: flex;
+}
+
+.cartfoot-pr {
+    flex: 1;
+    height: 100%;
+    text-align: center;
+    line-height: 100rpx;
+}
+
+.cartfoot-pr text {
+    color: #f00;
+}
+
+.cartfoot-btn {
+    width: 220rpx;
+    height: 100%;
+}
+
+.cartfoot-btn button {
+    width: 100%;
+    height: 100%;
+    background: #5dc9a0;
+    color: #fff;
+    font-size: 30rpx;
+    border-radius: 0;
+    line-height: 100rpx;
+}
+
+.checked-lable radio {
+    transform: scale(0.7);
+}
+
+.editImg {
+    margin-left: 20rpx;
+    margin-right: 20rpx;
+}
+
+.copyImg, .deleteImg, .editImg {
+    width: 40rpx;
+    height: 40rpx;
+    background-size: 100% 100%;
+}
+
+.itemName {
+    font-size: 30rpx;
+    color: #393939;
+}
+
+.itemDesc {
+    font-size: 24rpx;
+    line-height: 32rpx;
+    color: #afa9a9;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}

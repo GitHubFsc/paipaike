@@ -1,0 +1,367 @@
+.studentDetail {
+    margin-top: 50rpx;
+    margin-bottom: 20rpx;
+}
+
+.xueyuanName {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.stuName {
+    color: #469db9;
+    display: inline-block;
+    font-size: 32rpx;
+    vertical-align: middle;
+    border: 1rpx solid #ccc;
+    padding: 6rpx 10rpx  6rpx 20rpx;
+    border-radius: 8rpx 8rpx;
+}
+
+.stu-cn {
+    background: #fff;
+    border-radius: 10rpx;
+    padding: 24rpx 0;
+    margin-top: 42rpx;
+    overflow: hidden;
+    box-shadow: 0 0 10rpx rgba(153, 153, 153, 0.2);
+}
+
+.yn-cntop {
+    border-bottom: 1rpx solid #e5e5e5;
+    line-height: 80rpx;
+    padding-left: 40rpx;
+  
+}
+
+.yn-cntop text:first-child {
+    color: #333;
+    font-size: 28rpx;
+}
+
+.yn-cntop text:last-child {
+    color: #666;
+    font-size: 28rpx;
+    margin-top: 37rpx;
+    margin-bottom: 25rpx;
+}
+
+.stu-link {
+    width: 95%;
+    background: #f6f6f6;
+    margin: 0 auto;
+    margin-top: 25rpx;
+    border-radius: 15rpx;
+}
+
+.stu-link-item {
+    width: 95%;
+    height: 84rpx;
+    margin: 0 auto;
+    border-bottom: 1rpx solid #e5e5e5;
+    font-size: 27rpx;
+    line-height: 84rpx;
+}
+
+.orderNum {
+    width: 70%;
+    height: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.stu-link-item text {
+    float: right;
+}
+
+.stu-link-item {
+    margin-left: 30rpx;
+}
+
+.mr30 {
+    margin-right: 30rpx;
+}
+
+.stu-link .stu-link-item:last-child {
+    border: none;
+}
+
+.jiaoyi {
+    float: left !important;
+    background: #9fd754;
+    height: 38rpx;
+    line-height: 38rpx;
+    color: #fff;
+    padding: 0 10rpx;
+    margin-top: 23rpx;
+    border-radius: 5rpx;
+}
+
+.price {
+    float: none !important;
+    color: #f00;
+}
+
+.goBind {
+    width: 180rpx;
+    height: 60rpx;
+    background-color: #9fd754;
+    line-height: 60rpx;
+    text-align: center;
+    color: #fff;
+    border-radius: 8rpx;
+    font-size: 24rpx;
+    margin-right: 20rpx;
+    margin-top: 30rpx;
+    position: relative;
+    margin: 30rpx auto 0 auto;
+}
+
+.goBind image {
+    width: 20rpx;
+    height: 20rpx;
+    background-size: 100% 100%;
+    margin-top: 10rpx;
+}
+
+
+page {
+    background-color: #fff;
+}
+.itemMain{
+    padding-bottom: 100rpx;
+}
+
+.mainTitle {
+    height: 80rpx;
+    font-size: 34rpx;
+    text-indent: 40rpx;
+    box-shadow: 0 0 10rpx rgba(153, 153, 153, 0.2);
+    border-bottom: 4rpx solid #469db9;
+    line-height: 80rpx;
+    margin-bottom: 50rpx;
+    color: #469db9;
+}
+
+.item {
+    line-height: 100rpx;
+    /* border-bottom: 1rpx solid #f4f2f2; */
+    height: 100rpx;
+}
+
+.item .itemTitle {
+    width: 23%;
+    float: left;
+    font-size: 30rpx;
+    text-align: center;
+}
+
+.item .itemContent {
+    width: 75%;
+    float: right;
+}
+
+.item input {
+    height: 70rpx;
+    margin-top: 15rpx;
+    font-size: 28rpx;
+    border: 1px solid #efefef;
+    border-radius: 8rpx;
+    color: #999;
+    padding: 0 20rpx;
+}
+
+.select_box {
+    background: #fff;
+    width: 100%;
+    margin: 15rpx auto;
+    position: relative;
+}
+
+.select {
+    box-sizing: border-box;
+    width: 100%;
+    height: 70rpx;
+    border: 1px solid #efefef;
+    border-radius: 8rpx;
+    display: flex;
+    align-items: center;
+    padding: 0 20rpx;
+}
+
+.select_text {
+    font-size: 26rpx;
+    flex: 1;
+    color: #999;
+}
+
+.select_img {
+    width: 30rpx;
+    height: 30rpx;
+    display: block;
+    transition: transform 0.3s;
+    background-size: 100% 100%;
+}
+
+.select_img_rotate {
+    transform: rotate(90deg);
+}
+
+.option_box {
+    position: absolute;
+    top: 70rpx;
+    width: 100%;
+    border: 1px solid #efefef;
+    box-sizing: border-box;
+    overflow-y: auto;
+    border-top: 0;
+    background: #fff;
+    transition: height 0.3s;
+    z-index: 2;
+    height: 350rpx;
+    color: #999;
+}
+
+.option {
+    display: block;
+    line-height: 40rpx;
+    font-size: 26rpx;
+    border-bottom: 1px solid #efefef;
+    padding: 10rpx;
+}
+
+.lastItem, .lastRight {
+    width: 50%;
+    display: inline-block;
+    font-size: 30rpx;
+}
+
+.lastRight {
+    color: #999;
+}
+
+.checked-lable radio {
+    transform: scale(0.8);
+}
+
+.leftLabel {
+    margin-right: 40rpx;
+}
+
+.bgBlue {
+    background-color: #479aba;
+}
+
+.bgBlue text {
+    color: #fff;
+}
+
+
+.contentBorder{
+    border: 1px solid #efefef;
+    border-radius: 8rpx;
+    color: #999;
+    font-size: 28rpx;
+    line-height: 70rpx;
+    margin-top: 15rpx;
+}
+
+.picker{
+  position: relative;
+  padding-left: 20rpx;
+}
+
+
+
+.uploadImg {
+    width: 100%;
+    height: 150rpx;
+    background-color: #e8e8e8;
+    position: relative;
+    margin-top: 10rpx;
+}
+
+.uploadImg image {
+    position: absolute;
+    width: 80rpx;
+    height: 80rpx;
+    background-size: 100% 100%;
+    top: 50%;
+    margin-top: -38rpx;
+    left: 50%;
+    margin-left: -30rpx;
+}
+
+.uploadedImg {
+    margin-top: 20rpx;
+    overflow: hidden;
+}
+
+.imgItem {
+    width: 25%;
+    height: 140rpx;
+    background-size: 100% 100%;
+    border-radius: 10rpx 10rpx;
+    display: inline-block;
+    position: relative;
+}
+
+.imgItem image {
+    width: 90%;
+    height: 90%;
+    background-size: 100% 100%;
+    margin-left: 5%;
+    margin-top: 5%;
+    border-radius: 8rpx;
+}
+
+.iconClass {
+    position: absolute;
+    width: 15rpx;
+    height: 15rpx;
+    z-index: 99;
+    top: 3%;
+    right: 13%;
+}
+
+
+.buttonPage {
+    width: 35%;
+    height: 60rpx;
+    background-size: 100%;
+    margin-top: 30rpx;
+    border-radius: 8rpx;
+    position: relative;
+    margin:60rpx auto 0 auto;
+    text-align: center;
+    display: inline-block;
+}
+
+.buttonPage text{
+    color: #fff;
+    line-height: 60rpx;
+    font-size: 30rpx;
+}
+
+.btnMain{
+    overflow: hidden;
+}
+.editBtn{
+    float: right;
+    border: 4rpx solid #469bba;
+    background-color: #469bba;
+}
+.deleteBtn{
+    float: left;
+    background-color: #ff5f5f;
+      border: 4rpx solid #ff5f5f;
+}
+
+.stu-link-item .green{
+    color: #9fd754;
+}
+
+.stu-link-item .red{
+    color: #e3593d;
+}   

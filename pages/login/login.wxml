@@ -1,0 +1,70 @@
+<view class="container-cn">
+	<image class="logoImg" src="../../images/ICON.png"></image>
+
+	<input type="number" placeholder="请输入手机号码" value="{{loginUserName}}" bindinput="loginUserNameInput" maxlength="11"></input>
+	<input type="password" placeholder="请输入密码" value="{{loginPassword}}" bindinput="loginPasswordInput"></input>
+
+	<view class="curButton" bindtap="loginFn">
+		<text>确认登录</text>
+	</view>
+	<view class="line"></view>
+
+	<view class="curButton" bindtap="showModal">
+		<text>注册</text>
+	</view>
+</view>
+
+
+<view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+<view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+	<view class="title">
+		<text>注册信息</text>
+	</view>
+	<view class="linkItem">
+		<view class="leftImg">
+			<image src="../../images/userNameB.png" mode="widthFix"></image>
+		</view>
+		<view class="txt">
+			<input type="number" placeholder="手机号码(注册账号)" bindblur="userNameInput" value="{{userNameInput}}" maxlength="11"></input>
+		</view>
+	</view>
+
+	<view class="linkItem">
+		<view class="leftImg">
+			<image src="../../images/passwordB.png" mode="widthFix"></image>
+		</view>
+		<view class="txt">
+			<input type="password" placeholder="密码" bindinput="passwordInput" value="{{password}}"></input>
+		</view>
+	</view>
+
+
+	<view class="linkItem">
+		<view class="leftImg">
+			<image src="../../images/jgmcB.png" mode="widthFix"></image>
+		</view>
+		<view class="txt">
+			<input type="text" placeholder="请输入机构名称" bindinput="nameInput" value="{{name}}"></input>
+		</view>
+	</view>
+	<view class="linkItem">
+		<view class="leftImg">
+			<image src="../../images/addressIconB.png" mode="widthFix"></image>
+		</view>
+		<view class="txt">
+			<input type="text" placeholder="机构地址" bindinput="addressInput" value="{{address}}"></input>
+		</view>
+	</view>
+	<view class="linkItem">
+		<view class="leftImg">
+			<image src="../../images/phonrB.png" mode="widthFix"></image>
+		</view>
+		<view class="txt">
+			<input type="number" placeholder="联系电话" bindblur="phoneInput" value="{{phone}}" maxlength="11"></input>
+		</view>
+	</view>
+
+	<view class="rightBtn" bindtap="registerFn" wx:if="{{showModalStatus}}">
+		<text class="rightTxt">确定</text>
+	</view>
+</view>

@@ -1,0 +1,112 @@
+<view class='container'>
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" indicator-color="#868586" interval="{{interval}}" duration="{{duration}}" indicator-active-color="#fff" class="indexBanner">
+        <block wx:for="{{imgUrls}}" wx:key="id">
+            <swiper-item>
+                <image src="{{item.n_img_url}}" class="slide-image" />
+            </swiper-item>
+        </block>
+    </swiper>
+</view>
+
+<view class='container nav'>
+    <view class="navTitle"></view>
+    <view class='nav-item' bindtap="addCourseInfo">
+        <image src='../../images/kcsz.png'></image>
+        <text>课程设置</text>
+    </view>
+
+    <view class='nav-item' bindtap="teacherManage">
+        <image src='../../images/jsgl.png'></image>
+        <text>教师管理</text>
+    </view>
+
+    <view class='nav-item' bindtap="studentManage">
+        <image src='../../images/xygl.png'></image>
+        <text>学员管理</text>
+    </view>
+
+    <view class='nav-item' bindtap="releaseListen">
+        <image src='../../images/yyst.png'></image>
+        <text>试听预约</text>
+    </view>
+
+    <view class='nav-item' bindtap="leaveManager">
+        <image src='../../images/qjbk.png'></image>
+        <text>请假补课</text>
+    </view>
+    
+    <view class='nav-item' bindtap="enrollActivity">
+        <image src='../../images/zstg.png'></image>
+        <text>招生推广</text>
+    </view>
+
+    <view class='nav-item' bindtap="fromLetter">
+        <image src='../../images/jzlx.png'></image>
+        <text>家长来信</text>
+    </view>
+
+    <view class='nav-item' bindtap="notify">
+        <image src='../../images/tzgg.png'></image>
+        <text>通知公告</text>
+    </view>
+
+    <view class='nav-item' bindtap="chartList">
+        <image src='../../images/bbtj.png'></image>
+        <text>报表统计</text>
+    </view>
+</view>
+
+<view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+<view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+    <view class="title">
+        <text>注册信息</text>
+    </view>
+    <view class="linkItem">
+        <view class="leftImg">
+            <image src="../../images/phonrB.png" mode="widthFix"></image>
+        </view>
+        <view class="txt">
+            <input type="text" placeholder="请输入绑定手机号码"></input>
+        </view>
+    </view>
+
+    <view class="linkItem">
+        <view class="leftImg">
+            <image src="../../images/nameIcon.png" mode="widthFix"></image>
+        </view>
+        <view class="txt">
+            <input type="text" placeholder="请输入机构名称"></input>
+        </view>
+    </view>
+
+     <view class="linkItem">
+        <view class="leftImg">
+            <image src="../../images/addressIcon.png" mode="widthFix"></image>
+        </view>
+        <view class="txt">
+            <input type="text" placeholder="机构地址"></input>
+        </view>
+    </view>
+
+    <view class="linkItem">
+        <view class="leftImg">
+            <image src="../../images/addressIcon.png" mode="widthFix"></image>
+        </view>
+        <view class="txt">
+            <input type="text" placeholder="用户名"></input>
+        </view>
+    </view>
+   
+    <view class="linkItem">
+        <view class="leftImg">
+            <image src="../../images/addressIcon.png" mode="widthFix"></image>
+        </view>
+        <view class="txt">
+            <input type="password" placeholder="密码"></input>
+        </view>
+    </view>
+    <view class="rightBtn" bindtap="hideModal" wx:if="{{showModalStatus}}">
+        <text class="rightTxt">确定</text>
+    </view>
+
+</view>

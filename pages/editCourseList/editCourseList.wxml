@@ -1,0 +1,203 @@
+<view class="container courseDetail">
+   <view class="qrCode">
+        <canvas canvas-id="myQrcode"></canvas>
+    </view>
+
+    <view class="itemMain container-cn">
+        <view class="item">
+            <view class="itemTitle">试听课程:</view>
+            <view class="itemContent contentBorder">
+                <!-- <picker  value="{{kcIndex}}" range="{{classArray}}"> -->
+                    <view class="picker">
+                        {{courseName}}
+                    </view>
+                <!-- </picker> -->
+            </view>
+        </view>
+
+        <view class="item">
+            <view class="itemTitle">上课班级:</view>
+            <view class="itemContent contentBorder">
+                <!-- <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}"> -->
+                    <view class="picker">
+                        {{className}}
+                    </view>
+                <!-- </picker> -->
+            </view>
+        </view>
+
+
+        <view class="item">
+            <view class="itemTitle">上课教室:</view>
+            <view class="itemContent contentBorder">
+                <!-- <picker bindchange="bindJSPickerChange" value="{{jsIndex}}" range="{{classRoomArray}}"> -->
+                    <view class="picker">
+                        {{classRoomName}}
+                    </view>
+                <!-- </picker> -->
+            </view>
+            <!-- <text class="setTxx" bindtap="showModal">设置</text> -->
+        </view>
+
+        <view class="item">
+        <view class="itemTitle">上课日期:</view>
+        <view class="itemContent contentBorder">
+            <!-- <picker mode="date" value="{{date}}" start="2019-01-01" end="2030-01-01" bindchange="bindDateChange"> -->
+                <view class="picker"> {{date}} </view>
+            <!-- </picker> -->
+        </view>
+        <!-- <view class="datePinlv contentBorder"> -->
+            <!-- <picker bindchange="bindPinLvPickerChange" value="{{cishuIndex}}" range="{{cishuArray}}"> -->
+                <!-- <view class="picker">
+                    {{intervalName}}
+                </view> -->
+            <!-- </picker> -->
+        <!-- </view> -->
+    </view>
+
+
+        <view class="item">
+            <view class="itemTitle">上课时间:</view>
+
+            <view class="itemContent">
+                <view class='select_box select_box_time contentBorder'>
+                    <!-- <picker mode="time" value="{{startDate}}" start="8:00" end="22:00" bindchange="bindStartDateChange"> -->
+                        <view class="picker"> {{start}} </view>
+                    <!-- </picker> -->
+                </view>
+                <text class="tipsTxt">至</text>
+                <view class='select_box select_box_time contentBorder'>
+
+                    <!-- <picker mode="time" value="{{startDate}}" start="8:00" end="22:00" bindchange="bindEndDateChange"> -->
+                        <view class="picker"> {{end}} </view>
+                    <!-- </picker> -->
+                </view>
+            </view>
+        </view>
+
+        <view class="item">
+            <view class="itemTitle">上课教师:</view>
+            <view class="itemContent contentBorder">
+                <picker bindchange="bindTeacherPickerChange" value="{{teacherIndex}}" range="{{teacherArray}}" range-key="{{'cn_name'}}">
+                    <view class="picker">
+                        {{teacherArray[teacherIndex].cn_name}}
+                    </view>
+                </picker>
+            </view>
+            <!-- <text class="setTxx" bindtap="addTeacher">新增</text> -->
+        </view>
+
+        <view class="item">
+            <view class="itemTitle">班级容量:</view>
+            <view class="itemContent">
+                <input disabled="{{true}}" value="{{capacity}}" placeholder="班级容量" maxlength="2"></input>
+               
+            </view>
+        </view>
+
+        <!-- <view class="item">
+            <view class="itemTitle">设置平行班:</view>
+            <view class="contentBorder itemContent">
+                <multi-selector class='selector' value='{{name}}' bindchange='bindPxClassChange' bindmodalopen='onModalOpen' placeholder='请选择平行班' items='{{pxClass}}' bindmodalclose='onModalClose' show-value='{{false}}'>
+                </multi-selector>
+            </view>
+        </view> -->
+
+        <view class="selectItemMain" wx:if="{{pxStatus}}">
+            <view class="itemTitle">平行班级:</view>
+            <view class="itemContent">
+                <view class="selectItem" wx:key="select" wx:for="{{pingXingClassArray}}">{{item.name}}</view>
+            </view>
+        </view>
+
+        <view class="item">
+            <view class="itemTitle">学员名单:</view>
+
+            <view class="itemContent contentBorder">
+                <multi-selector class='selector' value='{{value}}' selected='{{courseLists}}' bindchange='bindSelectorChange' bindmodalopen='onModalOpen' placeholder='请选择学员' items='{{items}}' bindmodalclose='onModalClose' show-value='{{false}}'>
+                </multi-selector>
+            </view>
+            <!-- <text class="setTxx" bindtap="addStudent">新增</text> -->
+        </view>
+
+        <view class="selectItemMain" wx:if="{{selectStatus}}">
+            <view class="itemTitle">已选学员:</view>
+            <view class="itemContent">
+                <view class="selectItem" wx:key="select" wx:for="{{selectValue}}">{{item.name}}</view>
+            </view>
+        </view>
+
+        <view class="item">
+            <view class="itemTitle">备　　注:</view>
+            <view class="itemContent">
+                <input type="text" value="{{remark}}" bindinput="remarkInput" />
+            </view>
+        </view>
+
+        <view class="button" bindtap="submitForm">
+            <text>保存</text>
+            <view class="icon"></view>
+        </view>
+    </view>
+
+    <!-- 我的教室列表 -->
+    <view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+    <view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+        <view class="title">
+            <text>我的教室</text>
+        </view>
+        <view class="roomList">
+            <view class="linkItem roomItem">
+                <input type="text" value="教室一"></input>
+                <view class="edit" bindtap="showEditModal">修改</view>
+                <view class="delete" bindtap="deleteRoomFn">删除</view>
+            </view>
+            <view class="linkItem roomItem">
+                <input type="text" value="教室一"></input>
+                <view class="edit"  bindtap="showEditModal">修改</view>
+                <view class="delete" bindtap="deleteRoomFn">删除</view>
+            </view>
+        </view>
+        <view class="rightBtn" bindtap="showAddModal" wx:if="{{showModalStatus}}">
+            <text class="rightTxt">新增</text>
+        </view>
+    </view>
+
+    <!-- 新增教室 -->
+    <view class="commodity_screen" bindtap="hideModal" wx:if="{{showAddModalStatus}}"></view>
+    <view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showAddModalStatus}}">
+        <view class="title">
+            <text>新增教室</text>
+        </view>
+        <view class="linkItem">
+            <view class="leftImg">
+                <image src="../../images/classRoomBar.png" mode="widthFix"></image>
+            </view>
+            <view class="txt">
+                <input type="text" placeholder="请录入课程"></input>
+            </view>
+        </view>
+        <view class="rightBtn" bindtap="hideModal" wx:if="{{showAddModalStatus}}">
+            <text class="rightTxt">确定</text>
+        </view>
+    </view>
+
+    <!-- 修改教室 -->
+    <view class="commodity_screen" bindtap="hideModal" wx:if="{{showEditModalStatus}}"></view>
+    <view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showEditModalStatus}}">
+        <view class="title">
+            <text>编辑教室</text>
+        </view>
+        <view class="linkItem">
+            <view class="leftImg">
+                <image src="../../images/classRoomBar.png" mode="widthFix"></image>
+            </view>
+            <view class="txt">
+                <input type="text" placeholder="请录入课程" value="教室一"></input>
+            </view>
+        </view>
+        <view class="rightBtn" bindtap="hideModal" wx:if="{{showEditModalStatus}}">
+            <text class="rightTxt">保存</text>
+        </view>
+    </view>
+</view>

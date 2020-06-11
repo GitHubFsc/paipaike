@@ -1,0 +1,106 @@
+/**selectWork.wxss**/
+
+.container {
+    background-color: #fff;
+}
+
+.dateInfo {
+    margin-top: 20rpx;
+    padding-bottom: 40rpx;
+}
+
+.selectTitle {
+    display: inline-block;
+}
+
+.selectTitle image {
+    width: 130rpx;
+    height: 45rpx;
+    background-size: 100% 100%;
+    margin-left: 20rpx;
+    vertical-align: middle;
+}
+
+.dateTime {
+    padding: 30rpx 0;
+    font-size: 30rpx;
+    font-weight: lighter;
+    color: #000;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 20rpx;
+}
+
+/* .curButton image {
+    width: 40rpx;
+    height: 40rpx;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 15rpx;
+    left: 50%;
+    margin-left: -150rpx;
+} */
+
+.workItem {
+    height: 180rpx;
+    border: 1rpx solid #bbb;
+    border-radius: 8rpx;
+    overflow: hidden;
+    margin-bottom: 20rpx;
+}
+
+.workItem .leftItem {
+    width: 70%;
+    float: left;
+    margin-left: 3%;
+    color: #595959;
+    font-size: 28rpx;
+    /* background-color: red; */
+    height: 100%;
+}
+
+.leftItem view {
+    line-height: 50rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.leftItem view:first-child {
+    padding-top: 15rpx;
+}
+
+.workItem .rightItem {
+    width: 20%;
+    float: right;
+    position: relative;
+    background-color: #469bba;
+    color: #fff;
+    height: 100%;
+    text-align: center;
+    font-size: 30rpx;
+}
+
+.rightItem view {
+    line-height: 50rpx;
+}
+
+.rightItem view:first-child {
+    padding-top: 15rpx;
+}
+
+.lineIcon image {
+    width: 6rpx;
+    height: 30rpx;
+    background-size: 100% 100%;
+    margin: 5rpx 0rpx 0rpx 0rpx;
+}
+
+.rightItem .selectIcon {
+    position: absolute;
+    width: 20rpx;
+    height: 20rpx;
+    background-size: 100% 100%;
+    top: 80rpx;
+    right: 20rpx;
+}

@@ -1,0 +1,605 @@
+page {
+    background-color: #fff;
+    height: 100%;
+    padding-bottom: 99rpx;
+    box-sizing: border-box;
+}
+
+.userhead {
+    background-color: #469bba;
+}
+
+.us-info-head {
+    margin: 0 auto;
+    padding-top: 50rpx;
+    padding: 50epx;
+}
+
+.us-info-head image {
+    height: 150rpx;
+    width: 150rpx;
+    border-radius: 50% 50%;
+    background-size: 100% 100%;
+    margin: 0 auto;
+    display: block;
+}
+
+.us-info-name {
+    font-size: 36rpx;
+    color: #fff;
+    line-height: 120rpx;
+    text-align: center;
+}
+
+.user-mess {
+    padding-top: 50rpx;
+    text-align: right;
+}
+
+.user-mess image {
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.user-mess text {
+    color: #fff;
+    font-size: 22rpx;
+}
+
+.user-mess-text {
+    margin-top: -15rpx;
+}
+
+.user-infolist {
+    display: flex;
+}
+
+.user-tx {
+    width: 140rpx;
+    height: 166rpx;
+    background: url(http://520fax.com/ximg/txbg.png) no-repeat;
+    background-size: 100%;
+    position: relative;
+}
+
+.user-tx-img {
+    position: absolute;
+    top: 30rpx;
+    left: 5rpx;
+    width: 133rpx;
+    height: 133rpx;
+}
+
+.user-tx-img image {
+    width: 100%;
+    height: 100%;
+}
+
+.user-info {
+    flex: 1;
+    margin-left: 29rpx;
+    color: #fff;
+}
+
+.user-info-one {
+    font-size: 30rpx;
+    margin-top: 48rpx;
+}
+
+.user-info-one image {
+    width: 26rpx;
+    height: 26rpx;
+    margin-left: 14rpx;
+}
+
+.user-info-two {
+    font-size: 26rpx;
+    margin-top: 14rpx;
+}
+
+.user-info-two image {
+    width: 26rpx;
+    height: 26rpx;
+    margin-right: 14rpx;
+}
+
+.user-info-three {
+    margin-top: 18rpx;
+    width: 300rpx;
+    height: 52rpx;
+    text-align: center;
+    border: 1rpx solid #666;
+    box-sizing: border-box;
+    border-radius: 50rpx;
+    line-break: 52rpx;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.user-rt {
+    width: 61rpx;
+    margin-top: 52rpx;
+}
+
+.user-rt image {
+    width: 61rpx;
+    height: 61rpx;
+}
+
+.user-rt text {
+    font-size: 20rpx;
+    color: #fff;
+}
+
+.user-sy {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 138rpx;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.user-sy-item {
+    width: 33.3333%;
+    height: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: rgb(235, 235, 235);
+}
+
+.user-sy-item text {
+    width: 100%;
+    text-indent: 30rpx;
+}
+
+.user-sy-color {
+    color: #fff;
+}
+
+.userorder {
+    background: #fff;
+}
+
+.userlist {
+    background: #fff;
+    margin-top: 21rpx;
+}
+
+.userlist-item {
+    width: 100%;
+    height: 100rpx;
+    border-bottom: 1px solid #f5f6f7;
+    display: flex;
+    align-items: center;
+}
+
+.userlist-icon {
+    width: 50rpx;
+    height: 50rpx;
+    margin-left: 30rpx;
+}
+
+.schoolName {
+    font-size: 26rpx;
+    padding-right: 40rpx;
+}
+
+.userlist-icon image {
+    width: 100%;
+    height: 100%;
+}
+
+.userlist-text {
+    flex: 1;
+    margin-left: 30rpx;
+    font-size: 26rpx;
+    margin-right: 20rpx;
+}
+
+.userlist-text text {
+    float: right;
+    color: #5cc99c;
+}
+
+/* ----------------- */
+
+.userlist-rt {
+    width: 26rpx;
+    height: 26rpx;
+    margin-right: 38rpx;
+}
+
+.userlist-rt image {
+    width: 100%;
+    height: 100%;
+}
+
+.middleMain {
+    margin-bottom: 30rpx;
+}
+
+.nav {
+    width: 100%;
+    box-sizing: border-box;
+    background: #469bba;
+    height: 78rpx;
+}
+
+.nav-item {
+    display: inline-block;
+    text-align: center;
+    font-size: 30rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+    width: 50%;
+    color: #fff;
+}
+
+.line {
+    width: 120rpx;
+    height: 6rpx;
+    background-color: #fff;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.nav-item.active {
+    color: #fff;
+}
+
+.tab-box {
+    margin-top: 0rpx;
+    border-top: none;
+    border-radius: 0rpx 0rpx 13rpx 13rpx;
+    height: 100%;
+}
+
+.tab-content {
+    overflow-y: scroll;
+}
+
+/* =============== */
+.swiperItems {
+    height: auto;
+    overflow: scroll;
+    padding-bottom: 100rpx;
+}
+
+.studentDetail {
+    margin-top: 50rpx;
+    margin-bottom: 20rpx;
+}
+
+.stuName {
+    color: #469db9 !important;
+    display: inline !important;
+    font-size: 32rpx !important;
+}
+
+.stu-cn {
+    background: #fff;
+    border-radius: 10rpx;
+    padding: 24rpx 0;
+    margin-top: 42rpx;
+    overflow: hidden;
+    box-shadow: 0 0 10rpx rgba(153, 153, 153, 0.2);
+}
+
+.yn-cntop {
+    border-bottom: 1rpx solid #e5e5e5;
+    line-height: 80rpx;
+    padding-left: 40rpx;
+    position: relative;
+}
+
+.yn-cntop text:first-child {
+    color: #333;
+    font-size: 28rpx;
+}
+
+.yn-cntop text:last-child {
+    color: #666;
+    font-size: 28rpx;
+    margin-top: 37rpx;
+    margin-bottom: 25rpx;
+}
+
+.stu-link {
+    width: 95%;
+    background: #f6f6f6;
+    margin: 0 auto;
+    margin-top: 25rpx;
+    border-radius: 15rpx;
+}
+
+.stu-link-item {
+    width: 95%;
+    margin: 0 auto;
+    border-bottom: 1rpx solid #e5e5e5;
+    font-size: 27rpx;
+    line-height: 84rpx;
+}
+
+.stu-link-item image {
+    width: 100%;
+    height: 160rpx;
+    margin-right: 30rpx;
+}
+
+.orderNum {
+    width: 70%;
+    height: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.stu-link-item text {
+    float: right;
+}
+
+.stu-link-item {
+    margin-left: 30rpx;
+}
+
+.mr30 {
+    margin-right: 30rpx;
+}
+
+.stu-link .stu-link-item:last-child {
+    border: none;
+}
+
+.jiaoyi {
+    float: left !important;
+    background: #469db9;
+    height: 38rpx;
+    line-height: 38rpx;
+    color: #fff;
+    padding: 0 10rpx;
+    margin-top: 23rpx;
+    border-radius: 5rpx;
+}
+
+.zhizuoBtn {
+    position: absolute;
+    top: 10rpx;
+    right: 10rpx;
+    padding: 0rpx 10rpx;
+    background-color: #469bba;
+    font-size: 24rpx;
+    color: #fff;
+    border-radius: 8rpx;
+    line-height: 50rpx;
+}
+
+/* ==================== */
+
+.cartlist {
+    background: #fff;
+    margin-bottom: 20rpx;
+}
+
+.container {
+    height: 100%;
+}
+
+.containerMain .cartlist:last-child {
+    margin-bottom: 120rpx;
+}
+
+.cartlist-item {
+    height: 180rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* 水平居中 */
+}
+
+.item-img {
+    width: 140rpx;
+    height: 140rpx;
+}
+
+.item-img image {
+    width: 100%;
+    height: 100%;
+    border-radius: 8rpx;
+}
+
+.item-info {
+    flex: 1;
+    margin-left: 20rpx;
+    justify-content: center;
+    /* 水平居中 */
+    align-items: center;
+    /* 垂直居中 */
+    margin-right: 50rpx;
+}
+
+.editImg {
+    margin-left: 20rpx;
+    margin-right: 20rpx;
+}
+
+.copyImg,
+.deleteImg,
+.editImg {
+    width: 40rpx;
+    height: 40rpx;
+    background-size: 100% 100%;
+}
+
+.itemName {
+    font-size: 30rpx;
+    color: #393939;
+}
+
+.itemDesc {
+    font-size: 24rpx;
+    line-height: 32rpx;
+    color: #afa9a9;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.active-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.active-item .active-item-icon {
+    width: 200rpx;
+    height: 200rpx;
+}
+
+.active-item .active-item-icon image {
+    width: 100%;
+    height: 100%;
+}
+
+.active-desc {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.active-desc .active-title {
+    width: 100%;
+    height: 125rpx;
+    font-size: 30rpx;
+    color: #333;
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* white-space: nowrap; */
+    text-align: left;
+
+}
+
+.active-edit {
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+.active-edit .active-operation {
+    display: flex;
+    margin-left: 20rpx;
+}
+
+.active-edit view:nth-of-type(1) {
+    font-size: 28rpx;
+    font-weight: 400;
+    color: #999;
+}
+
+.active-edit .active-operation view {
+    font-size: 28rpx;
+    font-weight: 500;
+    color: #479AB9;
+    margin-left: 50rpx;
+}
+
+.active-item {
+    /* border-bottom: 1rpx solid #E5E5E5;
+    margin-top: 30rpx;
+    padding-bottom: 30rpx; */
+}
+
+.active-desc {
+    padding-left: 20rpx;
+
+}
+
+.checkBox {
+    width: 100%;
+    height: auto;
+    border-bottom: 1rpx solid #E5E5E5;
+    margin-top: 30rpx;
+    padding-bottom: 30rpx;
+    margin-left: 20rpx;
+    display: flex;
+    margin-bottom: 60rpx;
+}
+
+
+
+.active-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 99rpx;
+    border-top: 1rpx solid #E5E5E5;
+    padding: 20rpx;
+    box-sizing: border-box;
+    padding-left: 0;
+    background-color: #fff;
+}
+
+.active-footer button {
+    width: 120rpx;
+    height: 60rpx;
+    background-color: #479AB9;
+    border-radius: 10rpx;
+    border: none;
+    display: inline-block;
+    margin-left: 20rpx;
+
+    color: #fff;
+    text-align: center;
+    line-height: 60rpx;
+    font-size: 28rpx;
+}
+
+.delete-active {
+    display: none !important;
+}
+
+checkbox .wx-checkbox-input {
+    border: 2rpx solid #979797;
+    border-radius: 50%;
+    display: inline-block;
+    width: 50rpx;
+    height: 50rpx;
+    margin-top: 100rpx;
+    margin-left: -20rpx;
+}
+
+.check-active .wx-checkbox-input {
+    display: none;
+}
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+    background: #479AB9;
+}
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+    width: 28rpx;
+    height: 28rpx;
+    line-height: 28rpx;
+    text-align: center;
+    font-size: 25rpx;
+    color: #fff;
+    /* 对勾颜色 白色 */
+    background-color: #479AB9;
+}
+
+.caozuo-item {
+    display: flex;
+    align-self: flex-end;
+}
+
+.caozuo-item .copy {
+    color: #469bba;
+    font-size: 28rpx;
+    margin-left: 40rpx;
+
+}

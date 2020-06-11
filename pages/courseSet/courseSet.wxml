@@ -1,0 +1,31 @@
+<view class='userlist container'>
+    <view class='userlist-item' bindtap="addKecheng">
+        <view class='userlist-icon'>
+            <image src='../../images/BTN.png'></image>
+        </view>
+        <view class='userlist-text'>录入课程</view>
+        <view class='userlist-rt'>
+            <image src='../../images/iconr.png'></image>
+        </view>
+    </view>
+
+    <view class='userlist-item' bindtap="addClassRoom">
+        <view class='userlist-icon'>
+            <image src='../../images/classRoomBar.png'></image> 
+        </view>
+        <view class='userlist-text'>录入教室</view>
+        <view class='userlist-rt'>
+            <image src='../../images/iconr.png'></image>
+        </view>
+    </view>
+
+    <view class='userlist-item' bindtap="addClass">
+        <view class='userlist-icon'>
+            <image src='../../images/classBar.png'></image>
+        </view>
+        <view class='userlist-text'>录入班级</view>
+        <view class='userlist-rt'>
+            <image src='../../images/iconr.png'></image>
+        </view>
+    </view>
+</view>

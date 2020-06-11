@@ -1,0 +1,187 @@
+<view class="container middleMain">
+	<scroll-view scroll-x="true" class="nav" scroll-left="{{navScrollLeft}}" scroll-with-animation="{{true}}">
+		<block wx:for="{{navData}}" wx:for-index="idx" wx:for-item="navItem" wx:key="idx">
+			<view class="nav-item {{currentTab == idx ?'active':''}}" data-current="{{idx}}" bindtap="switchNav">
+				{{navItem.text}}
+				<block wx:if="{{currentTab == idx}}">
+					<view class="line"></view>
+				</block>
+			</view>
+		</block>
+		<view>
+		</view>
+	</scroll-view>
+
+	<swiper style="height:{{heiNum}}" class="container-cn tab-box" current="{{currentTab}}" duration="300" bindchange="switchTab">
+		<swiper-item class="swiperItems">
+			<checkbox-group bindchange="handleItemChange" wx:for="{{activityArray}}" wx:key="index" data-index="{{index}}">
+				<view class="checkBox">
+					<view class="checkbox">
+						<checkbox class="{{show_chekitem ? '' : 'check-active'}}" value="{{item.id}}"></checkbox>
+					</view>
+					<view class="active-item">
+						<view class="active-item-icon">
+							<image src="{{item.image}}" alt="" />
+						</view>
+						<view class="active-desc">
+							<view class="active-title" data-id="{{item.id}}" bindtap="goPromotePage">
+								{{item.title}}
+							</view>
+							<view class="active-edit">
+								<view>{{item.count}}人报名</view>
+								<view class="active-operation">
+									<navigator class="edit-url" url="/pages/promoteDetail/promoteDetail?id={{item.id}}" hover-class="none"  open-type="navigate">
+										<view>详情</view>
+									</navigator>
+									<view bindtap="takeFn" data-id="{{item.id}}" data-mode="{{item.mode}}">{{item.mode==1?"下架":"上架"}}</view>
+									<navigator class="edit-url" url="/pages/enterForEdit/enterForEdit?id={{item.id}}" hover-class="none" open-type="navigate">
+										<view>编辑</view>
+									</navigator>
+								</view>
+
+							</view>
+						</view>
+					</view>
+				</view>
+
+				<!-- <checkbox class="{{show_chekitem ? '' : 'check-active'}}" value="true" >
+                    <view class="active-item">
+                        <view class="active-item-icon">
+                            <image  src="../../images/active_two.png" alt="" />
+                        </view>
+                        <view class="active-desc">
+                            <view class="active-title" bindtap="goPromotePage">
+                                新春价到！898元课程90元抢购，还有超值团购价格
+                            </view>
+                            <view class="active-edit">
+                                <view>200人报名</view>
+                                <view class="active-operation">
+                                    <navigator class="edit-url" url="/pages/promoteDetail/promoteDetail"  open-type="navigate">
+                                        <view>详情</view>
+                                    </navigator>
+                                    <view>下架</view>
+                                    <navigator class="edit-url"  url="/pages/pintuanEdit/pintuanEdit" open-type="navigate">
+                                        <view>编辑</view>
+                                    </navigator>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </checkbox> -->
+			</checkbox-group>
+
+		</swiper-item>
+
+		<swiper-item class="swiperItems">
+			<view class="container studentDetail">
+
+				<view class="container-cn stu-cn">
+					<view class="yn-cntop">
+						模版:
+						<text class="stuName">拼团模版</text>
+						<view class="zhizuoBtn" bindtap="pinTuanTemp">
+							制作活动海报
+						</view>
+
+					</view>
+					<view class="stu-link">
+						<view class="stu-link-item">
+							模版说明:
+							<text class="mr30">拼团模版</text>
+						</view>
+						<view class="stu-link-item">
+							模版描述:
+							<text class="mr30">拼团选择</text>
+						</view>
+
+						<view class="stu-link-item">
+							<image src="../../images/background-3.jpg"></image>
+						</view>
+
+					</view>
+				</view>
+				<view class="container-cn stu-cn">
+					<view class="yn-cntop">
+						模版:
+						<text class="stuName">报名模版</text>
+						<view class="zhizuoBtn" bindtap="baoMingTemp">
+							制作活动海报
+						</view>
+					</view>
+
+					<view class="stu-link">
+						<view class="stu-link-item">
+							报名说明:
+							<text class="mr30">报名模版</text>
+						</view>
+						<view class="stu-link-item">
+							模版描述:
+							<text class="mr30">报名选择</text>
+						</view>
+
+						<view class="stu-link-item">
+							<image src="../../images/background-2.jpg"></image>
+						</view>
+
+					</view>
+				</view>
+			</view>
+		</swiper-item>
+
+		<!-- <swiper-item class="swiperItems">
+			<view class="container cartlist" wx:for="{{cartData}}" wx:key="data">
+
+				<view class="container-cn cartlist-item">
+					<view class="item-img">
+						<image src="{{item.image}}"></image>
+					</view>
+
+					<view class="item-info">
+						<view class="itemName">{{item.name}}</view>
+						<view class="itemDesc">{{item.desc}}</view>
+					</view> -->
+
+					<!-- <view class="caozuo-item"> -->
+						<!-- <view class="copy" bindtap="copyTemp">复制</view> -->
+						<!-- <view class="copy" bindtap="baoMingTemp">编辑</view> -->
+						<!-- <view class="copy">上架</view> -->
+						<!-- <view class="copy" bindtap="deleteTemp">删除</view> -->
+						<!-- <image bindtap="copyTemp" data-text="{{item.id}}" class="copyImg" src="../../images/copyIcon.png"></image>
+                 <image bindtap="baoMingTemp" class="editImg" src="../../images/editIcon-set.png"></image>
+                  <image bindtap="deleteTemp" class="deleteImg" src="../../images/deleteIcon.png"></image> -->
+
+					<!-- </view>
+				</view>
+			</view>
+		</swiper-item> -->
+
+	</swiper>
+	<view class="active-footer" wx:if="{{currentTab==0}}">
+		<button bindtap="manageItem">管理</button>
+		<button class="{{show_chekitem ? '' : 'delete-active'}}" bindtap="deleteItem">删除</button>
+	</view>
+</view>
+
+
+
+<!-- <view class='userlist container'>
+    <view class='userlist-item' bindtap="tuiguangSet">
+        <view class='userlist-icon'>
+            <image src='../../images/studentChart.png'></image>
+        </view>
+        <view class='userlist-text'>推广设置</view>
+        <view class='userlist-rt'>
+            <image src='../../images/iconr.png'></image>
+        </view>
+    </view>
+
+    <view class='userlist-item' bindtap="activityTemp">
+        <view class='userlist-icon'>
+            <image src='../../images/teacherChart.png'></image>
+        </view>
+        <view class='userlist-text'>活动模版</view>
+        <view class='userlist-rt'>
+            <image src='../../images/iconr.png'></image>
+        </view>
+    </view>
+</view> -->

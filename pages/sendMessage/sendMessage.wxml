@@ -1,0 +1,58 @@
+<view class="container studentDetail">
+    <view class="container-cn stu-cn">
+        <view class="yn-cntop">
+            <!-- 学员姓名: -->
+            <text class="stuName">您将发消息给:</text>
+        </view>
+
+        <view class="stu-link">
+            <view class="stu-link-item">
+                江晓鹏家长1
+                <text class="mr30">1515517717</text>
+            </view>
+            <view class="stu-link-item">
+                江晓鹏家长2
+                <text class="mr30">18567676767</text>
+            </view>
+            <view class="stu-link-item">
+                江晓鹏家长3
+                <text class="mr30">151277686887</text>
+            </view>
+            <view class="stu-link-item">
+                江晓鹏家长1
+                <text class="mr30">1515517717</text>
+            </view>
+            <view class="stu-link-item">
+                江晓鹏家长2
+                <text class="mr30">18567676767</text>
+            </view>
+            <view class="stu-link-item">
+                江晓鹏家长3
+                <text class="mr30">151277686887</text>
+            </view>
+            <view class="stu-link-item">
+                江晓鹏家长1
+                <text class="mr30">1515517717</text>
+            </view>
+            <view class="stu-link-item">
+                江晓鹏家长2
+                <text class="mr30">18567676767</text>
+            </view>
+            <view class="stu-link-item">
+                江晓鹏家长3
+                <text class="mr30">151277686887</text>
+            </view>
+        </view>
+    </view>
+
+    <view class="container-cn inputMessage">
+        <view class="txtDom">
+            <textarea placeholder="请编辑群发消息内容" maxlength="{{noteMaxLen}} "></textarea>
+        </view>
+    </view>
+</view>
+<view class="container-cn">
+    <view class="button">
+        <text>发送</text>
+    </view>
+</view>

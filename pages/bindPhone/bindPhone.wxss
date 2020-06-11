@@ -1,0 +1,57 @@
+page {
+    background-color: #fff;
+}
+
+.mainTitle {
+    height: 80rpx;
+    font-size: 34rpx;
+    text-indent: 40rpx;
+    box-shadow: 0 0 10rpx rgba(153, 153, 153, 0.2);
+    border-bottom: 4rpx solid #469db9;
+    line-height: 80rpx;
+    margin-bottom: 50rpx;
+    color: #469db9;
+}
+
+.item {
+    line-height: 100rpx;
+    /* border-bottom: 1rpx solid #f4f2f2; */
+    height: 100rpx;
+}
+
+.item .itemTitle {
+    width: 23%;
+    float: left;
+    font-size: 30rpx;
+    text-align: center;
+}
+
+.contentBorder {
+    border: 1px solid #efefef;
+    border-radius: 8rpx;
+    color: #999;
+    font-size: 28rpx;
+    line-height: 70rpx;
+    margin-top: 15rpx;
+}
+
+.item .itemContent {
+    width: 75%;
+    float: right;
+    height: 70rpx;
+}
+
+.picker {
+    position: relative;
+    padding-left: 20rpx;
+}
+
+.item input {
+    height: 70rpx;
+    margin-top: 15rpx;
+    font-size: 28rpx;
+    border: 1px solid #efefef;
+    border-radius: 8rpx;
+    color: #999;
+    padding: 0 20rpx;
+}

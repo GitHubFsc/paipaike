@@ -1,0 +1,81 @@
+<view class="itemMain container-cn">
+    <view class="item">
+        <view class="itemTitle">试听班级:</view>
+        <view class="itemContent contentBorder">
+            <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+                <view class="picker">
+                    {{array[index]}}
+                </view>
+            </picker>
+        </view>
+    </view>
+
+    <view class="item">
+        <view class="itemTitle">试听教室:</view>
+
+        <view class="itemContent contentBorder">
+            <picker bindchange="bindJSPickerChange" value="{{jsIndex}}" range="{{classRoomArray}}">
+                <view class="picker">
+                    {{classRoomArray[jsIndex]}}
+                </view>
+            </picker>
+        </view>
+    </view>
+
+  <view class="item">
+        <view class="itemTitle">试听日期:</view>
+        <view class="itemContent contentBorder">
+            <picker mode="date" value="{{date}}"  start="1990-01-01" end="2030-01-01" bindchange="bindDateChange">
+                <view class="picker"> {{date}} </view>
+            </picker>
+        </view>
+    </view>
+
+    <view class="item">
+        <view class="itemTitle">试听时间:</view>
+
+        <view class="itemContent">
+            <view class='select_box select_box_time contentBorder'>
+                <picker mode="time" value="{{startDate}}" start="0:00" end="24:00" bindchange="bindStartDateChange">
+                <view class="picker"> {{startDate}} </view>
+            </picker>
+            </view>
+            <text class="tipsTxt">至</text>
+            <view class='select_box select_box_time contentBorder'>
+
+                <picker mode="time" value="{{endDate}}"  start="0:00" end="24:00"     bindchange="bindEndDateChange">
+                <view class="picker"> {{endDate}} </view>
+            </picker>
+            </view>
+        </view>
+    </view>
+
+      <view class="item">
+        <view class="itemTitle">全部名额:</view>
+        <view class="itemContent">
+            <input placeholder="全部名额"></input>
+        </view>
+    </view>
+
+      <view class="item">
+        <view class="itemTitle">可约名额:</view>
+        <view class="itemContent">
+            <input placeholder="可约名额"></input>
+        </view>
+    </view>
+
+    <view class="item">
+        <view class="itemTitle">授课老师:</view>
+       <view class="itemContent contentBorder">
+            <picker bindchange="bindTeaPickerChange" value="{{teacherIndex}}" range="{{teacherArray}}">
+                <view class="picker">
+                    {{teacherArray[teacherIndex]}}
+                </view>
+            </picker>
+        </view>
+    </view>
+
+    <view class="button" bindtap="submitForm">
+        <text>确认发布</text>
+    </view>
+</view>

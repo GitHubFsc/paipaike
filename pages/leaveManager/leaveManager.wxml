@@ -1,0 +1,636 @@
+<view class="container middleMain">
+    <scroll-view scroll-x="true" class="nav" scroll-left="{{navScrollLeft}}" scroll-with-animation="{{true}}">
+        <block wx:for="{{navData}}" wx:for-index="idx" wx:for-item="navItem" wx:key="idx">
+            <view class="nav-item {{currentTab == idx ?'active':''}}" data-current="{{idx}}" bindtap="switchNav">
+                {{navItem.text}}
+                <block wx:if="{{currentTab == idx}}">
+                    <view class="line"></view>
+                </block>
+            </view>
+        </block>
+        <view>
+        </view>
+    </scroll-view>
+
+    <swiper style="height:{{heiNum}}" class="container-cn tab-box" current="{{currentTab}}" duration="300" bindchange="switchTab">
+        <swiper-item class="swiperItems">
+            <view class="container ">
+                <calendar bindOnDayClick="onDayClick" bindOnMonthChange='onMonthChange' bindchange='change' value='{{month}}' days-style='{{daysStyle}}' />
+            </view>
+
+            <view class="container dateInfo">
+                <view class="dateTime">{{month}} {{week}}</view>
+                <view class="container-cn">
+                    <view bindtap="selectAttendance" class="workItem" wx:for="{{cartData}}" wx:key="id" data-id="{{item.id}}">
+                        <view class="leftItem">
+                            <view>课程名称: {{item.courseName}}</view>
+                            <view>班　　级: {{item.className}}</view>
+                            <view>上课老师: {{item.teacherName}}</view>
+                        </view>
+                        <view class="rightItem">
+                            <view>{{item.start}}</view>
+                            <view class="lineIcon">
+                                <image src="../../images/kaoqinLineIcon.png"></image>
+                            </view>
+                            <view>{{item.end}}</view>
+                            <image class="selectIcon" src="../../images/kqListIcon.png"></image>
+                        </view>
+                    </view>
+
+                </view>
+            </view>
+        </swiper-item>
+
+        <swiper-item class="swiperItems">
+            <view class="container">
+                <calendar bindOnDayClick="onDayClick" bindOnMonthChange='onMonthChange' bindchange='change' days-style='{{daysStyle}}' />
+            </view>
+
+            <scroll-view class="scroll-box"  scroll-y="true" upper-threshold="50" lower-threshold="50" 
+                scroll-top="0" scroll-left="0" scroll-into-view="" scroll-with-animation="false" enable-back-to-top="false" 
+                bindscrolltoupper="" bindscrolltolower="" bindscroll="">
+                
+                <view class="table" wx:for="{{leaveArray}}" wx:key="id">
+                    <view class="thead">
+                        <view class="td">{{item.start}}-{{item.end}}</view>
+                        <view class="td" bindtap="showModal" data-id="{{item.id}}">详情</view>
+                    </view>
+                    <view class="tbody">
+                        <view class="tr">课程名称:　　{{item.courseName}}</view>
+                        <view class="tr">授课老师:　　{{item.teacherName}}</view>
+                        <view class="tr">班　　级:　　{{item.className}}</view>
+                        <view class="tr">上课教室:　　{{item.classRoomName}}</view>
+                    </view>
+                </view>
+                
+            </scroll-view>
+              
+
+
+            <!-- <view class="calenderMain">
+                <picker mode='date' bindchange='change' value='={{month}}'>
+                    <view class="dateTime">{{month}}</view>
+                </picker>
+                <calendar class="calender" value='{{month}}' bindchange='change' />
+            </view> -->
+
+            <!-- <view class="container dateInfo">
+                <view class="container-cn courseMain">
+                    <view class="hoursTime">
+                        <view class="timeItem">8:00</view>
+                        <view class="timeItem">10:00</view>
+                        <view class="timeItem">12:00</view>
+                        <view class="timeItem">14:00</view>
+                        <view class="timeItem">16:00</view>
+                        <view class="timeItem">18:00</view>
+                        <view class="timeItem">20:00</view>
+                        <view class="timeItem">22:00</view>
+                    </view>
+
+                    <view class="rightMain">
+                        6个颜色区分不同的课程
+                        greenItem, orangeItem, redItem, blueItem ,violetItem, grassGreenItem
+                        <view class="courseItem">
+                            <view class="citems violetItem" bindtap="showModal" >
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">课程名称:</text>
+                                    <text class="itemTxt">舞蹈课舞蹈课舞蹈课舞蹈课舞蹈课</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">老师:</text>
+                                    <text class="itemTxt">王某某老师</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">班级:</text>
+                                    <text class="itemTxt">精英班</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">教室:</text>
+                                    <text class="itemTxt">F4教室</text>
+                                </view>
+                                 <view class="itemTxtMain">
+                                    <text class="itemTitle">上课时间:</text>
+                                    <text class="itemTxt">9:00-17:00</text>
+                                </view>
+                            </view>
+
+                            <view class="citems blueItem" bindtap="showModal" >
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">课程名称:</text>
+                                    <text class="itemTxt">舞蹈课舞蹈课舞蹈课舞蹈课舞蹈课</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">老师:</text>
+                                    <text class="itemTxt">王某某老师</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">班级:</text>
+                                    <text class="itemTxt">精英班</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">教室:</text>
+                                    <text class="itemTxt">F4教室</text>
+                                </view>
+                                 <view class="itemTxtMain">
+                                    <text class="itemTitle">上课时间:</text>
+                                    <text class="itemTxt">9:00-17:00</text>
+                                </view>
+                            </view>
+
+                            <view class="citems blueItem" bindtap="showModal" >
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">课程名称:</text>
+                                    <text class="itemTxt">舞蹈课舞蹈课舞蹈课舞蹈课舞蹈课</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">老师:</text>
+                                    <text class="itemTxt">王某某老师</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">班级:</text>
+                                    <text class="itemTxt">精英班</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">教室:</text>
+                                    <text class="itemTxt">F4教室</text>
+                                </view>
+                                 <view class="itemTxtMain">
+                                    <text class="itemTitle">上课时间:</text>
+                                    <text class="itemTxt">9:00-17:00</text>
+                                </view>
+                            </view>
+                            <view class="citems blueItem" bindtap="showModal" >
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">课程名称:</text>
+                                    <text class="itemTxt">舞蹈课舞蹈课舞蹈课舞蹈课舞蹈课</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">老师:</text>
+                                    <text class="itemTxt">王某某老师</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">班级:</text>
+                                    <text class="itemTxt">精英班</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">教室:</text>
+                                    <text class="itemTxt">F4教室</text>
+                                </view>
+                                 <view class="itemTxtMain">
+                                    <text class="itemTitle">上课时间:</text>
+                                    <text class="itemTxt">9:00-17:00</text>
+                                </view>
+                            </view>
+                        </view>
+                        <view class="courseItem">
+                            <view class="citems blueItem" bindtap="showModal" >
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">课程名称:</text>
+                                    <text class="itemTxt">舞蹈课舞蹈课舞蹈课舞蹈课舞蹈课</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">老师:</text>
+                                    <text class="itemTxt">王某某老师</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">班级:</text>
+                                    <text class="itemTxt">精英班</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">教室:</text>
+                                    <text class="itemTxt">F4教室</text>
+                                </view>
+                                 <view class="itemTxtMain">
+                                    <text class="itemTitle">上课时间:</text>
+                                    <text class="itemTxt">9:00-17:00</text>
+                                </view>
+                            </view>
+                            <view class="citems blueItem" bindtap="showModal" >
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">课程名称:</text>
+                                    <text class="itemTxt">舞蹈课舞蹈课舞蹈课舞蹈课舞蹈课</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">老师:</text>
+                                    <text class="itemTxt">王某某老师</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">班级:</text>
+                                    <text class="itemTxt">精英班</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">教室:</text>
+                                    <text class="itemTxt">F4教室</text>
+                                </view>
+                                 <view class="itemTxtMain">
+                                    <text class="itemTitle">上课时间:</text>
+                                    <text class="itemTxt">9:00-17:00</text>
+                                </view>
+                            </view>
+                            <view class="citems blueItem" bindtap="showModal" >
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">课程名称:</text>
+                                    <text class="itemTxt">舞蹈课舞蹈课舞蹈课舞蹈课舞蹈课</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">老师:</text>
+                                    <text class="itemTxt">王某某老师</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">班级:</text>
+                                    <text class="itemTxt">精英班</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">教室:</text>
+                                    <text class="itemTxt">F4教室</text>
+                                </view>
+                                 <view class="itemTxtMain">
+                                    <text class="itemTitle">上课时间:</text>
+                                    <text class="itemTxt">9:00-17:00</text>
+                                </view>
+                            </view>
+                        </view>
+                        <view class="courseItem">
+                            <view class="citems blueItem" bindtap="showModal" >
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">课程名称:</text>
+                                    <text class="itemTxt">舞蹈课舞蹈课舞蹈课舞蹈课舞蹈课</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">老师:</text>
+                                    <text class="itemTxt">王某某老师</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">班级:</text>
+                                    <text class="itemTxt">精英班</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">教室:</text>
+                                    <text class="itemTxt">F4教室</text>
+                                </view>
+                                 <view class="itemTxtMain">
+                                    <text class="itemTitle">上课时间:</text>
+                                    <text class="itemTxt">9:00-17:00</text>
+                                </view>
+                            </view>
+                        </view>
+                        <view class="courseItem">
+                            <view class="citems violetItem" bindtap="showModal" >
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">课程名称:</text>
+                                    <text class="itemTxt">舞蹈课舞蹈课舞蹈课舞蹈课舞蹈课</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">老师:</text>
+                                    <text class="itemTxt">王某某老师</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">班级:</text>
+                                    <text class="itemTxt">精英班</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">教室:</text>
+                                    <text class="itemTxt">F4教室</text>
+                                </view>
+                                 <view class="itemTxtMain">
+                                    <text class="itemTitle">上课时间:</text>
+                                    <text class="itemTxt">9:00-17:00</text>
+                                </view>
+                            </view>
+                            <view class="citems violetItem" bindtap="showModal" >
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">课程名称:</text>
+                                    <text class="itemTxt">舞蹈课舞蹈课舞蹈课舞蹈课舞蹈课</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">老师:</text>
+                                    <text class="itemTxt">王某某老师</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">班级:</text>
+                                    <text class="itemTxt">精英班</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">教室:</text>
+                                    <text class="itemTxt">F4教室</text>
+                                </view>
+                                 <view class="itemTxtMain">
+                                    <text class="itemTitle">上课时间:</text>
+                                    <text class="itemTxt">9:00-17:00</text>
+                                </view>
+                            </view>
+                            <view class="citems blueItem" bindtap="showModal" >
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">课程名称:</text>
+                                    <text class="itemTxt">舞蹈课舞蹈课舞蹈课舞蹈课舞蹈课</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">老师:</text>
+                                    <text class="itemTxt">王某某老师</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">班级:</text>
+                                    <text class="itemTxt">精英班</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">教室:</text>
+                                    <text class="itemTxt">F4教室</text>
+                                </view>
+                                 <view class="itemTxtMain">
+                                    <text class="itemTitle">上课时间:</text>
+                                    <text class="itemTxt">9:00-17:00</text>
+                                </view>
+                            </view>
+                            <view class="citems blueItem" bindtap="showModal" >
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">课程名称:</text>
+                                    <text class="itemTxt">舞蹈课舞蹈课舞蹈课舞蹈课舞蹈课</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">老师:</text>
+                                    <text class="itemTxt">王某某老师</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">班级:</text>
+                                    <text class="itemTxt">精英班</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">教室:</text>
+                                    <text class="itemTxt">F4教室</text>
+                                </view>
+                                 <view class="itemTxtMain">
+                                    <text class="itemTitle">上课时间:</text>
+                                    <text class="itemTxt">9:00-17:00</text>
+                                </view>
+                            </view>
+                        </view>
+                        <view class="courseItem">
+                            <view class="citems violetItem" bindtap="showModal" >
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">课程名称:</text>
+                                    <text class="itemTxt">舞蹈课舞蹈课舞蹈课舞蹈课舞蹈课</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">老师:</text>
+                                    <text class="itemTxt">王某某老师</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">班级:</text>
+                                    <text class="itemTxt">精英班</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">教室:</text>
+                                    <text class="itemTxt">F4教室</text>
+                                </view>
+                                 <view class="itemTxtMain">
+                                    <text class="itemTitle">上课时间:</text>
+                                    <text class="itemTxt">9:00-17:00</text>
+                                </view>
+                            </view>
+                            <view class="citems blueItem" bindtap="showModal" >
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">课程名称:</text>
+                                    <text class="itemTxt">舞蹈课舞蹈课舞蹈课舞蹈课舞蹈课</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">老师:</text>
+                                    <text class="itemTxt">王某某老师</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">班级:</text>
+                                    <text class="itemTxt">精英班</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">教室:</text>
+                                    <text class="itemTxt">F4教室</text>
+                                </view>
+                                 <view class="itemTxtMain">
+                                    <text class="itemTitle">上课时间:</text>
+                                    <text class="itemTxt">9:00-17:00</text>
+                                </view>
+                            </view>
+                            <view class="citems blueItem" bindtap="showModal" >
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">课程名称:</text>
+                                    <text class="itemTxt">舞蹈课舞蹈课舞蹈课舞蹈课舞蹈课</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">老师:</text>
+                                    <text class="itemTxt">王某某老师</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">班级:</text>
+                                    <text class="itemTxt">精英班</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">教室:</text>
+                                    <text class="itemTxt">F4教室</text>
+                                </view>
+                                 <view class="itemTxtMain">
+                                    <text class="itemTitle">上课时间:</text>
+                                    <text class="itemTxt">9:00-17:00</text>
+                                </view>
+                            </view>
+                        </view>
+
+                        <view class="courseItem">
+                            <view class="citems blueItem" bindtap="showModal" >
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">课程名称:</text>
+                                    <text class="itemTxt">舞蹈课舞蹈课舞蹈课舞蹈课舞蹈课</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">老师:</text>
+                                    <text class="itemTxt">王某某老师</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">班级:</text>
+                                    <text class="itemTxt">精英班</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">教室:</text>
+                                    <text class="itemTxt">F4教室</text>
+                                </view>
+                                 <view class="itemTxtMain">
+                                    <text class="itemTitle">上课时间:</text>
+                                    <text class="itemTxt">9:00-17:00</text>
+                                </view>
+                            </view>
+
+                            <view class="citems blueItem" bindtap="showModal" >
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">课程名称:</text>
+                                    <text class="itemTxt">舞蹈课舞蹈课舞蹈课舞蹈课舞蹈课</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">老师:</text>
+                                    <text class="itemTxt">王某某老师</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">班级:</text>
+                                    <text class="itemTxt">精英班</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">教室:</text>
+                                    <text class="itemTxt">F4教室</text>
+                                </view>
+                                 <view class="itemTxtMain">
+                                    <text class="itemTitle">上课时间:</text>
+                                    <text class="itemTxt">9:00-17:00</text>
+                                </view>
+                            </view>
+                        </view>
+
+                        <view class="courseItem">
+                            <view class="citems blueItem" bindtap="showModal" >
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">课程名称:</text>
+                                    <text class="itemTxt">舞蹈课舞蹈课舞蹈课舞蹈课舞蹈课</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">老师:</text>
+                                    <text class="itemTxt">王某某老师</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">班级:</text>
+                                    <text class="itemTxt">精英班</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">教室:</text>
+                                    <text class="itemTxt">F4教室</text>
+                                </view>
+                                 <view class="itemTxtMain">
+                                    <text class="itemTitle">上课时间:</text>
+                                    <text class="itemTxt">9:00-17:00</text>
+                                </view>
+                            </view>
+                            <view class="citems violetItem" bindtap="showModal" >
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">课程名称:</text>
+                                    <text class="itemTxt">舞蹈课舞蹈课舞蹈课舞蹈课舞蹈课</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">老师:</text>
+                                    <text class="itemTxt">王某某老师</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">班级:</text>
+                                    <text class="itemTxt">精英班</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">教室:</text>
+                                    <text class="itemTxt">F4教室</text>
+                                </view>
+                                 <view class="itemTxtMain">
+                                    <text class="itemTitle">上课时间:</text>
+                                    <text class="itemTxt">9:00-17:00</text>
+                                </view>
+                            </view>
+                            <view class="citems blueItem" bindtap="showModal" >
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">课程名称:</text>
+                                    <text class="itemTxt">舞蹈课舞蹈课舞蹈课舞蹈课舞蹈课</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">老师:</text>
+                                    <text class="itemTxt">王某某老师</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">班级:</text>
+                                    <text class="itemTxt">精英班</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">教室:</text>
+                                    <text class="itemTxt">F4教室</text>
+                                </view>
+                                 <view class="itemTxtMain">
+                                    <text class="itemTitle">上课时间:</text>
+                                    <text class="itemTxt">9:00-17:00</text>
+                                </view>
+                            </view>
+                        </view>
+
+                        <view class="courseItem">
+                            <view class="citems violetItem" bindtap="showModal" >
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">课程名称:</text>
+                                    <text class="itemTxt">舞蹈课舞蹈课舞蹈课舞蹈课舞蹈课</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">老师:</text>
+                                    <text class="itemTxt">王某某老师</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">班级:</text>
+                                    <text class="itemTxt">精英班</text>
+                                </view>
+                                <view class="itemTxtMain">
+                                    <text class="itemTitle">教室:</text>
+                                    <text class="itemTxt">F4教室</text>
+                                </view>
+                                 <view class="itemTxtMain">
+                                    <text class="itemTitle">上课时间:</text>
+                                    <text class="itemTxt">9:00-17:00</text>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view class="curButton" bindtap="addCourse">
+                    <image src="../../images/addDateB.png"></image>
+                    <text>新增日程</text>
+                </view>
+            </view> -->
+        </swiper-item>
+    </swiper>
+</view>
+
+<!-- 补课学员列表 -->
+<view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+<view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+    <view class="title">
+        <text>补课学员</text>
+    </view>
+
+    <view class="roomList">
+        <view class="linkItem roomItem" wx:for="{{studentArray}}" wx:key="id">
+            <input type="text" value="{{item.stuName}}" disabled></input>
+        </view>
+    </view>
+
+    <!-- <view class="rightBtn" bindtap="showAddModal" wx:if="{{showModalStatus}}">
+        <text class="rightTxt">新增</text>
+    </view> -->
+</view>
+
+<!-- <view class='userlist container'>
+    <view class='userlist-item' bindtap="zaiduFn">
+        <view class='userlist-icon'>
+            <image src='../../images/zaiduIcon.png'></image>
+        </view>
+        <view class='userlist-text'>在读</view>
+        <view class='userlist-rt'>
+            <image src='../../images/iconr.png'></image>
+        </view>
+    </view>
+
+    <view class='userlist-item' bindtap="cengduduFn">
+        <view class='userlist-icon'>
+            <image src='../../images/cengduIcon.png'></image>
+        </view>
+        <view class='userlist-text'>曾读</view>
+        <view class='userlist-rt'>
+            <image src='../../images/iconr.png'></image>
+        </view>
+    </view>
+
+    <view class='userlist-item' bindtap="yixiangFn">
+        <view class='userlist-icon'>
+            <image src='../../images/yixiangIcon.png'></image>
+        </view>
+        <view class='userlist-text'>意向</view>
+        <view class='userlist-rt'>
+            <image src='../../images/iconr.png'></image>
+        </view>
+    </view>
+</view> -->

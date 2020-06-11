@@ -1,0 +1,53 @@
+<view class="itemMain container-cn">
+    <view class="item">
+        <view class="itemTitle">课程名称:</view>
+        <view class="itemContent">
+            <input placeholder="课程名称" value="{{dataList.mc}}" disabled='disabled'></input>
+        </view>
+    </view>
+    <view class="item">
+        <view class="itemTitle">请假学员:</view>
+        <view class="itemContent">
+            <input placeholder="请假学员" value="{{dataList.nr}}" disabled='disabled'></input>
+        </view>
+    </view>
+    <view class="item">
+        <view class="itemTitle">请假课程:</view>
+        <view class="itemContent">
+            <input placeholder="请假课程" value="{{dataList.mc}}" disabled='disabled'></input>
+        </view>
+    </view>
+    <view class="item">
+        <view class="itemTitle">请假时间:</view>
+        <view class="itemContent">
+            <input placeholder="请假课程" value="{{dataList.sj}}" disabled='disabled'></input>
+        </view>
+    </view>
+    <view class="item">
+        <view class="itemTitle">补课班级:</view>
+        <view class="itemContent">
+            <input placeholder="补课班级" value="{{dataList.bj}}" disabled='disabled'></input>
+        </view>
+    </view>
+    <view class="item">
+        <view class="itemTitle">可选平行班:</view>
+        <view class="contentBorder itemContent">
+            <multi-selector class='selector' value='{{value}}' bindchange='bindSelectorChange' bindmodalopen='onModalOpen' placeholder='请选择可选平行班' items='{{items}}' bindmodalclose='onModalClose' show-value='{{false}}'></multi-selector>
+        </view>
+    </view>
+    <view class="item">
+        <view class="lastItem">发送审核通知:</view>
+        <view class="lastRight">
+            <label class="leftLabel fr font checked-lable" catchtap='checkedTap'>
+                <radio checked="{{checked}}" color='#469bba' />发送
+            </label>
+
+            <label class="fr font checked-lable" catchtap='checkedTap'>
+                <radio checked="{{checked}}" color='#469bba' />不发送
+            </label>
+        </view>
+    </view>
+    <view class="button bgBlue" bindtap="confirm">
+        <text>确认</text>
+    </view>
+</view>

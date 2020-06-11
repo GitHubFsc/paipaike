@@ -1,0 +1,43 @@
+<view class="container-cn">
+    <view class="stuMain">
+        <view class="leftImg">
+            <image src='../../images/BTN.png'></image>
+        </view>
+        <view class="rightCircle">
+            <text>2</text>
+        </view>
+    </view>
+</view>
+
+
+<!-- 显示已到 -->
+<view class="container-cn bukeMain">
+    <view class="leaveItem">
+        <view class="stuInfo">
+            <view>浦江机构</view>
+            <view>请假人: 江小鹏</view>
+            <view>请假班级: 普通班</view>
+            <view>请假课程: 少儿英语</view>
+            <view>请假时间: 2019-11-20</view>
+        </view>
+        <view class="goPaike" bindtap="bukeDetail">
+            <view>查看详情</view>
+            <image src="../../images/qx.png"></image>
+        </view>
+    </view>
+
+    <view class="leaveItem">
+        <view class="stuInfo">
+           <view>浦江机构</view>
+            <view>请假人: 江小鹏</view>
+            <view>请假班级: 普通班</view>
+            <view>请假课程: 少儿英语</view>
+            <view>请假时间: 2019-11-20</view>
+        </view>
+        <view class="goPaike" bindtap="bukeDetail">
+            <view>查看详情</view>
+            <image src="../../images/qx.png"></image>
+        </view>
+    </view>
+</view>
+

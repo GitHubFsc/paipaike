@@ -1,0 +1,304 @@
+<view class="container ptMain">
+
+    <view class="bannerMain">
+        <image class="bannerImage" src="{{banner_path}}" mode="widthFix">
+        </image>
+        <view class="addBannerImg" bindtap="chooseImageTap" data-model="banner_image" data-path="banner_path">
+            <image src="../../images/addImgIcon.png"></image>
+        </view>
+    </view>
+
+    <view class="pTItle">
+        <textarea value="{{title}}" placeholder="请输入活动标题" bindinput="inputWatch" data-model="title">
+        </textarea>
+    </view>
+
+    <view class="pTActivity">
+        <view class="activityTitle">
+            <text>活动</text>
+            <text>时间</text> </view>
+        <view class="line"></view>
+    </view>
+
+    <view class="pTTime">
+        <view class="timeStart">
+            <picker mode="date" value="{{start_date}}" start="1990-01-01" end="2030-01-01" bindchange="bindStartDateChange">
+                <view class="picker"> {{start_date}} </view>
+            </picker>
+        </view>
+        <view class="innerTxt">到</view>
+        <view class="timeEnd">
+            <picker mode="date" value="{{end_date}}" start="1990-01-01" end="2030-01-01" bindchange="bindEndDateChange">
+                <view class="picker"> {{end_date}} </view>
+            </picker>
+        </view>
+    </view>
+
+    <view class="ptselectMain">
+        <view>1,活动页面是否显示可以直接参与的活动</view>
+        <view class="checkedRadio">
+        		<radio-group bindchange="is_show_groupChange">
+					<radio  color='#469bba' value="true" />显示
+					<radio  color='#469bba' value="false" />不显示
+				</radio-group>
+        </view>
+    </view>
+
+    <view class="ptselectMain">
+        <view>2,是否对报名者姓名进行加密处理</view>
+        <view class="checkedRadio">
+           <radio-group bindchange="is_name_secretChange">
+					<radio  color='#469bba' value="true" />加密
+					<radio  color='#469bba' value="false" />不加密
+				</radio-group>
+        </view>
+    </view>
+
+    <!-- <view class="ptselectMain">
+        <view>3,是否开启分佣</view>
+        <view class="checkedRadio">
+           <radio-group bindchange="is_split_commissionChange">
+					<radio color='#469bba' value="true" />开启
+					<radio color='#469bba' value="false" />不开启
+				</radio-group>
+        </view>
+    </view> -->
+
+    <view class="pTActivity">
+        <view class="activityTitle">
+            <text>活动</text>
+            <text>课程</text> </view>
+        <view class="line"></view>
+    </view>
+
+    <view class="ptGoodMain">
+        <view class="goodTitle">
+            <text>项目一</text>
+        </view>
+
+        <view class="goodItem">
+            <view class="leftTxt">图片:</view>
+            <view class="rightCaozuo">
+                <view class="goodImg" bindtap="chooseImageTap" data-model="group_course_image" data-path="group_course_path">
+                    <image src="{{group_course_path}}"></image>
+                </view>
+            </view>
+
+            <view class="leftTxt">内容:</view>
+            <view class="rightCaozuo">
+                <view class="textAreaMain">
+
+                    <textarea value="{{group_course_content}}" placeholder="请输入活动内容" bindinput="inputWatch" data-model="group_course_content"></textarea>
+                </view>
+            </view>
+
+            <view class="leftTxt">库存:</view>
+            <view class="rightCaozuo">
+                <input value="{{group_course_capacity}}" placeholder="请输入库存" type="number" bindinput="inputWatch" data-model="group_course_capacity"></input>
+            </view>
+
+            <view class="leftTxt">商品原价:</view>
+            <view class="rightCaozuo">
+                <input value="{{group_course_price}}" placeholder="商品原价" type="number" bindinput="inputWatch" data-model="group_course_price"></input>
+            </view>
+
+            <view class="leftTxt">活动需预付:</view>
+            <view class="rightCaozuo">
+                <input value="{{group_course_prepayment}}" placeholder="活动需预付" type="number" bindinput="inputWatch" data-model="group_course_prepayment"></input>
+            </view>
+
+        </view>
+    </view>
+
+
+    <!-- <view class="pTActivity">
+        <view class="activityTitle">
+            <text>拼团</text>
+            <text>方案</text>
+        </view>
+        <view class="line"></view>
+    </view> -->
+
+    <!-- <view class="ptGoodMain">
+
+        <view class="ptGuize">
+            <text>达到</text>
+            <input placeholder="人数" value="{{group_full_people_1}}" type="number" bindinput="inputWatch" data-model="group_full_people_1"></input>
+            <text>人</text>
+
+            <text>参团价</text>
+            <input placeholder="价格" value="{{group_full_price_1}}" type="number" bindinput="inputWatch" data-model="group_full_price_1"></input>
+            <text>元</text>
+        </view>
+        <view class="ptGuize">
+            <text>达到</text>
+            <input placeholder="人数" value="{{group_full_people_2}}" type="number" bindinput="inputWatch" data-model="group_full_people_2"></input>
+            <text>人</text>
+
+            <text>参团价</text>
+            <input placeholder="价格" value="{{group_full_price_2}}" type="number" bindinput="inputWatch" data-model="group_full_price_2"></input>
+            <text>元</text>
+        </view>
+        <view class="ptGuize">
+            <text>达到</text>
+            <input placeholder="人数" value="{{group_full_people_3}}" type="number" bindinput="inputWatch" data-model="group_full_people_"></input>
+            <text>人</text>
+
+            <text>参团价</text>
+            <input placeholder="价格" value="{{group_full_price_3}}" type="number" bindinput="inputWatch" data-model="group_full_price_3"></input>
+            <text>元</text>
+        </view>
+
+    </view> -->
+
+    <!-- <view class="ptselectMain">
+        <view>是否开团长福利</view>
+        <view class="checkedRadio">
+           <radio-group bindchange="is_group_master_boonChange">
+					<radio color='#469bba' value="true" />开启
+					<radio color='#469bba' value="false" />不开启
+				</radio-group>
+        </view>
+    </view>
+
+
+    <view class="pTActivity">
+        <view class="activityTitle">
+            <text>团长</text>
+            <text>福利</text>
+        </view>
+        <view class="line"></view>
+    </view> -->
+
+    <!-- <view class="pTItle">
+        <textarea bindinput="inputWatch" data-model="group_master_boon" value="{{group_master_boon}}" placeholder="福利" maxlength="100">
+        </textarea>
+    </view> -->
+
+
+    <!-- <view class="bannerMain">
+        <image class="bannerImage" src="{{boon_path}}" mode="widthFix">
+        </image>
+        <view class="addBannerImg" bindtap="chooseImageTap" data-model="boon_image" data-path="boon_path">
+            <image src="../../images/addImgIcon.png"></image>
+        </view>
+    </view> -->
+
+    <view class="actvSm">
+        <!-- <input bindinput="inputWatch" data-model="mini_title_1" value="{{mini_title_1}}" class="smInput"></input> -->
+        活动说明
+    </view>
+
+    <view class="pTItle">
+        <textarea bindinput="inputWatch" data-model="mini_content_1" value="{{mini_content_1}}" placeholder="请输入活动说明">
+        </textarea>
+    </view>
+
+
+    <view class="bannerMain">
+        <image class="bannerImage" src="{{mini_path_1}}" mode="widthFix">
+        </image>
+        <view class="addBannerImg" bindtap="chooseImageTap" data-model="mini_image_1" data-path="mini_path_1">
+            <image src="../../images/addImgIcon.png"></image>
+        </view>
+    </view>
+    <view class="actvSm">
+            特别奖励
+        </view>
+    <view class="pTItle">
+        <textarea bindinput="inputWatch" placeholder="请输入特别奖励" data-model="spec_content_1" value="{{spec_content}}">
+        </textarea>
+    </view>
+
+    <view class="bannerMain">
+        <image class="bannerImage" src="{{spec_path}}" mode="widthFix">
+        </image>
+        <view class="addBannerImg" bindtap="chooseImageTap" data-model="spec_image" data-path="spec_path">
+            <image src="../../images/addImgIcon.png"></image>
+        </view>
+    </view>
+<!-- 
+    <view class="bannerMain">
+        <image class="bannerImage" src="../../images/BTN.png" mode="widthFix">
+        </image>
+        <view class="addBannerImg">
+            <image src="../../images/addImgIcon.png"></image>
+        </view>
+    </view> -->
+
+    <view class="actvSm">
+        <!-- <input bindinput="inputWatch" data-model="mini_title_2" value="{{mini_title_2}}" class="smInput"></input> -->
+        活动规则
+    </view>
+
+    <view class="pTItle">
+        <textarea bindinput="inputWatch" data-model="mini_content_2" value="{{mini_content_2}}" placeholder="请输入活动规则">
+        </textarea>
+    </view>
+
+
+    <view class="bannerMain">
+        <image class="bannerImage" src="{{mini_path_2}}" mode="widthFix">
+        </image>
+        <view class="addBannerImg"  bindtap="chooseImageTap" data-model="mini_image_2" data-path="mini_path_2">
+            <image src="../../images/addImgIcon.png"></image>
+        </view>
+    </view>
+
+    <view class="actvSm">
+        <!-- <input bindinput="inputWatch" data-model="mini_title_3" value="{{mini_title_3}}" class="smInput"></input> -->
+        机构介绍
+    </view>
+
+    <view class="pTItle">
+        <textarea bindinput="inputWatch" data-model="mini_content_3" value="{{mini_content_3}}" placeholder="请输入机构介绍">
+        </textarea>
+    </view>
+
+<!-- 
+    <view class="pTItle">
+        <textarea value="机构环境机构环境机构环境机构环境机构环境" placeholder="请输入活动说明">
+        </textarea>
+    </view> -->
+
+
+    <view class="bannerMain">
+        <image class="bannerImage" src="{{mini_path_3}}" mode="widthFix">
+        </image>
+        <view class="addBannerImg"  bindtap="chooseImageTap" data-model="mini_image_3" data-path="mini_path_3">
+            <image src="../../images/addImgIcon.png"></image>
+        </view>
+    </view>
+
+    <view class="actvSm">
+        <input bindblur="inputWatch" data-model="shop_hot_line" maxlength="11" placeholder="咨询热线" value="{{shop_hot_line}}" class="smInput"></input>
+		<input bindblur="inputWatch" data-model="shop_name" placeholder="学校名称" maxlength="16" value="{{shop_name}}" class="smInput"></input>
+		<input bindblur="inputWatch" data-model="shop_address" placeholder="学校地址" maxlength="30" value="{{shop_address}}" class="smInput"></input>
+		<input bindblur="inputWatch" type="number" data-model="shop_phone" placeholder="联系电话" maxlength="11" value="{{shop_phone}}" class="smInput"></input>
+    </view>
+
+    <view class="bannerMain">
+        <image class="bannerImage" src="{{shop_path}}" mode="widthFix">
+        </image>
+        <view class="addBannerImg" bindtap="chooseImageTap" data-model="shop_image" data-path="shop_path">
+            <image src="../../images/addImgIcon.png"></image>
+        </view>
+    </view>
+
+    <view class="actvSm">
+        <view>报名信息</view>
+		<!-- <input bindblur="inputWatch" data-model="user_info" placeholder="收集用户信息"  value="{{user_info}}" class="smInput"></input> -->
+		<input bindblur="inputWatch" data-model="user_name" placeholder="姓名" maxlength="14" value="{{user_name}}" class="smInput"></input>
+		<input bindblur="inputWatch" data-model="user_phone" type="number" maxlength="11" placeholder="电话" value="{{user_phone}}" class="smInput"></input>
+		<input bindblur="inputWatch" data-model="user_school" placeholder="所在学校" maxlength="20" value="{{user_school}}" class="smInput"></input>
+		<input bindblur="inputWatch" data-model="user_class" placeholder="年级" maxlength="12" value="{{user_class}}" class="smInput"></input>
+    </view>
+
+    <!-- <view class="curButton" bindtap="submitFn">
+        <text> 保存</text>
+    </view> -->
+    <view class="curButton" bindtap="submitFn">
+        <text>提交推广</text>
+    </view>
+
+</view>

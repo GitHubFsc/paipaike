@@ -1,0 +1,12 @@
+<view class="container letterDetail">
+	<view class="container-cn letter-from-cn">
+		<view class="letter-cont">
+			<!-- 家长姓名: -->
+			<text class="letterFormName">{{student_name}}</text>的家长
+		</view>
+
+		<view class="detilaTxt">
+			{{content}}
+		</view>
+	</view>
+</view>

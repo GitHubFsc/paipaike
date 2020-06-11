@@ -1,0 +1,167 @@
+.stuMain {
+    width: 100%;
+    border: 1rpx solid #bdbdbd;
+    background-color: #fff;
+    border-radius: 13rpx 13rpx 0rpx 0rpx;
+    height: 200rpx;
+    overflow: hidden;
+}
+
+.leftImg {
+    width: 120rpx;
+    height: 50rpx;
+    float: left;
+    margin-top: 75rpx;
+}
+
+.leftImg image {
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    margin-left: 40rpx;
+}
+
+.rightCircle {
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 50% 50%;
+    border: 1rpx solid #469bba;
+    float: right;
+    margin-top: 40rpx;
+    margin-right: 40rpx;
+    text-align: center;
+}
+
+.redStatus {
+    color: #f90c0c !important;
+}
+
+.rightCircle text {
+    line-height: 120rpx;
+    font-size: 28rpx;
+}
+
+.middleMain {
+    margin-top: 20rpx;
+    margin-bottom: 30rpx;
+}
+
+.nav {
+    width: 100%;
+    box-sizing: border-box;
+    background: #fff;
+    border: 1rpx solid #c9c9c9;
+    height: 78rpx;
+}
+
+.nav-item {
+    display: inline-block;
+    text-align: center;
+    font-size: 30rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+    width: 50%;
+}
+
+.line {
+    width: 100rpx;
+    height: 4rpx;
+    background-color: #469bba;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.nav-item.active {
+    color: #469bba;
+}
+
+.bukeMain {
+    margin-top: 20rpx;
+    background-color: #fff;
+    border-radius: 0rpx 0rpx 13rpx 13rpx;
+    border: 1rpx solid #c9c9c9;
+    /* height: 284rpx; */
+    margin-bottom: 60rpx;
+    padding-bottom: 20rpx;
+}
+
+.tab-box {
+    margin-top: 0rpx;
+    border: 1rpx solid #c9c9c9;
+    border-top: none;
+    background-color: #fff;
+    border-radius: 0rpx 0rpx 13rpx 13rpx;
+}
+
+.tab-content {
+    overflow-y: scroll;
+}
+
+.swiperItems image {
+    width: 100%;
+}
+
+.leaveItem {
+    width: 96%;
+    border-bottom: 1rpx solid #efefef;
+    margin: 0 auto;
+    padding-bottom: 20rpx;
+}
+
+.leaveItem .stuInfo {
+    margin-top: 35rpx;
+    padding-left: 30rpx;
+    width: 70%;
+    color: #565454;
+    font-size: 28rpx;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.leaveItem .goPaike {
+    width: 24%;
+    text-align: right;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.goPaike view {
+    margin-top: 55rpx;
+    display: inline-block;
+    color: #464646;
+    font-size: 28rpx;
+}
+
+.leaveItem .goPaike image {
+    width: 15rpx;
+    height: 15rpx;
+    background-size: 100% 100%;
+    display: inline-block;
+    margin-left: 25rpx;
+}
+
+.noStuTips {
+    margin-top: 20rpx;
+    background-color: #fff;
+    border-radius: 0rpx 0rpx 13rpx 13rpx;
+    border: 1rpx solid #c9c9c9;
+    height: 340rpx;
+    margin-bottom: 60rpx;
+}
+
+.nogetStu {
+    width: 90%;
+    border-bottom: 1rpx solid #bbb;
+    margin: 0 auto;
+    color: #101010;
+    font-size: 32rpx;
+    padding: 25rpx 0;
+    text-indent: 30rpx;
+}
+
+.nogetTips {
+    color: #ccc;
+    font-size: 38rpx;
+    text-align: center;
+    margin-top: 100rpx;
+}

@@ -1,0 +1,405 @@
+page {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+
+.nav {
+    width: 100%;
+    box-sizing: border-box;
+    background: #469bba;
+    height: 78rpx;
+}
+
+.nav-item {
+    display: inline-block;
+    text-align: center;
+    font-size: 30rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+    width: 50%;
+    color: #fff;
+}
+
+.line {
+    width: 60rpx;
+    height: 4rpx;
+    background-color: #fff;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.nav-item.active {
+    color: #fff;
+}
+
+.tab-box {
+    width: 100%;
+    height: 100%;
+    margin-top: 0rpx;
+    border-top: none;
+    border-radius: 0rpx 0rpx 13rpx 13rpx;
+}
+
+.tab-content {
+    overflow-y: scroll;
+}
+
+.swiperItems image {
+    width: 100%;
+}
+
+
+/* =========请假信息============= */
+
+.dateInfo {
+    margin-top: 20rpx;
+    padding-bottom: 40rpx;
+}
+
+.selectTitle {
+    display: inline-block;
+}
+
+.selectTitle image {
+    width: 130rpx;
+    height: 45rpx;
+    background-size: 100% 100%;
+    margin-left: 20rpx;
+    vertical-align: middle;
+}
+
+.dateTime {
+    padding: 30rpx 0;
+    font-size: 30rpx;
+    font-weight: lighter;
+    color: #000;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 20rpx;
+}
+
+/* .curButton image {
+    width: 40rpx;
+    height: 40rpx;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 15rpx;
+    left: 50%;
+    margin-left: -150rpx;
+} */
+
+.workItem {
+    height: 180rpx;
+    border: 1rpx solid #bbb;
+    border-radius: 8rpx;
+    overflow: hidden;
+    margin-bottom: 20rpx;
+}
+
+.workItem .leftItem {
+    width: 70%;
+    float: left;
+    margin-left: 3%;
+    color: #595959;
+    font-size: 28rpx;
+    /* background-color: red; */
+    height: 100%;
+}
+
+.leftItem view {
+    line-height: 50rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.leftItem view:first-child {
+    padding-top: 15rpx;
+}
+
+.workItem .rightItem {
+    width: 20%;
+    float: right;
+    position: relative;
+    background-color: #469bba;
+    color: #fff;
+    height: 100%;
+    text-align: center;
+    font-size: 30rpx;
+}
+
+.rightItem view {
+    line-height: 50rpx;
+}
+
+.rightItem view:first-child {
+    padding-top: 15rpx;
+}
+
+.lineIcon image {
+    width: 6rpx;
+    height: 30rpx;
+    background-size: 100% 100%;
+    margin: 5rpx 0rpx 0rpx 0rpx;
+}
+
+.rightItem .selectIcon {
+    position: absolute;
+    width: 20rpx;
+    height: 20rpx;
+    background-size: 100% 100%;
+    top: 80rpx;
+    right: 20rpx;
+}
+
+/* ==========请假补课================ */
+
+.selectBar image {
+    width: 130rpx;
+    height: 50rpx;
+    background-size: 100% 100%;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+.canlenderMain {
+    position: relative;
+    overflow: hidden;
+}
+
+.dateInfo {
+    padding-top: 4%;
+    padding-bottom: 20rpx;
+}
+
+.dateTime {
+    text-align: center;
+    padding: 15rpx 0;
+    border-bottom: 2rpx solid #f6f3f3;
+    font-size: 30rpx;
+    font-weight: bold;
+    color: #000;
+    background-color: #fff;
+}
+
+.courseMain {
+    overflow: hidden;
+    margin-top: 0rpx;
+    margin-bottom: 100rpx;
+}
+
+.hoursTime {
+    width: 15%;
+    float: left;
+}
+
+.timeItem {
+    height: 185rpx;
+    margin-bottom: 3%;
+}
+
+.rightMain {
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+.courseItem {
+    float: left;
+    /* height: 160rpx; */
+    width: 100%;
+    margin-left: 3%;
+}
+
+.citems {
+    background-color: #f5f5f5;
+    border-radius: 5rpx 5rpx;
+    margin-bottom: 3%;
+    padding: 10rpx 0rpx;
+    white-space: nowrap;
+    min-width: 45%;
+    display: inline-block;
+    border-top: 1rpx solid #eae7e7;
+    border-right: 1rpx solid #eae7e7;
+}
+
+.greenItem {
+    background-color: #dffaf5;
+    border: 1rpx solid #33ceac;
+    border-left: none;
+}
+
+.greenItem text {
+    color: #33ceac !important;
+}
+
+.blueItem {
+    background-color: #e6f2fe;
+    border: 1rpx solid #79a7db;
+    border-left: none;
+}
+
+.blueItem text {
+    color: #508fd6 !important;
+}
+
+.orangeItem {
+    background-color: #fef0e3;
+    border: 1rpx solid #fa934e;
+    border-left: none;
+}
+
+.orangeItem text {
+    color: #fa934e !important;
+}
+
+.redItem {
+    background-color: #fee8ea;
+    border: 1rpx solid #f2636f;
+    border-left: none;
+}
+
+.redItem text {
+    color: #f2636f !important;
+}
+
+.violetItem {
+    background-color: #f4e5f7;
+    border: 1rpx solid #ce93d8;
+    border-left: none;
+}
+
+.violetItem text {
+    color: #a215ba !important;
+}
+
+.grassGreenItem {
+    background-color: #ddf5c1;
+    border: 1rpx solid #9bcb64;
+    border-left: none;
+}
+
+.grassGreenItem text {
+    color: #9bcb64 !important;
+}
+
+.citems text {
+    display: block;
+    font-size: 22rpx;
+    text-align: center;
+    color: #333;
+}
+
+.curButton {
+    position: fixed;
+    bottom: 0rpx;
+    left: 0;
+    right: 0;
+}
+
+.curButton image {
+    width: 40rpx;
+    height: 40rpx;
+    background-size: 100% 100%;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20rpx;
+}
+
+.calendar-title {
+    height: 500rpx !important;
+    background-color: red;
+}
+
+.itemTxtMain {
+    margin: 0 0;
+    padding: 0 0;
+    line-height: 30rpx;
+    overflow: hidden;
+}
+
+.itemTxtMain .itemTitle {
+    width: 100rpx;
+    text-align: right;
+    float: left;
+}
+
+.itemTxtMain .itemTxt {
+    width: 150rpx;
+    text-align: left;
+    margin-left: 10rpx;
+    padding-right: 20rpx;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    float: left;
+}
+
+
+/* ============== */
+
+.roomItem {
+    margin-top: 5rpx;
+    margin-bottom: 5rpx;
+}
+
+.commodity_attr_box {
+    width: 90%;
+    top: 25%;
+    margin-left: 5%;
+}
+.roomItem{
+    line-height: 76rpx;
+    font-size: 30rpx;
+    margin-top: 5rpx;
+    margin-bottom: 5rpx;
+}
+
+.roomItem input {
+    width: 100%;
+    height: 76rpx;
+    margin-top: 0rpx;
+    /* padding-left: 15rpx; */
+    display: inline-block;
+    margin-right: 30rpx;
+    text-align: center;
+}
+
+
+.scroll-box {
+    height: 1100rpx;
+}
+.last {
+    padding-bottom: 60rpx !important;
+}
+.table {
+    margin: 20rpx;
+    padding: 0 20rpx;
+    font-size: 30rpx;
+    border: 1rpx solid #60abc7;
+    border-radius: 10rpx;
+}
+.table .thead {
+    height: 50rpx;
+    padding: 0 20rpx;
+    margin-left: -20rpx;
+    margin-right: -20rpx;
+    background-color: #dcf0f7;
+    border-bottom:  1rpx solid #60abc7;
+    border-top-left-radius: 10rpx;
+    border-top-right-radius: 10rpx;
+    color: #207fa2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.table .tbody .tr {
+    height: 70rpx;
+    line-height: 70rpx;
+}
+.table .mark {
+    background-color: #f89b5d;
+    color: #fff;
+}

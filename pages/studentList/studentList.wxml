@@ -1,0 +1,17 @@
+<view class="container-cn">
+    <view class="searchMain">
+        <view class="search">
+            <input placeholder="搜索..."></input>
+        </view>
+    </view>
+    <view bindtap="chartDetail" class="studentItem"  wx:for="{{studentList}}" wx:key="stuItem"> 
+        <view class="studentInfo">
+            <view class="ite">
+                <text class="classTitle">{{item.name}} , {{item.engName}}</text>
+            </view>
+            <view class='select-icon'>
+                <image src='http://520fax.com/ximg/iconr.png'></image>
+            </view>
+        </view>
+    </view>
+</view>

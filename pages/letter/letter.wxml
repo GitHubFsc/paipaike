@@ -1,0 +1,14 @@
+<view class="container-cn">
+	<view class="letterItem" bindtap="letterDetail" wx:for="{{letterData}}" wx:key="id" data-id="{{item.id}}">
+		<view class="letterInfo">
+			<view class="ite">
+				<view class="classTitle"><text class="letterFormName">{{item.from_name}} </text> 的家长:</view>
+				<view class="letterInfoTxt">{{item.title}}</view>
+			</view>
+
+			<view class='select-icon'>
+				<image src='../../images/iconr.png'></image>
+			</view>
+		</view>
+	</view>
+</view>

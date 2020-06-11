@@ -1,0 +1,93 @@
+/* pages/makeUpClass/studentManage.wxss */
+
+page {
+    background-color: #fff;
+}
+
+.searchMain {
+    overflow: hidden;
+}
+
+.search {
+    width: 70%;
+    height: 60rpx;
+    background: #fff url(mainSearchIcon.png) no-repeat left 90% center;
+    background-size: 28rpx;
+    border-radius: 15rpx;
+    margin: 20rpx auto 40rpx auto;
+    border: 1rpx solid #bcbcbc;
+    margin-left: 15%;
+}
+
+.search input {
+    width: 90%;
+    height: 100%;
+    float: right;
+    font-size: 27rpx;
+}
+
+
+.studentItem {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 6rpx;
+    height: 80rpx;
+    margin-bottom: 10rpx;
+    line-height: 80rpx;
+    position: relative;
+    background-color: #fff;
+    box-shadow: 0 0 10rpx rgba(153, 153, 153, 0.2);
+}
+
+.studentItem .studentInfo {
+    width: 100%;
+    font-size: 28rpx;
+}
+
+.studentInfo .ite {
+    padding-left: 5%;
+    padding-right: 5%;
+    line-height: 80rpx;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 82%;
+    display: inline-block;
+    height: 80rpx;
+    vertical-align: middle;
+}
+
+.select-icon {
+    width: 8%;
+    display: inline-block;
+    height: 80rpx;
+    vertical-align: middle;
+}
+
+.select-icon image {
+    position: absolute;
+    width: 35rpx;
+    height: 35rpx;
+    background-size: 100% 100%;
+    margin-top: 23rpx;
+}
+
+/* .studentInfo .ite text:nth-child(2) {
+    font-size: 26rpx;
+    color: #5a5a5a;
+}
+
+.studentInfo .ite:first-child {
+    padding-top: 25rpx;
+    margin-bottom: 15rpx;
+}
+
+.studentInfo .ite:last-child {
+    padding-bottom: 25rpx;
+    margin-top: 15rpx;
+} */
+
+.studentInfo .classTitle {
+    color: #1a1a1a;
+    margin-right: 25rpx;
+}

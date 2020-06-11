@@ -1,0 +1,22 @@
+<view class="page">
+	<view class="container cartlist" wx:for="{{cartData}}" wx:for-item="item" wx:key="id">
+		<view class="container-cn cartlist-item">
+			<view class="item-img">
+				<image src="{{item.image}}"></image>
+			</view>
+			<view class="item-info">
+				<view class="itemName">{{item.name}}</view>
+				<view class="itemDesc">{{item.desc}}</view>
+				<view class="itemDesc">{{item.item}}</view>
+			</view>
+			<view class="caozuo-item">
+				<image bindtap="copyCourse" data-id="{{item.id}}" data-text="{{item.name}} {{item.desc}}" class="copyImg" src="../../images/copy.png"></image>
+				<image bindtap="editCourse" data-id="{{item.id}}" class="editImg" src="../../images/edit.png"></image>
+				<image bindtap="deleteKeCheng" data-id="{{item.id}}" class="deleteImg" src="../../images/delete.png"></image>
+			</view>
+		</view>
+	</view>
+	<view class="curButton" bindtap="addKecheng">
+		<text>新增课程</text>
+	</view>
+</view>

@@ -1,0 +1,14 @@
+<view class="studentInfo">
+    <text>学员: 小A, Amy</text>
+</view>
+<view class="studentInfo">
+    <text>所报课时: 英语课</text>
+</view>
+
+<view class="container columnCanvas">
+    <view class="wcks">总课时 <text>58.0</text></view>
+    <view class="sdrs">已消课时 <text>20</text></view>
+    <view class="syks">剩余课时 <text>10</text></view>
+    <view class="jlks">奖励课时 <text>10</text></view>
+    <canvas canvas-id="columnCanvas" disable-scroll="true" class="canvas"></canvas>
+</view>

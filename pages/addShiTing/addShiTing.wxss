@@ -1,0 +1,364 @@
+.courseDetail {
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+    padding-bottom: 50rpx;
+}
+
+.courseName {
+    color: #469db9 !important;
+    display: inline !important;
+    font-size: 32rpx !important;
+}
+
+.stu-cn {
+    background: #fff;
+    border-radius: 10rpx;
+    padding: 24rpx 0;
+    margin-top: 20rpx;
+    overflow: hidden;
+    box-shadow: 0 0 10rpx rgba(153, 153, 153, 0.2);
+}
+
+.course-title {
+    border-bottom: 1rpx solid #e5e5e5;
+    line-height: 80rpx;
+    padding-left: 40rpx;
+}
+
+.course-title text:first-child {
+    color: #333;
+    font-size: 28rpx;
+}
+
+.course-title text:last-child {
+    color: #666;
+    font-size: 28rpx;
+    margin-top: 37rpx;
+    margin-bottom: 25rpx;
+}
+
+.course-item {
+    width: 100%;
+    background: #f6f6f6;
+    margin: 0 auto;
+}
+
+.course-item-item {
+    width: 95%;
+    height: 84rpx;
+    margin: 0 auto;
+    border-bottom: 1rpx solid #e5e5e5;
+    font-size: 27rpx;
+    line-height: 84rpx;
+}
+
+.orderNum {
+    width: 70%;
+    height: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.course-item-item text {
+    float: right;
+}
+
+.course-item-item {
+    margin-left: 30rpx;
+}
+
+.mr30 {
+    margin-right: 30rpx;
+}
+
+.course-item .course-item-item:last-child {
+    border: none;
+}
+
+.btnMain {
+    overflow: hidden;
+}
+
+.goBind {
+    /* width: 180rpx; */
+    padding-left: 40rpx;
+    padding-right: 40rpx;
+    height: 60rpx;
+    background-color: #469db9;
+    line-height: 60rpx;
+    text-align: center;
+    color: #fff;
+    border-radius: 8rpx;
+    font-size: 24rpx;
+    margin-top: 30rpx;
+    position: relative;
+    margin: 30rpx auto 0 auto;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/* ======= */
+
+page {
+    background-color: #fff;
+}
+
+.item {
+    line-height: 100rpx;
+    /* border-bottom: 1rpx solid #f4f2f2; */
+    height: 100rpx;
+}
+
+.selectItemMain {
+    height: auto;
+    overflow: hidden;
+}
+
+.item .itemTitle, .selectItemMain  .itemTitle {
+    width: 23%;
+    float: left;
+    font-size: 30rpx;
+    text-align: center;
+}
+
+.contentBorder {
+    border: 1px solid #efefef;
+    border-radius: 8rpx;
+    color: #999;
+    font-size: 28rpx;
+    line-height: 70rpx;
+    margin-top: 15rpx;
+}
+
+.item .itemContent, .selectItemMain .itemContent {
+    width: 75%;
+    float: right;
+    min-height: 70rpx;
+}
+
+.picker{
+    height: 70rpx;
+    position: relative;
+    padding-left: 20rpx;
+  }
+
+.item input {
+    height: 70rpx;
+    margin-top: 15rpx;
+    font-size: 28rpx;
+    border: 1px solid #efefef;
+    border-radius: 8rpx;
+    color: #999;
+    padding: 0 20rpx;
+}
+
+.tips {
+    color: #999;
+    font-size: 26rpx;
+    padding-left: 30rpx;
+    display: block;
+    padding-top: 20rpx;
+}
+
+.select_box {
+    background: #fff;
+    width: 100%;
+    margin: 15rpx auto;
+    position: relative;
+}
+
+.select_box_time {
+    width: 45.6%;
+    display: inline-block;
+}
+
+.tipsTxt {
+    font-size: 26rpx;
+    color: #999;
+    margin-left: 6rpx;
+    margin-right: 6rpx;
+}
+
+.select {
+    box-sizing: border-box;
+    width: 100%;
+    height: 70rpx;
+    border: 1px solid #efefef;
+    border-radius: 8rpx;
+    display: flex;
+    align-items: center;
+    padding: 0 20rpx;
+}
+
+.select_text {
+    font-size: 26rpx;
+    flex: 1;
+    color: #999;
+}
+
+.select_img {
+    width: 30rpx;
+    height: 30rpx;
+    display: block;
+    transition: transform 0.3s;
+    background-size: 100% 100%;
+}
+
+.select_img_rotate {
+    transform: rotate(90deg);
+}
+
+.option_box {
+    position: absolute;
+    top: 70rpx;
+    width: 100%;
+    border: 1px solid #efefef;
+    box-sizing: border-box;
+    /* height: 0; */
+    overflow-y: auto;
+    border-top: 0;
+    background: #fff;
+    transition: height 0.3s;
+    z-index: 2;
+    height: 350rpx;
+    color: #999;
+}
+
+.option {
+    display: block;
+    line-height: 40rpx;
+    font-size: 26rpx;
+    border-bottom: 1px solid #efefef;
+    padding: 10rpx;
+}
+
+.lastItem, .lastRight {
+    width: 50%;
+    display: inline-block;
+    font-size: 30rpx;
+}
+
+.lastRight {
+    color: #999;
+}
+
+.checked-lable radio {
+    transform: scale(0.8);
+}
+
+.leftLabel {
+    margin-right: 40rpx;
+}
+
+.addClassIcon {
+    width: 40rpx;
+    height: 40rpx;
+    background-size: 100% 100%;
+    margin-left: 20rpx;
+    margin-top: 30rpx;
+}
+
+.banjiset {
+    width: 65%;
+    float: left;
+    margin-left: 12rpx;
+}
+
+checkbox {
+    transform: scale(0.8);
+}
+
+.selectItem {
+    padding: 0rpx 10rpx;
+    display: inline-block;
+    margin-right: 10rpx;
+    line-height: 60rpx;
+    border-radius: 8rpx;
+    background-color: #c9e5ef;
+    margin-bottom: 20rpx;
+    font-size: 28rpx;
+    color: #0e617f;
+}
+
+
+
+.uploadImg {
+    width: 100%;
+    height: 150rpx;
+    background-color: #e8e8e8;
+    position: relative;
+    margin-top: 10rpx;
+}
+
+.uploadImg image {
+    position: absolute;
+    width: 80rpx;
+    height: 80rpx;
+    background-size: 100% 100%;
+    top: 50%;
+    margin-top: -38rpx;
+    left: 50%;
+    margin-left: -30rpx;
+}
+
+
+.uploadedImg {
+    margin-top: 20rpx;
+    overflow: hidden;
+}
+
+.imgItem {
+    width: 25%;
+    height: 140rpx;
+    background-size: 100% 100%;
+    border-radius: 10rpx 10rpx;
+    display: inline-block;
+    position: relative;
+}
+
+.imgItem image {
+    width: 90%;
+    height: 90%;
+    background-size: 100% 100%;
+    margin-left: 5%;
+    margin-top: 5%;
+    border-radius: 8rpx;
+}
+
+.iconClass {
+    position: absolute;
+    width: 15rpx;
+    height: 15rpx;
+    z-index: 99;
+    top: 3%;
+    right: 13%;
+}
+
+.addClassIcon {
+    width: 40rpx;
+    height: 40rpx;
+    background-size: 100% 100%;
+    margin-left: 20rpx;
+    margin-top: 30rpx;
+}
+.rightBtn {
+    width: 45%;
+    height: 70rpx;
+    background-size: 100%;
+    margin-top: 30rpx;
+    border: 4rpx solid #469bba;
+    border-radius: 20rpx;
+    position: relative;
+    margin: 60rpx auto 0 auto;
+    background-color: #469bba;
+    text-align: center;
+}
+
+.rightBtn .rightTxt {
+    color: #fff;
+    line-height: 70rpx;
+    display: inline-block;
+    font-size: 30rpx;
+    vertical-align: middle;
+}

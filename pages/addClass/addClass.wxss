@@ -1,0 +1,190 @@
+/* pages/makeUpClass/studentManage.wxss */
+
+page {
+    background-color: #fff;
+}
+
+.checkBox  checkbox {
+    display: inline-block;
+    vertical-align: middle;
+    width: 30rpx;
+    margin-left: 5%;
+    border-radius: 50% 50%;
+}
+
+.stuInfo {
+    display: inline-block;
+    vertical-align: middle;
+    width: 80%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-left: 6%;
+    line-height: 80rpx;
+    font-size: 26rpx;
+    color: #333;
+}
+
+.item {
+    /* border-bottom: 1rpx solid #eee; */
+    box-shadow: 0 0 10rpx rgba(153, 153, 153, 0.2);
+    margin-top: 15rpx;
+}
+
+checkbox {
+    transform: scale(0.8);
+}
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+    border: 1rpx solid #469bb8;
+    background: #469bb8;
+    border-radius: 50% 50%;
+}
+
+checkbox .wx-checkbox-input {
+    border-radius: 50%;
+}
+
+.topBar {
+    height: 80rpx;
+    background-color: #009bbd;
+    margin-bottom: 50rpx;
+    position: relative;
+    text-align: center;
+    line-height: 80rpx;
+    color: #fff;
+    font-size: 30rpx;
+}
+
+.topBar image {
+    width: 40rpx;
+    height: 40rpx;
+    background-size: 100% 100%;
+    position: absolute;
+}
+
+.leftAdd {
+    left: 40rpx;
+    top: 20rpx;
+}
+
+.rightDel {
+    right: 40rpx;
+    top: 20rpx;
+}
+
+
+
+.commodity_screen {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.5;
+    overflow: hidden;
+    z-index: 9;
+    color: #fff;
+}
+
+.commodity_attr_box {
+    width: 80%;
+    position: fixed;
+    top: 40%;
+    left: 0;
+    z-index: 10;
+    background: #fff;
+    padding-top: 20rpx;
+    margin-left: 10%;
+    margin-top: -150rpx;
+    border-radius: 15rpx;
+    padding-bottom: 30rpx;
+}
+
+.commodity_attr_box .title {
+    position: relative;
+}
+
+.commodity_attr_box .title text:first-child {
+    color: #469bba;
+    font-size: 36rpx;
+    text-align: center;
+    margin-top: 50rpx;
+    display: block;
+}
+
+.linkItem {
+    width: 85%;
+    height: 80rpx;
+    background-color: #fff;
+     box-shadow: 0 0 10rpx rgba(153, 153, 153, 0.2);
+    border-radius: 10rpx;
+    margin-bottom: 30rpx;
+    margin: 30rpx auto 30rpx auto;
+    position: relative;
+    display: flex;
+    border:1rpx solid rgba(153, 153, 153, 0.2);
+}
+
+.linkItem .leftImg image {
+    width: 51rpx;
+    background-size: 100%;
+    margin-top: 16rpx;
+    margin-left: 50rpx;
+    margin-right: 30rpx;
+}
+
+.linkItem .txt {
+    line-height: 70rpx;
+    text-align: left;
+    font-size: 26rpx;
+    position: relative;
+    height: 70rpx;
+    width: 100%;
+}
+
+.txt input {
+    width: 85%;
+    height: 76rpx;
+    position: absolute;
+    margin-top: 0rpx;
+}
+
+.dialogBtn {
+    width: 90%;
+    margin: 0 auto;
+    padding: 5rpx;
+}
+
+.buttonDia {
+    width: 100%;
+    height: 80rpx;
+    background-color: #d5bf8f;
+    border-radius: 8rpx;
+    color: #fff;
+    font-size: 28rpx;
+    line-height: 80rpx;
+    text-align: center;
+}
+
+.rightBtn {
+    width: 45%;
+    height: 70rpx;
+    background-size: 100%;
+    margin-top: 30rpx;
+    border: 4rpx solid #469bba;
+    border-radius: 20rpx;
+    position: relative;
+    margin: 60rpx auto 0 auto;
+    background-color: #469bba;
+    text-align: center;
+}
+
+.rightBtn .rightTxt {
+    color: #fff;
+    line-height: 70rpx;
+    display: inline-block;
+    font-size: 30rpx;
+    vertical-align: middle;
+}

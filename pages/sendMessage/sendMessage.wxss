@@ -1,0 +1,100 @@
+
+.studentDetail {
+    margin-top: 10rpx;
+    margin-bottom: 20rpx;
+}
+
+.stuName {
+    color: #469db9 !important;
+    display: inline !important;
+    font-size: 32rpx !important;
+}
+
+.inputMessage{
+     background: #fff;
+    border-radius: 10rpx;
+    overflow: hidden;
+    box-shadow: 0 0 10rpx rgba(153, 153, 153, 0.2);
+    height: 140rpx;
+    margin-top: 40rpx;
+}
+
+.stu-cn {
+    background: #fff;
+    border-radius: 10rpx;
+    padding: 24rpx 0;
+    overflow: hidden;
+    box-shadow: 0 0 10rpx rgba(153, 153, 153, 0.2);
+}
+
+.yn-cntop {
+    border-bottom: 1rpx solid #e5e5e5;
+    /* line-height: 60rpx; */
+    padding-left: 40rpx;
+    padding-bottom: 20rpx;
+}
+
+.yn-cntop text:first-child {
+    color: #333;
+    font-size: 28rpx;
+}
+
+.yn-cntop text:last-child {
+    color: #666;
+    font-size: 28rpx;
+    margin-top: 37rpx;
+    margin-bottom: 25rpx;
+}
+
+.stu-link {
+    width: 95%;
+    background: #f6f6f6;
+    margin: 0 auto;
+    margin-top: 25rpx;
+    border-radius: 15rpx;
+}
+
+.stu-link-item {
+    width: 95%;
+    height: 60rpx;
+    margin: 0 auto;
+    border-bottom: 1rpx solid #e5e5e5;
+    font-size: 27rpx;
+    line-height: 60rpx;
+    color: #5d5d5d;
+}
+
+.orderNum {
+    width: 70%;
+    height: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.stu-link-item text {
+    float: right;
+}
+
+.stu-link-item {
+    margin-left: 30rpx;
+}
+
+.mr30 {
+    margin-right: 30rpx;
+}
+
+.stu-link .stu-link-item:last-child {
+    border: none;
+}
+
+.txtDom{
+     margin: 30rpx 25rpx;
+}
+
+.txtDom textarea {
+    font-size: 26rpx;
+    color: #999;
+    width: 100%;
+    padding-bottom: 30rpx;
+}

@@ -1,0 +1,365 @@
+.courseDetail {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding: 30rpx 0 70rpx 0;
+}
+
+.courseName {
+    color: #469db9 !important;
+    display: inline !important;
+    font-size: 32rpx !important;
+}
+
+.banjiset2{
+     width: 35%;
+    float: left;
+    margin-left: 12rpx;
+}
+
+.datePinlv{
+    float: left;
+    width: 35%;
+    margin-left: 4%;
+}
+
+
+.stu-cn {
+    background: #fff;
+    border-radius: 10rpx;
+    padding: 24rpx 0;
+    margin-top: 20rpx;
+    overflow: hidden;
+    box-shadow: 0 0 10rpx rgba(153, 153, 153, 0.2);
+}
+
+.course-title {
+    border-bottom: 1rpx solid #e5e5e5;
+    line-height: 80rpx;
+    padding-left: 40rpx;
+   
+}
+
+.course-title text:first-child {
+    color: #333;
+    font-size: 28rpx;
+}
+
+.course-title text:last-child {
+    color: #666;
+    font-size: 28rpx;
+    margin-top: 37rpx;
+    margin-bottom: 25rpx;
+}
+
+.course-item {
+    width: 100%;
+    background: #f6f6f6;
+    margin: 0 auto;
+}
+
+.course-item-item {
+    width: 95%;
+    height: 84rpx;
+    margin: 0 auto;
+    border-bottom: 1rpx solid #e5e5e5;
+    font-size: 27rpx;
+    line-height: 84rpx;
+}
+
+.orderNum {
+    width: 70%;
+    height: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.course-item-item text {
+    float: right;
+}
+
+.course-item-item {
+    margin-left: 30rpx;
+}
+
+.mr30 {
+    margin-right: 30rpx;
+}
+
+.course-item .course-item-item:last-child {
+    border: none;
+}
+
+.btnMain {
+    overflow: hidden;
+}
+
+.setTxx {
+    color: #469db9;
+    font-size: 30rpx;
+    margin-left: 20rpx;
+}
+
+.goBind {
+    /* width: 180rpx; */
+    padding-left: 40rpx;
+    padding-right: 40rpx;
+    height: 60rpx;
+    background-color: #469db9;
+    line-height: 60rpx;
+    text-align: center;
+    color: #fff;
+    border-radius: 8rpx;
+    font-size: 24rpx;
+    margin-top: 30rpx;
+    position: relative;
+    margin: 30rpx auto 0 auto;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.qrCode {
+    /* text-align: center; */
+    width: 300rpx;
+    height: 300rpx;
+    margin: 0 auto;
+  }
+  canvas {
+    width: 300rpx;
+    height: 300rpx;
+  }
+  .qrCode image {
+    width: 300rpx;
+    height: 300rpx;
+    background-size: 100% 100%;
+  }
+
+/* ======= */
+
+page {
+    background-color: #fff;
+}
+
+.item {
+    line-height: 100rpx;
+    /* border-bottom: 1rpx solid #f4f2f2; */
+    height: 100rpx;
+}
+
+.selectItemMain {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.commodity_attr_box .title{
+     margin-bottom: 30rpx;
+}
+
+.item .itemTitle, .selectItemMain  .itemTitle {
+    width: 23%;
+    float: left;
+    font-size: 30rpx;
+    text-align: center;
+}
+
+.contentBorder {
+    border: 1px solid #efefef;
+    border-radius: 8rpx;
+    color: #999;
+    font-size: 28rpx;
+    line-height: 70rpx;
+    margin-top: 15rpx;
+}
+
+.item .itemContent, .selectItemMain .itemContent {
+    width: 75%;
+    float: right;
+    min-height: 70rpx;
+}
+
+.picker {
+    position: relative;
+    padding-left: 20rpx;
+}
+
+.item input {
+    height: 70rpx;
+    margin-top: 15rpx;
+    font-size: 28rpx;
+    border: 1px solid #efefef;
+    border-radius: 8rpx;
+    color: #999;
+    padding: 0 20rpx;
+}
+
+.tips {
+    color: #999;
+    font-size: 26rpx;
+    padding-left: 30rpx;
+    display: block;
+    padding-top: 20rpx;
+}
+
+.select_box {
+    background: #fff;
+    width: 100%;
+    margin: 15rpx auto;
+    position: relative;
+}
+
+.select_box_time {
+    width: 45.6%;
+    display: inline-block;
+}
+
+.tipsTxt {
+    font-size: 26rpx;
+    color: #999;
+    margin-left: 6rpx;
+    margin-right: 6rpx;
+}
+
+.select {
+    box-sizing: border-box;
+    width: 100%;
+    height: 70rpx;
+    border: 1px solid #efefef;
+    border-radius: 8rpx;
+    display: flex;
+    align-items: center;
+    padding: 0 20rpx;
+}
+
+.select_text {
+    font-size: 26rpx;
+    flex: 1;
+    color: #999;
+}
+
+.select_img {
+    width: 30rpx;
+    height: 30rpx;
+    display: block;
+    transition: transform 0.3s;
+    background-size: 100% 100%;
+}
+
+.select_img_rotate {
+    transform: rotate(90deg);
+}
+
+.option_box {
+    position: absolute;
+    top: 70rpx;
+    width: 100%;
+    border: 1px solid #efefef;
+    box-sizing: border-box;
+    /* height: 0; */
+    overflow-y: auto;
+    border-top: 0;
+    background: #fff;
+    transition: height 0.3s;
+    z-index: 2;
+    height: 350rpx;
+    color: #999;
+}
+
+.option {
+    display: block;
+    line-height: 40rpx;
+    font-size: 26rpx;
+    border-bottom: 1px solid #efefef;
+    padding: 10rpx;
+}
+
+.lastItem, .lastRight {
+    width: 50%;
+    display: inline-block;
+    font-size: 30rpx;
+}
+
+.lastRight {
+    color: #999;
+}
+
+.checked-lable radio {
+    transform: scale(0.8);
+}
+
+.leftLabel {
+    margin-right: 40rpx;
+}
+
+.addClassIcon {
+    width: 40rpx;
+    height: 40rpx;
+    background-size: 100% 100%;
+    margin-left: 20rpx;
+    margin-top: 30rpx;
+}
+
+.banjiset {
+    width: 60%;
+    float: left;
+    margin-left: 12rpx;
+}
+
+checkbox {
+    transform: scale(0.8);
+}
+
+.selectItem {
+    padding: 0rpx 10rpx;
+    display: inline-block;
+    margin-right: 10rpx;
+    line-height: 60rpx;
+    border-radius: 8rpx;
+    background-color: #c9e5ef;
+    margin-bottom: 20rpx;
+    font-size: 28rpx;
+    color: #0e617f;
+}
+
+.roomItem {
+    margin-top: 5rpx;
+    margin-bottom: 5rpx;
+}
+
+.commodity_attr_box {
+    width: 90%;
+    top: 25%;
+    margin-left: 5%;
+}
+.roomItem{
+    line-height: 76rpx;
+    font-size: 30rpx;
+    margin-top: 5rpx;
+    margin-bottom: 5rpx;
+}
+
+.roomItem input {
+    width: 60%;
+    height: 76rpx;
+    margin-top: 0rpx;
+    padding-left: 15rpx;
+    display: inline-block;
+    margin-right: 30rpx;
+}
+
+.roomItem .edit {
+    display: inline-block;
+    text-align: right;
+    color: #469bba;
+}
+
+.roomItem .delete {
+    display: inline-block;
+    text-align: right;
+    color: #db5e42;
+    margin-left: 20rpx;
+}

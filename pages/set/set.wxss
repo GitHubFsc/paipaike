@@ -1,0 +1,21 @@
+/* pages/set/set.wxss */
+
+.mainBg{
+    background: #fff;
+    width: 100%;
+    font-size: 28rpx;
+}
+
+.mainBg .item:first-child{
+     border-top: 1rpx solid #e5e5e5;
+}
+
+.item {
+   height: 100rpx;
+   border-bottom: 1rpx solid #e5e5e5;
+}
+
+.item text{
+    line-height: 100rpx;
+    padding-left: 40rpx;
+}

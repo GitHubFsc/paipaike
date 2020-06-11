@@ -1,0 +1,100 @@
+<view class="container-cn classMain">
+	<view class="class-name">
+		<view>
+			<text>课程名称:</text>
+			<text> {{courseName}}</text>
+		</view>
+		<view>
+			<text>班级:</text>
+			<text>{{className}}</text>
+		</view>
+	</view>
+	<view class="teacher-name">
+		<view>
+			<text>上课时间:</text>
+			<text>{{start}}-{{end}}</text>
+		</view>
+		<view>
+			<text>上课老师:</text>
+			<text>{{teacherName}}</text>
+		</view>
+	</view>
+</view>
+
+<view class="container-cn">
+	<view class="stuMain">
+		<view class="leftImg">
+			<image src='../../images/xuyuanKaoqin.png'></image>
+		</view>
+		<view class="rightCircle">
+			<text>{{signCount}}</text>
+			<text>/{{totalCount}}</text>
+		</view>
+	</view>
+</view>
+
+
+<view class="container-cn middleMain">
+	<scroll-view scroll-x="true" class="nav" scroll-left="{{navScrollLeft}}" scroll-with-animation="{{true}}">
+		<block wx:for="{{navData}}" wx:for-index="idx" wx:for-item="navItem" wx:key="idx">
+			<view class="nav-item {{currentTab == idx ?'active':''}}" data-current="{{idx}}" bindtap="switchNav">
+				{{navItem.text}}
+				<block wx:if="{{currentTab == idx}}">
+					<view class="line"></view>
+				</block>
+			</view>
+		</block>
+		<view>
+		</view>
+	</scroll-view>
+
+	<swiper style="height:{{heiNum}}" class="tab-box" current="{{currentTab}}" duration="300" bindchange="switchTab">
+
+		<swiper-item class="swiperItems">
+			<view class="leaveItem" wx:for="{{leaveList}}" wx:key="id">
+				<view class="stuInfo">
+					<view>{{item.stuName}}</view>
+					<view>{{item.stuPhone}}</view>
+				</view>
+
+				<view class="goPaike" data-id="{{item.id}}" bindtap="goPaike">
+					<view>{{item.mode==2?"已安排补课":"安排补课"}}</view>
+					<image src="../../images/AddScheduleB.png"></image>
+				</view>
+
+			</view>
+		</swiper-item>
+
+		<swiper-item class="swiperItems">
+			<view class="leaveItem" wx:for="{{nosignList}}" wx:key="id">
+				<view class="stuInfo">
+					<view>{{item.stuName}}</view>
+					<view>{{item.stuPhone}}</view>
+				</view>
+				<view class="goPaike">
+					<view class="redStatus">未点名</view>
+				</view>
+			</view>
+		</swiper-item>
+	</swiper>
+</view>
+
+<!-- 显示已到 -->
+<view class="container-cn noGetMain" hidden="{{show}}">
+	<view class="leaveItem" wx:for="{{signedList}}" wx:key="id">
+		<view class="stuInfo">
+			<view>{{item.stuName}}</view>
+			<view>{{item.stuPhone}}</view>
+		</view>
+		<view class="goPaike">
+			<view>已点名</view>
+		</view>
+	</view>
+</view>
+
+<!-- 如果全员到显示该块 -->
+<view hidden="{{allInShow}}" class="container-cn noStuTips">
+	<view class="nogetStu">未到名单</view>
+	<view class="nogetTips">全部到齐</view>
+</view>
+<view class="hei80r"></view>

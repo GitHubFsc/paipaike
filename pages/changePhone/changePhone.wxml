@@ -1,0 +1,22 @@
+<view class="itemMain container-cn">
+    
+    <view class="item">
+        <view class="itemTitle">手机号:</view>
+         <view class="banjiset">
+            <input type="number" placeholder="请输入手机号" bindblur="phoneInput" value="{{phone}}"></input>
+        </view>
+        <view class="getNumberBtn" bindtap="getNumberFn">获取验证码</view>
+    </view>
+
+    <view class="item">
+        <view class="itemTitle">验证码:</view>
+         <view class="itemContent">
+            <input type="number" placeholder="验证码" bindinput="codeInput" value="{{code}}"></input>
+        </view>
+    </view>
+
+    <view class="button bgBlue" bindtap="submitAdd">
+        <text>确认修改</text>
+    </view>
+</view>
+

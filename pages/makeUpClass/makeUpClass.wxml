@@ -1,0 +1,107 @@
+<!--pages/makeUpClass/makeUpClass.wxml-->
+<view class="container-cn dataMain">
+	<radio-group>
+		<block wx:for="{{scheduleArray}}" wx:key="id">
+			<view class="classItem">
+				<view class="leftInfo">
+					<view class="ite">
+						<text class="classTitle">补课班级:</text>
+						<text>{{item.className}}</text>
+					</view>
+
+					<view class="ite">
+						<text class="classTitle">补课日期:</text>
+						<text>{{item.date}}  {{item.start}}-{{item.end}}</text>
+					</view>
+
+					<view class="ite">
+						<text class="classTitle">补课课程:</text>
+						<text>{{item.courseName}}</text>
+					</view>
+				</view>
+				<label class="fr font checked-lable" data-id="{{item.id}}" bindtap="changeChecked">
+					<view class="rightHandle">
+						<!-- <radio-group > -->
+						<view class="radioDom">
+							<radio checked="{{checked}}" color='#469bba' />
+						</view>
+						<!-- </radio-group> -->
+					</view>
+				</label>
+			</view>
+		</block>
+	</radio-group>
+	<!-- <view class="classItem">
+        <view class="leftInfo">
+            <view class="ite">
+                <text class="classTitle">补课班级:</text>
+                <text>班级一</text>
+            </view>
+
+            <view class="ite">
+                <text class="classTitle">补课日期:</text>
+                <text>2019-10-01 13:00-14:30</text>
+            </view>
+
+            <view class="ite">
+                <text class="classTitle">补课课程:</text>
+                <text>数学课</text>
+            </view>
+        </view>
+
+        <view class="rightHandle">
+            <view class="radioDom">
+                <label class="fr font checked-lable" catchtap='checkedTap'>
+                    <radio checked="{{checked}}" color='#469bba' />
+                </label>
+            </view>
+
+        </view>
+
+    </view>
+    <view class="classItem">
+        <view class="leftInfo">
+            <view class="ite">
+                <text class="classTitle">补课班级:</text>
+                <text>班级一</text>
+            </view>
+
+            <view class="ite">
+                <text class="classTitle">补课日期:</text>
+                <text>2019-10-01 13:00-14:30</text>
+            </view>
+
+            <view class="ite">
+                <text class="classTitle">补课课程:</text>
+                <text>数学课</text>
+            </view>
+        </view>
+
+        <view class="rightHandle">
+            <view class="radioDom">
+                <label class="fr font checked-lable" catchtap='checkedTap'>
+                    <radio checked="{{checked}}" color='#469bba' />
+                </label>
+            </view>
+
+        </view>
+    </view> -->
+
+	<view class="leftBtn" bindtap="studentTime">
+		<text>确认排课</text>
+	</view>
+
+	<view class="rightBtn" bindtap="addClass">
+		<image src="../../images/btnAddIconB.png"></image>
+		<text class="rightTxt">新增补课班</text>
+	</view>
+</view>
+
+<!-- 注:此处为无补课信息时的提示 -->
+<view class="container noData" wx:if="{{false}}">
+	<image class="tipsImg" src="../../images/noDataImgB.png"></image>
+	<view class="bottonBtn" bindtap="noClassAdd">
+		<image src="../../images/btnAddIcon.png"></image>
+		<text class="rightTxt">新增补课班</text>
+	</view>
+</view>

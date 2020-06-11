@@ -1,0 +1,84 @@
+<view class="container">
+    <calendar bindOnDayClick="onDayClick" bindOnMonthChange='onMonthChange' days-style='{{daysStyle}}' />
+</view>
+
+<view class="container dateInfo">
+    <view class="dateTime">2019-10-30 周三</view>
+    <view class="container-cn">
+        <view bindtap="selectAttendance" class="workItem">
+            <view class="leftItem">
+                <view>班级一</view>
+                <view>课程名称: 舞蹈课</view>
+                <view>上课教室: F001</view>
+            </view>
+            <view class="rightItem">
+                <view>9:00</view>
+                <view class="lineIcon">
+                    <image src="../../images/kaoqinLineIcon.png"></image>
+                </view>
+                <view>9:45</view>
+                <image class="selectIcon" src="../../images/kqListIcon.png"></image>
+            </view>
+        </view>
+
+        <view bindtap="selectAttendance"  class="workItem">
+            <view class="leftItem">
+                <view>班级一</view>
+                <view>课程名称: 舞蹈课</view>
+                <view>上课教室: F001</view>
+            </view>
+            <view class="rightItem">
+                <view>9:00</view>
+                <view class="lineIcon">
+                    <image src="../../images/kaoqinLineIcon.png"></image>
+                </view>
+                <view>9:45</view>
+                <image class="selectIcon" src="../../images/kqListIcon.png"></image>
+            </view>
+        </view>
+
+        <view bindtap="selectAttendance"  class="workItem">
+            <view class="leftItem">
+                <view>班级一</view>
+                <view>课程名称: 舞蹈课</view>
+                <view>上课教室: F001</view>
+            </view>
+            <view class="rightItem">
+                <view>9:00</view>
+                <view class="lineIcon">
+                    <image src="../../images/kaoqinLineIcon.png"></image>
+                </view>
+                <view>9:45</view>
+                <image class="selectIcon" src="../../images/kqListIcon.png"></image>
+            </view>
+        </view>
+
+         <view bindtap="selectAttendance"  class="workItem">
+            <view class="leftItem">
+                <view>班级一</view>
+                <view>课程名称: 舞蹈课</view>
+                <view>上课教室: F001</view>
+            </view>
+            <view class="rightItem">
+                <view>9:00</view>
+                <view class="lineIcon">
+                    <image src="../../images/kaoqinLineIcon.png"></image>
+                </view>
+                <view>9:45</view>
+                <image class="selectIcon" src="../../images/kqListIcon.png"></image>
+            </view>
+        </view>
+
+
+    </view>
+
+
+
+
+
+    <!-- <view class="curButton" bindtap="addCourse">
+        <image src="http://yan.zhangqianit.com/PAIKEIMG/btnIconBook.png"></image>
+        <text>新增日程</text>
+    </view> -->
+
+</view>

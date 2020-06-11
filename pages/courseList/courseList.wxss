@@ -1,0 +1,228 @@
+/**index.wxss**/
+
+.container {
+    background-color: #fff;
+}
+
+.selectBar image {
+    width: 130rpx;
+    height: 50rpx;
+    background-size: 100% 100%;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+.canlenderMain {
+    position: relative;
+    overflow: hidden;
+}
+
+.dateInfo {
+    padding-top: 4%;
+    padding-bottom: 20rpx;
+}
+
+.dateTime {
+    text-align: center;
+    padding: 15rpx 0;
+    border-bottom: 2rpx solid #f6f3f3;
+    font-size: 30rpx;
+    font-weight: bold;
+    color: #000;
+    background-color: #fff;
+}
+
+.courseMain {
+    overflow: hidden;
+    margin-top: 0rpx;
+    margin-bottom: 100rpx;
+}
+
+.hoursTime {
+    width: 15%;
+    float: left;
+}
+
+.timeItem {
+    height: 185rpx;
+    margin-bottom: 3%;
+}
+
+.rightMain {
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+.courseItem {
+    float: left;
+    /* height: 160rpx; */
+    width: 100%;
+    margin-left: 3%;
+}
+
+.citems {
+    background-color: #f5f5f5;
+    border-radius: 5rpx 5rpx;
+    margin-bottom: 3%;
+    padding: 10rpx 0rpx;
+    white-space: nowrap;
+    min-width: 45%;
+    display: inline-block;
+    border-top: 1rpx solid #eae7e7;
+    border-right: 1rpx solid #eae7e7;
+}
+
+.greenItem {
+    background-color: #dffaf5;
+    border: 1rpx solid #33ceac;
+    border-left: none;
+}
+
+.greenItem text {
+    color: #33ceac !important;
+}
+
+.blueItem {
+    background-color: #e6f2fe;
+    border: 1rpx solid #79a7db;
+    border-left: none;
+}
+
+.blueItem text {
+    color: #508fd6 !important;
+}
+
+.orangeItem {
+    background-color: #fef0e3;
+    border: 1rpx solid #fa934e;
+    border-left: none;
+}
+
+.orangeItem text {
+    color: #fa934e !important;
+}
+
+.redItem {
+    background-color: #fee8ea;
+    border: 1rpx solid #f2636f;
+    border-left: none;
+}
+
+.redItem text {
+    color: #f2636f !important;
+}
+
+.violetItem {
+    background-color: #f4e5f7;
+    border: 1rpx solid #ce93d8;
+    border-left: none;
+}
+
+.violetItem text {
+    color: #a215ba !important;
+}
+
+.grassGreenItem {
+    background-color: #ddf5c1;
+    border: 1rpx solid #9bcb64;
+    border-left: none;
+}
+
+.grassGreenItem text {
+    color: #9bcb64 !important;
+}
+
+.citems text {
+    display: block;
+    font-size: 22rpx;
+    text-align: center;
+    color: #333;
+}
+
+/* .curButton {
+    position: fixed;
+    bottom: 0rpx;
+    left: 0;
+    right: 0;
+} */
+
+.curButton image {
+    width: 40rpx;
+    height: 40rpx;
+    background-size: 100% 100%;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20rpx;
+}
+
+.calendar-title {
+    height: 500rpx !important;
+    background-color: red;
+}
+
+.itemTxtMain {
+    margin: 0 0;
+    padding: 0 0;
+    line-height: 30rpx;
+    overflow: hidden;
+}
+
+.itemTxtMain .itemTitle {
+    width: 100rpx;
+    text-align: right;
+    float: left;
+}
+
+.itemTxtMain .itemTxt {
+    width: 150rpx;
+    text-align: left;
+    margin-left: 10rpx;
+    padding-right: 20rpx;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    float: left;
+}
+
+
+/* .scroll-box {
+    height: 1100rpx;
+} */
+.last {
+    padding-bottom: 60rpx !important;
+}
+.table {
+    margin: 20rpx;
+    padding: 0 20rpx;
+    font-size: 30rpx;
+    border: 1rpx solid #60abc7;
+    border-radius: 10rpx;
+}
+.table .thead {
+    height: 50rpx;
+    padding: 0 20rpx;
+    margin-left: -20rpx;
+    margin-right: -20rpx;
+    background-color: #dcf0f7;
+    border-bottom:  1rpx solid #60abc7;
+    border-top-left-radius: 10rpx;
+    border-top-right-radius: 10rpx;
+    color: #207fa2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.table .tbody .tr {
+    height: 70rpx;
+    line-height: 70rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: left;
+}
+.table .mark {
+    background-color: #f89b5d;
+    color: #fff;
+}

@@ -1,0 +1,136 @@
+<view class="enter-for-header">
+  <view class="music">音乐</view>
+  <view class="img-wrap">
+    <image class="" src="/images/pintuan_bg.png" mode="widthFix" lazy-load="false" binderror="" bindload="" />
+  </view>
+  <view class="change-btn">
+    <view class="btn-top"></view>
+    <view class="btn-bottom">更换封面</view>
+  </view>
+</view>
+
+<view class="change-title">
+  <view class="sjx"></view>
+  <view class="first-title">
+    <view class="title">更换标题</view>
+    <view class="text-wrap">
+      <textarea bindinput="lengthChange" placeholder="新春价到！898元课程90元抢购，还有超值团购价格" maxlength="35" cols="32"></textarea>
+      <view>{{ipt_length}}/35</view>
+    </view>
+    <text class="">标题不填写或为空，则活动中不显示</text>
+  </view>
+  <view class="second-title">
+    <view class="title">活动时间</view>
+    <view class="choose-time">
+      <picker class="" mode="date"  value="2020-02-14"
+          bindchange="" bindcancel="" start="2020-02-17" end="2021-12-31">
+        <view>
+          2020/02/10 00:00
+        </view>
+      </picker>
+      <text class="" >到</text>
+      <picker class="" mode="date"  value="2020-02-14"
+          bindchange="" bindcancel="" start="2020-02-17" end="2021-12-31">
+        <view>
+          2020/02/10 00:00
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view class="third-title">
+    <view class="title">活动页面是否显示可以直接参与的团</view>
+    <radio-group bindchange="handleRadioChange">
+     <radio  checked="{{index == 0}}" value="{{index}}" wx:for="{{show}}" wx:key="*this">{{item}}</radio>
+    </radio-group>
+  </view>
+  <view class="third-title">
+    <view class="title">是否对报名者姓名进行加密处理</view>
+    <radio-group bindchange="">
+      <radio checked="{{index == 0}}" class="" value="" wx:for="{{encrypty}}" wx:key="*this">{{item}}</radio>
+    </radio-group>
+  </view>
+</view>
+
+<view class="change-class" >
+  <view class="sjx"></view>
+  <view class="class-title">拼团商品</view>
+  <view class="class-item">
+    <view class="item-content2">
+      <textarea maxlength="20" placeholder="精品口才课4节课"></textarea>
+    </view>
+  </view>
+  <view class="class-item item-flex">
+    <view>
+      <view class="item-title">商品数量</view>
+      <view class="item-content">100</view>
+      <text>件</text>
+    </view>
+    <view >
+      <view class="item-title">商品原价</view>
+      <view class="item-content">100</view>
+      <text>元</text>
+    </view>
+  </view>
+  <view class="class-item">
+    <view class="item-title">参团需预付</view>
+    <view class="item-content">20</view>
+    <text>元</text>
+  </view>
+  <view class="tip">您设置的预付款不能低于1块钱，如有报名者，不可修改</view>  
+  <view class="class-title">拼团方案</view>
+  <view class="case-item ">
+    <view class="case-item-lt">
+      <view class="item-title">达到</view>
+      <view class="item-content">20</view>
+      <text>人</text>
+    </view>
+    <view >
+      <view class="item-title">参团价</view>
+      <view class="item-content">80</view>
+      <text>元</text>
+    </view>
+  </view>
+</view>
+
+<view class="enter-detail">
+   <view class="enter-detail-main">
+    <view class="enter-detail-title">活动说明</view>
+    <view class="enter-detail-contet">
+      <textarea name="" id="" value="这是一段活动说明这是一段活动说明这是一段活动说明这是一段活动说明这是一段活动说明这是一段活动说明这是一段活动说明这是一段活动说明这是一段活动说明这是一段活动说明这是一段活动说明这是一段活动说明这是一段活动说明这是一段活动说明这是一段活动说明这是一段活动说明这是一段活动说明这是一段活动说明" ></textarea>
+      <view class="cancle-btn"></view>
+      <text class="">120/300</text>
+    </view>
+    <view class="enter-detail-img">
+      <!-- <image class="" src="" mode="widthFix"  /> -->
+      <view class="cancle-btn"></view>
+      <view class="change-img">换图</view>
+    </view>
+    <view class="enter-detail-img">
+      <!-- <image class="" src="" mode="widthFix"  /> -->
+      <view class="cancle-btn"></view>
+      <view class="change-img">换图</view>
+    </view>
+  </view>
+  <view class="enter-detail-main">
+    <view class="enter-detail-title">机构介绍</view>
+    <view class="enter-detail-contet">
+      <textarea name="" id="" value="机构介绍，机构介绍机构介绍，机构介绍机构介绍，机构介绍机构介绍，机构介绍机构介绍，机构介绍机构介绍，机构介绍机构介绍，机构介绍机构介绍，机构介绍机构介绍，机构介绍机构介绍，机构介绍机构介绍，机构介绍机构介绍，机构介绍" ></textarea>
+      <view class="cancle-btn"></view>
+      <text class="">120/300</text>
+    </view>
+    <view class="enter-detail-img">
+      <!-- <image class="" src="" mode="widthFix"  /> -->
+      <view class="cancle-btn"></view>
+      <view class="change-img">换图</view>
+    </view>
+    <view class="enter-detail-img">
+      <!-- <image class="" src="" mode="widthFix"  /> -->
+      <view class="cancle-btn"></view>
+      <view class="change-img">换图</view>
+    </view>
+  </view>
+</view>
+
+<view class="save-active">
+  <view bindtap="saveChange">保存活动</view>
+</view>

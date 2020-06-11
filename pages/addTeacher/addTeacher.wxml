@@ -1,0 +1,136 @@
+<!-- <view class="container-cn mainTitle">
+    分配教师账号
+</view> -->
+<view class="itemMain container-cn">
+	<view class="item">
+		<view class="itemTitle">姓名(中文):</view>
+		<view class="itemContent">
+			<input placeholder="必填" bindinput="cnNameInput" value="{{cn_name}}" maxlength="12"></input>
+		</view>
+	</view>
+	<view class="item">
+		<view class="itemTitle">姓名(英文):</view>
+		<view class="itemContent">
+			<input type="url" placeholder="必填" value="{{en_name}}" bindinput="enNameInput" maxlength="25"></input>
+		</view>
+	</view>
+	<view class="item">
+		<view class="itemTitle">类型:</view>
+		<view class="itemContent">
+			<radio-group bindchange="typeChange">
+				<radio checked="{{ext}}" color='#469bba' value="2" />外籍教师
+				<radio checked="{{offical}}" color='#469bba' value="1" />中国教师
+			</radio-group>
+
+		</view>
+	</view>
+
+	<!-- <view class="item">
+        <view class="itemTitle">密码:</view>
+        <view class="itemContent">
+            <input type="password" placeholder="密码"></input>
+        </view>
+    </view> -->
+
+	<view class="item">
+		<view class="itemTitle">手机号:</view>
+		<view class="itemContent">
+			<input type="number" placeholder="必填" value="{{phone}}" bindblur="phoneInput" maxlength="11"></input>
+		</view>
+	</view>
+
+
+	<!-- <view class="item">
+        <view class="itemTitle">日期选择器</view>
+        <view class="itemContent contentBorder">
+            <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+                <view class="picker">
+                当前选择: {{date}}
+                </view>
+            </picker>
+        </view>    
+    </view> -->
+
+
+	<view class="item">
+		<view class="itemTitle">入职时间:</view>
+		<view class="itemContent contentBorder">
+			<picker mode="date" value="{{date}}" start="1990-01-01" end="{{end}}" bindchange="bindDateChange">
+				<view class="picker"> {{date}} </view>
+			</picker>
+		</view>
+	</view>
+
+	<!-- <view class="item">
+		<view class="itemTitle">教授科目:</view>
+		<view class="itemContent contentBorder">
+			<picker bindchange="bindKCPickerChange" value="{{kcIndex}}" range="{{courseData}}" range-key="{{'name'}}">
+				<view class="picker">
+					{{courseData[kcIndex].name}}
+				</view>
+			</picker>
+		</view>
+		<view class="clear"></view>
+	</view> -->
+	<view class="item">
+		<view class="itemTitle">教授科目:</view> 
+		<view class="itemContent contentBorder">
+			<multi-selector class='selector' value='{{value}}'  selected='{{courseLists}}' 
+			items='{{courseData}}' bindchange='bindSelectorChange' bindmodalopen='onModalOpen' placeholder='请选择教授科目'   
+			bindmodalclose='onModalClose' show-value='{{false}}'>
+			</multi-selector>
+		</view>
+	</view>
+	<view class="item info">
+		<view class="itemTitle">履历介绍:</view>
+		<view class="itemContent">
+			<textarea class="" placeholder="必填" maxlength="150" value="{{info}}" bindinput="infoInput"></textarea>
+		</view>
+	</view>
+
+	<!-- <view class="item">
+        <view class="itemTitle">所属机构:</view>
+        <view class="itemContent contentBorder">
+            <picker bindchange="bindPickerChange" value="{{selectData[index].id}}" range="{{selectData}}" range-key="{{'name'}}" >
+                <view class="picker">
+                    {{selectData[index].name}}
+                </view>
+            </picker>
+        </view>
+    </view> -->
+
+
+	<view class="item">
+		<view class="itemTitle">教师照片:</view>
+	</view>
+	<view class="uploadImg" bindtap="chooseImageTap">
+		<image src="../../images/addImgIcon.png"></image>
+	</view>
+
+	<view class="container-cn uploadedImg">
+		<view class="imgItem" wx:if="{{imgShow}}">
+			<icon class="iconClass" type="cancel" size="15" bindtap="deleteImageFn" />
+			<image src="{{imagePath}}"></image>
+		</view>
+	</view>
+
+	<view class="item">
+		<view class="itemTitle">资质图片:</view>
+	</view>
+
+	<view class="uploadImg" bindtap="chooseMultImageTap">
+		<image src="../../images/addImgIcon.png"></image>
+	</view>
+
+	<view class="container-cn uploadedImg" wx:if="{{certShow}}">
+		<view class="imgItem" wx:for="{{certificatePath}}" wx:key="index">
+			<icon class="iconClass" type="cancel" size="15" bindtap="deleteMultImageFn" data-index="{{index}}" />
+			<image src="{{item.path}}"></image>
+		</view>
+	</view>
+
+	<view class="button bgBlue" bindtap="submitAllocation">
+		<text>保存</text>
+	</view>
+
+</view>

@@ -1,0 +1,25 @@
+<view class="container cartlist" wx:for="{{cartData}}" wx:key="data">
+
+    <view class="container-cn cartlist-item">
+        <view class="item-img">
+            <image src="{{item.image}}"></image>
+        </view>
+
+        <view class="item-info">
+            <view class="itemName">{{item.title}}</view>
+            <view class="itemDesc">{{item.content}}</view>
+        </view>
+
+        <view class="caozuo-item">
+            <image bindtap="editNotice" data-id="{{item.id}}"
+            class="editImg" src="../../images/edit.png"></image>
+
+            <image bindtap="deleteNotice" data-id="{{item.id}}"
+            class="deleteImg" src="../../images/delete.png"></image>
+        </view>
+    </view>
+</view>
+
+<view class="curButton" bindtap="addNotice">
+    <text>新增公告</text>
+</view>

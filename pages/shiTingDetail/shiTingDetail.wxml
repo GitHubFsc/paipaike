@@ -1,0 +1,78 @@
+<view class="container courseDetail">
+    <view class="itemMain container-cn">
+        <view class="item">
+            <view class="itemTitle">试听课程:</view>
+            <view class="itemContent">
+                <input value="少儿英语课" disabled='disabled'></input>
+            </view>
+        </view>
+
+        <view class="item">
+            <view class="itemTitle">试听班级:</view>
+            <view class="itemContent">
+                <input value="重点班" disabled='disabled'></input>
+            </view>
+        </view>
+
+        <view class="item">
+            <view class="itemTitle">试听教室:</view>
+            <view class="itemContent">
+                <input value="F教室" disabled='disabled'></input>
+            </view>
+        </view>
+
+        <view class="item">
+            <view class="itemTitle">试听日期:</view>
+            <view class="itemContent">
+                <input value="1990-11-12" disabled='disabled'></input>
+            </view>
+        </view>
+
+        <view class="item">
+            <view class="itemTitle">试听时间:</view>
+            <view class="itemContent">
+                <view class='select_box_time'>
+                    <input value="13:20" disabled='disabled'></input>
+                </view>
+                <text class="tipsTxt">至</text>
+                <view class='select_box_time '>
+                    <input value="14:30" disabled='disabled'></input>
+                </view>
+            </view>
+        </view>
+
+        <view class="item">
+            <view class="itemTitle">上课教师:</view>
+            <view class="itemContent">
+                <input value="王某某老师" disabled='disabled'></input>
+            </view>
+        </view>
+
+        <view class="item">
+            <view class="itemTitle">班级容量:</view>
+            <view class="itemContent">
+                <input placeholder="班级容量" value="30人" disabled='disabled'></input>
+            </view>
+        </view>
+
+        <view class="selectItemMain">
+            <view class="itemTitle">试听学员:</view>
+
+            <view class="itemContent">
+                <view class="selectItem">
+                    暂无人报名 
+                </view>
+                <view class="selectItem" wx:for="{{xueyuanDate}}">
+                    <text class="name">姓名:{{item.name}},</text> 
+                    <text class="phoneNumber">电话: {{item.phone}}</text>  
+                </view>
+            </view>
+        </view>
+
+        <navigator url="/pages/listenList/listenList">
+            <view class="button">
+                <text>返回</text>
+            </view>
+        </navigator>
+    </view>
+</view>

@@ -1,0 +1,85 @@
+page {
+    background-color: #fff;
+    margin: 0 0;
+    padding: 0 0;
+}
+
+.wcks ,.sdrs ,.syks ,.jlks ,.wxks{
+    color: #101010;
+    font-size: 26rpx;
+    padding-left: 20rpx;
+    margin-bottom: 15rpx;
+}
+
+.wxks text{
+    color: #055e7f;
+}
+
+.wcks text{
+    color: #afdcb1;
+}
+
+.sdrs text{
+    color: #92a4e4;
+}
+
+.syks text{
+      color: #469bba;
+}
+
+.jlks text{
+      color: #da5d3d;
+}
+
+.canvas {
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 150rpx;
+    margin-top: 30rpx;
+}
+
+.columnCanvas {
+    box-shadow: 0 0 10rpx rgba(153, 153, 153, 0.2);
+}
+
+.xiaoke {
+    color: #afdcb1;
+    font-weight: bold;
+    font-size: 30rpx;
+    width: 100%;
+    box-shadow: 0 0 10rpx rgba(153, 153, 153, 0.2);
+    margin-top: 80rpx;
+}
+
+.xiaoke .title {
+    margin-left: 5%;
+    padding: 20rpx 0rpx;
+    color: #101010;
+    font-weight: lighter;
+}
+
+.progress {
+    width: 90%;
+    margin-top: 0px;
+    padding-bottom: 20px;
+    margin: 0rpx auto;
+}
+
+.zb {
+    color: #95a7e9;
+}
+
+.studentInfo{
+    width: 100%;
+    height: 70rpx;
+    background-color: #fff;
+    margin-bottom: 50rpx;
+     box-shadow: 0 0 10rpx rgba(153, 153, 153, 0.2);
+     text-align: center;
+     margin-top: 5rpx;
+}
+.studentInfo text{
+    font-size: 32rpx;
+    font-weight: bold;
+    line-height: 70rpx;
+}
